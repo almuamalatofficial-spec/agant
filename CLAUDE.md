@@ -12,12 +12,10 @@ bir nechta ixtisoslashgan AI agent orqali tekshiradi. Asosiy buyruq: `/hujjat-te
 2. **Manbasiz iqtibos yo'q.** Standart raqami, band, qonun moddasini faqat `bilim/` papkasidagi matnda
    topgan bo'lsangiz aniq keltiring. Topilmasa: "manba bilim bazasida yo'q — tekshirish kerak" deb yozing.
    Hech qachon modda yoki band raqamini o'ylab topmang.
-3. **Bilim bazasi:**
-   - `bilim/aaoifi/` — AAOIFI standartlari matni (litsenziyali nusxa)
-   - `bilim/qonunchilik/` — O'zbekiston qonunlari, Markaziy bank nizomlari (lex.uz dan)
-   - `bilim/korxona/` — korxona tuzilmasi, vakolatlar matritsasi, lavozim yo'riqnomalari
-   - `bilim/ichki-normativ/` — korxonaning o'z ichki qonun hujjatlari (nizom, siyosatlar, tartiblar)
-   - `bilim/glossariy.md` — tasdiqlangan atamalar lug'ati
+3. **Bilim bazasi** — har bir bosqichning o'z papkasi bor (`bilim/01-...` – `bilim/09-...`),
+   AAOIFI standartlari esa umumiy: `bilim/00-umumiy/aaoifi/`. Har bir agent o'z papkasini
+   agent faylidagi "Sening bilim bazang" bo'limida ko'radi. PDF/DOCX ning matni yonidagi `.md` faylda
+   (`python3 scripts/bazani_tayyorla.py` yaratadi).
 4. **Natija formati** (har bir agent shu formatda qaytaradi):
 
    ```

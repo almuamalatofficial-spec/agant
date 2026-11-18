@@ -1,37 +1,63 @@
 ---
-description: Islomiy hujjatni barcha agentlar orqali to'liq tekshirish (moslashtirish → parallel tekshiruv → AAOIFI darvozasi → yakuniy hisobot)
-argument-hint: <hujjat yo'li> [--moslashtirmasdan] [--soha risk,komplayens,audit,buxgalteriya,gazna]
+description: An'anaviy yoki ichki hujjatni islomiylashtirib, barcha agentlar orqali BIRMA-BIR (ketma-ket) tahlil qilish va yakuniy hujjat + hisobot chiqarish
+argument-hint: <hujjat yo'li> [--soha risk,komplayens,audit,buxgalteriya,gazna] [--moslashtirmasdan] [--faqat 2,3,7]
 ---
 
-Sen orkestratorsan. Tekshiriladigan hujjat: $ARGUMENTS
+Sen orkestratorsan. Kirish: $ARGUMENTS
+
+ASOSIY QOIDA: agentlar PARALLEL EMAS, BIRMA-BIR ishga tushiriladi. Har bir agent tugaguncha kut,
+uning natijasini faylga yoz, foydalanuvchiga 2–3 qatorda qisqa xulosa ko'rsat va keyin keyingisiga o'tasan.
+Har bir keyingi agentga oldingi barcha hisobotlar yo'lini ber.
 
 ## 0. Tayyorgarlik
-- Hujjatni o'qi (PDF/DOCX bo'lsa matnini chiqar). Hujjat turi, aqd turi va sohasini aniqla.
-- Soha agentlarini tanla: `--soha` berilgan bo'lsa shularni, aks holda mazmuniga qarab
-  (risk → soha-risk, AML/KYC/komplayens → soha-komplayens, audit → soha-audit,
-  hisob/provodka/hisobot → soha-buxgalteriya, likvidlik/sukuk/valyuta → soha-gazna). Bir nechtasi bo'lishi mumkin.
+1. `python3 scripts/bazani_tayyorla.py` — bilim bazasidagi yangi fayllarni matnga aylantir.
+   Bo'sh papkalar ro'yxatini foydalanuvchiga ko'rsat (to'xtama, davom et).
+2. `python3 scripts/bazani_tayyorla.py <hujjat>` — kirish hujjatini matnga aylantir va o'qi.
+3. Ish papkasi: `hisobotlar/<hujjat_nomi>_<YYYY-MM-DD>/` (keyingi hamma fayllar shu yerda, `I/` deb belgilanadi).
+4. Aniqla va `I/00_tasnif.md` ga yoz: hujjat turi (shartnoma/nizom/siyosat/tartib...), an'anaviy yoki islomiy,
+   an'anaviy mahsulot nomi, soha(lar). Soha agentlari: `--soha` berilgan bo'lsa shular, aks holda mazmunga qarab
+   (risk → soha-risk, AML/KYC → soha-komplayens, audit → soha-audit, hisob/provodka → soha-buxgalteriya,
+   likvidlik/sukuk/valyuta → soha-gazna). Hech biri mos kelmasa — soha bosqichi o'tkazib yuboriladi.
+5. `--faqat` berilgan bo'lsa, faqat shu raqamli bosqichlarni bajar (1 va 9 kerak bo'lsa ular ham ko'rsatilishi kerak).
 
-## 1. Moslashtirish (ketma-ket)
-`--moslashtirmasdan` berilmagan bo'lsa, `shariat-moslashtiruvchi` agentini ishga tushir.
-Keyingi bosqichlar uning yozgan `hisobotlar/<hujjat>_moslashtirilgan.md` fayli ustida ishlaydi.
+## Bosqichlar (qat'iy tartibda)
 
-## 2. Mustaqil tekshiruv (PARALLEL — bitta xabarda barcha Agent chaqiruvlari)
-huquqiy-tekshiruvchi, shariat-auditor, terminolog, tuzilma-tekshiruvchi, metodolog,
-ichki-normativ-tekshiruvchi + tanlangan soha-* agentlari.
-Har biriga: hujjat yo'li, hujjat turi va "CLAUDE.md dagi formatda qaytar" deb yoz.
+| # | Agent | Kirish | Natija fayli |
+|---|---|---|---|
+| 1 | shariat-moslashtiruvchi (A rejim) | asl hujjat | `I/01_islomiy_versiya.md` + `I/01_ozgarishlar.md` |
+| 2 | huquqiy-tekshiruvchi | 01 versiya | `I/02_huquqiy.md` |
+| 3 | shariat-auditor | 01 versiya | `I/03_shariat_audit.md` |
+| 4 | terminolog | 01 versiya | `I/04_terminologiya.md` |
+| 5 | tuzilma-tekshiruvchi | 01 versiya | `I/05_tuzilma.md` |
+| 6.x | soha-* (tanlanganlar, har biri alohida, ketma-ket) | 01 versiya | `I/06_1_risk.md`, `I/06_2_komplayens.md`, ... |
+| 7 | metodolog | 01 versiya | `I/07_metodologiya.md` |
+| 8 | ichki-normativ-tekshiruvchi | 01 versiya | `I/08_ichki_normativ.md` |
+| 9 | aaoifi-nazoratchi | 01 versiya + 02–08 hamma hisobotlar | `I/09_aaoifi_nazorat.md` |
+| 10 | shariat-moslashtiruvchi (B rejim) | 01 versiya + 02–09 | `I/10_yakuniy_hujjat.md` |
 
-## 3. AAOIFI darvozasi
-`aaoifi-nazoratchi` ga hujjat yo'lini VA 2-bosqichdagi barcha agentlar xulosalarini ber.
-U VETO qilgan tavsiyalar yakuniy hisobotga kirmaydi (alohida bo'limda ko'rsatiladi).
+`--moslashtirmasdan` bo'lsa 1-bosqich o'rniga asl hujjat matni `I/01_islomiy_versiya.md` ga ko'chiriladi.
 
-## 4. Yakuniy hisobot
-`hisobotlar/<hujjat>_hisobot_<YYYY-MM-DD>.md` faylini yoz:
-1. Xulosa: umumiy baho (MOS / SHARTLI MOS / MOS EMAS), KRITIK topilmalar soni.
-2. Agentlar bo'yicha baholar jadvali.
-3. Barcha topilmalar birlashtirilgan jadvali (takrorlarni birlashtir, KRITIK → PAST tartibida, qaysi agent(lar) topgani).
-4. ZIDDIYATLAR: shariat/AAOIFI ↔ qonunchilik, agentlar orasidagi kelishmovchiliklar — inson qarori uchun.
+Har bir Agent chaqiruvi prompti shu shablonda:
+```
+Tahlil qilinadigan hujjat: I/01_islomiy_versiya.md
+Asl (an'anaviy) hujjat: <yo'l>
+Hujjat tasnifi: I/00_tasnif.md
+Oldingi agentlar hisobotlari: <ro'yxat>
+Avval o'z bilim bazangni o'rgan, keyin tahlil qil. CLAUDE.md dagi formatda qaytar.
+```
+Agent qaytargan matnni o'zgartirmasdan natija fayliga yoz (agent o'zi yozgan bo'lsa — tekshir).
+Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, faylga "BAJARILMADI: sabab" deb yoz va davom et.
+
+## 11. Yakuniy hisobot — `I/YAKUNIY_HISOBOT.md`
+1. Xulosa: umumiy baho (MOS / SHARTLI MOS / MOS EMAS), KRITIK topilmalar soni, tanlangan islomiy tuzilma.
+2. Bosqichlar jadvali: agent, baho, topilmalar soni (K/Y/O'/P), bilim bazasi to'liqmi.
+3. Barcha topilmalar birlashtirilgan jadvali (takrorlar birlashtirilgan, KRITIK → PAST, qaysi agent topgani).
+4. ZIDDIYATLAR (shariat/AAOIFI ↔ qonun, agentlar o'rtasida) — inson qarori uchun.
 5. VETO qilingan tavsiyalar.
 6. Shariat kengashi va yuristga savollar.
-7. Eslatma: AI xulosasi maslahat xarakterida; yakuniy fatvo — Shariat kengashi, huquqiy xulosa — yurist.
+7. Bilim bazasidagi bo'shliqlar (qaysi bosqichga qaysi hujjat yetishmadi).
+8. Eslatma: AI xulosasi maslahat xarakterida; yakuniy fatvo — Shariat kengashi, huquqiy xulosa — yurist.
 
-Foydalanuvchiga qisqa xulosa va hisobot fayl yo'lini ko'rsat.
+So'ng `pandoc I/10_yakuniy_hujjat.md -o I/10_yakuniy_hujjat.docx` va
+`pandoc I/YAKUNIY_HISOBOT.md -o I/YAKUNIY_HISOBOT.docx` bilan Word versiyalarini yarat.
+Foydalanuvchiga: qisqa xulosa, KRITIK topilmalar va ish papkasi yo'lini ko'rsat.
