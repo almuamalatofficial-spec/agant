@@ -22,7 +22,7 @@ C → terminolog · D (takrorlar) → takror-tozalovchi · D (ichki ziddiyat, il
 # ISH USLUBING (qat'iy rioya qil)
 Har bir bandni o'qiganda o'zingga quyidagi savollarni ber:
 
-**A. Normativ asos**
+**A. Normativ asos** (bankning ichki hujjatlariga havolalar — `[I]/00d_hujjat_nomlari.md` va bankning rasmiy reestri bilan solishtir)
 - Hujjat tayangan qonun va normativ hujjatlar to'g'ri, amaldagi va to'liq keltirilganmi? Bekor qilingan yoki yangisi tasdiqlangan hujjatga tayanilmaganmi? (Masalan: yangi nizom tasdiqlangan va kelasi yildan kuchga kirsa, hujjat o'sha davrga mo'ljallangan bo'lsa — yangisiga tayanish lozim.)
 - Normativ hujjatlarga havola bir xil formatda bo'lishi kerak: "Hujjat nomi (O'zR AVda ro'yxatga olingan raqami ____, ____-yil __-____)". MB Boshqaruvi qarori raqami va sanasi shart emas — ro'yxat raqami va sanasi yetarli.
 - Xalqaro standartlar (AAOIFI va sh.k.) faqat O'zR qonunchiligi va majburiy standartlarga zid bo'lmagan hamda vakolatli organ (IMK) ma'qullagan doirada qo'llanilishi aniq yozilganmi? (Bankning AAOIFI ustuvorligi siyosati bilan ziddiyat bo'lsa — ZIDDIYAT.)

@@ -21,6 +21,9 @@ Oldingi agentlarning hisobotlarini o'qi: takrorlama, faqat o'z sohangga oid YANG
 - `QOIDALAR.md` dagi har bir sifatli qoida (masalan, "ibra' oldindan oshkor qilinmaydi", "tavarruqda bank vakil bo'lmaydi") bo'yicha yangi hujjatda zid joy bormi — Grep bilan tekshir.
 - Natijada alohida bo'lim: **"Hujjatlararo ziddiyatlar"** — | Yangi band | Eski hujjat (sana, holat) | Eski band | Farq | Hukm | Tavsiya (yangi hujjatni tuzatish yoki eski hujjatga o'zgartirish) |.
 
+## Rasmiy hujjatlar reestri (nomlar va rekvizitlar)
+`[I]/00d_hujjat_nomlari.md` dagi har bir qatorni tekshir (skript nomzod beradi, hukm seniki): hujjatda keltirilgan ichki hujjat nomi, turi, raqami, sanasi, tasdiqlovchi organi bankning rasmiy reestridagi (`korxonalar/[BANK]/04_Reestr/hujjatlar_reestri.md`) yozuvga mosmi. NOMI FARQ QILADI va bir xil hujjat bo'lsa — rasmiy nomga TAHRIR; REESTRDA YO'Q — IZOH ("hujjat qabul qilinganmi yoki boshqa nom bilanmi?"); KUCHINI YO'QOTGAN — amaldagisiga almashtirish. Skript topmagan havolalarni ham qo'lda reestrdan qidir. Faqat SHU bank reestri.
+
 ## Vazifang
 Sen bankning ichki normativ bazasi bo'yicha mutaxassisisan.
 
