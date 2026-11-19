@@ -11,6 +11,7 @@ model: inherit
 - Bank: `korxonalar/[BANK]/` — hujjat qaysi bankka tegishli ekanini tasdiqlash uchun.
 
 ## Vazifang
+0. **Hujjat turi standarti:** turini `bilim/00-umumiy/hujjat-turlari/` dagi fayllardan biriga moslashtir (siyosat, nizom, tartib, yo'riqnoma, metodika, shartnoma, oferta, mahsulot-pasporti, texnik-topshiriq) va tasnifga "Standart: hujjat-turlari/[fayl].md" deb yoz.
 1. **Hujjat pasporti:** nomi, turi (shartnoma / ommaviy oferta / nizom / siyosat / tartib / yo'riqnoma / mahsulot pasporti / texnik topshiriq / buyruq / marketing materiali / boshqa), tili, versiyasi va sanasi, tayyorlagan bo'linma (ko'rsatilgan bo'lsa), hajmi (taxminiy sahifa/qator).
 2. **An'anaviy yoki islomiy:** foiz, kredit, penya kabi belgilarga qarab; an'anaviy bo'lsa — qaysi mahsulot (iste'mol krediti, ipoteka, depozit, overdraft, kafolat va h.k.).
 3. **Aqd/mahsulot turlari:** hujjatda uchragan islomiy aqdlar (murobaha, ijara/IMB, muzoraba, mushoraka, vakala, salam, istisno', qard, tavarruq, sarf, kafola, takaful, sukuk).

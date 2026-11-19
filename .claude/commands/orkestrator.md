@@ -14,6 +14,7 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 2. `python3 scripts/bazani_tayyorla.py [hujjat]` — kirish hujjatini matnga aylantir.
 3. Ish papkasi: `B/02_Hisobotlar/[hujjat_nomi]_[YYYY-MM-DD]/` (bundan keyin `I/`).
 4. **Tasniflovchi** agentini ishga tushir → `I/00_tasnif.md` (hujjat turi, an'anaviy/islomiy, aqdlar, mijozga ko'rinadigan qismlar, kerakli agentlar asosi bilan). `--agentlar +x,-y` berilgan bo'lsa — tasnifni shunga moslab tuzat. Tanlangan agentlar ro'yxatini foydalanuvchiga ko'rsat.
+4a. **Reestr bilan solishtirish:** `python3 scripts/reestr.py solishtir I/01_islomiy_versiya.md --bank [BANK] --nom "[hujjat nomi]" -o I/00b_reestr_solishtirish.md` (reestr bo'lmasa — avval `python3 scripts/reestr.py boshlash --bank [BANK]`). Natija ichki-normativ-tekshiruvchi (asosiy) va fatvo-xotirasiga beriladi.
 5. `--faqat` berilgan bo'lsa — faqat shu raqamli bosqichlar.
 6. Hujjat islomiy bo'lsa (1-bosqich yo'q): asl matnni `I/01_islomiy_versiya.md` ga ko'chir (izohlarsiz toza nusxa: `pandoc [asl.docx] -t gfm-raw_html --wrap=none --track-changes=accept -o I/01_islomiy_versiya.md`).
 
@@ -141,7 +142,9 @@ Tahrirlangan, toza va jadval .docx fayllarini hamda YAKUNIY_HISOBOT.docx ni `B/0
 2. **Bosqichlar jadvali:** agent | baho | K/Y/O'/P | iqtiboslar ishonchliligi | bilim bazasi to'liqmi.
 3. **Barcha topilmalar birlashtirilgan jadvali** (takrorlar birlashtirilgan; KRITIK → PAST; qaysi agent(lar); Turi TAHRIR/IZOH; iqtibos holati).
 4. **Terminologiya jadvali:** Hujjatdagi atama | Rasmiy/tavsiya etilgan atama | Manba.
+2a. **Sifat kartasi** (hujjat turi standarti bo'yicha): dastlabki baho → yakuniy baho (12a), mezonlar bo'yicha; **ko'r nuqtalar** — hujjatda umuman yo'q bo'lgan muhim mavzular.
 3a. **Ichki ziddiyatlar reestri** — metodologning reestridan HAQIQIY ziddiyatlar + boshqa agentlar topgan ichki ziddiyatlar (birlashtirilgan): Band A | Band B | Mavzu | Farq | Qaror/savol.
+3b. **Hujjatlararo ziddiyatlar** (bankning avval tasdiqlangan hujjatlari bilan, reestr asosida) va **eski hujjatlarga o'zgartirish kiritish kerak bo'lganlar** ro'yxati.
 4a. **Mohiyat xulosasi** (8.5) va **oldingi IMK qarorlariga moslik** (3.5) — har biri 2–3 jumla.
 4b. **Hisob-kitob testlari** (7.2): shariat jihatidan xavfli xulqlar.
 5. **Ziddiyatlar** va ularning hal qilinishi (`10_ziddiyatlar.md` qisqacha); inson qarori kutilayotganlar — highlight.

@@ -82,6 +82,29 @@ def bandlar(matn):
             yield i, joriy, q.strip(), sar, ota_matn
 
 
+ORGAN_SINONIM = [
+    (r"^(bank imk|imk|islomiy moliya kengashi|bankning islomiy moliya kengashi)$", "IMK"),
+    (r"^(markaziy bank imk)$", "MB IMK"),
+    (r"^(aksiyadorlar umumiy yig['‘’ʻ]ilishi|umumiy yig['‘’ʻ]ilish)$", "Aksiyadorlar umumiy yig'ilishi"),
+    (r"^(boshqaruv)$", "Boshqaruv"),
+    (r"^(kuzatuv kengashi)$", "Kuzatuv kengashi"),
+    (r"^(apbq|alco)$", "APBQ"),
+    (r"^(bosh buxgalter|bhhd)$", "BHHD (Bosh buxgalter)"),
+    (r"^(komplaens\w*|komplayens\w*)$", "Komplaens"),
+    (r"^(ichki audit\w*)$", "Ichki audit"),
+    (r"^(islomiy audit\w*)$", "Islomiy audit"),
+]
+
+
+def organ_norm(o):
+    meros = " (ota banddan)" if o.endswith(" (ota banddan)") else ""
+    t = o.replace(" (ota banddan)", "").strip().lower()
+    for rx, nom in ORGAN_SINONIM:
+        if re.match(rx, t):
+            return nom + meros
+    return t + meros
+
+
 def meros_organ(band, ota_matn):
     q = band.split(".")
     while len(q) > 1:
@@ -95,14 +118,8 @@ def meros_organ(band, ota_matn):
     return None
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("hujjat")
-    ap.add_argument("-o", "--chiqish")
-    ap.add_argument("--chegara", type=float, default=0.3)
-    a = ap.parse_args()
-    matn = Path(a.hujjat).read_text(encoding="utf-8")
-
+def parametrlar(matn):
+    """Hujjatdan raqamli va vakolat parametrlarini ajratadi: [(tur, qiymat, band, qator, kontekst, so'zlar_to'plami)]."""
     yozuvlar = []  # (tur, qiymat, band, qator, kontekst, sozlar)
     for qator, band, t, sar, ota_matn in bandlar(matn):
         # raqamli parametrlar
@@ -128,10 +145,42 @@ def main():
                 o = meros_organ(band, ota_matn)
                 if o and re.search(r"(tasdiqlaydi|qaror qabul qiladi|belgilaydi|ma['‘’ʻ]qullaydi)", t, re.I):
                     organlar = {o.lower() + " (ota banddan)"}
+            organlar = {organ_norm(o) for o in organlar}
             for o in organlar:
                 obyekt = re.sub(ORGAN_RX, " ", t)
                 yozuvlar.append(("vakolat", o, band, qator, t[:260], sozlar(obyekt)))
 
+    return yozuvlar
+
+
+def juftlik_mosmi(ti, vi, si, tj, vj, sj, chegara):
+    """Ikki parametr bir mavzuda, lekin qiymati farqlimi? (o'xshashlik, umumiy so'zlar) yoki None."""
+    if tj != ti or not si or not sj:
+        return None
+    if re.sub(r" \(ota banddan\)", "", vi) == re.sub(r" \(ota banddan\)", "", vj):
+        return None
+    j_k, umumiy = oxshashlik(si, sj)
+    hujjat_turi = any(u.startswith(h[:6]) for u in umumiy for h in HUJJAT_TURI)
+    kerak = 2 if (ti == "vakolat" and hujjat_turi) else (99 if ti == "vakolat" else 3)
+    if j_k >= chegara and len(umumiy) >= kerak:
+        return round(j_k, 2), sorted(umumiy)[:8]
+    return None
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("hujjat")
+    ap.add_argument("-o", "--chiqish")
+    ap.add_argument("--chegara", type=float, default=0.3)
+    a = ap.parse_args()
+    matn = Path(a.hujjat).read_text(encoding="utf-8")
+
+    yozuvlar = parametrlar(matn)
+
+    org = defaultdict(set)
+    for tur, qiymat, band, *_ in yozuvlar:
+        if tur == "vakolat":
+            org[band].add(qiymat.replace(" (ota banddan)", ""))
     # juftliklar: bir xil tur, farqli qiymat, o'xshash kontekst
     nomzod = []
     for i in range(len(yozuvlar)):
@@ -148,6 +197,8 @@ def main():
                 continue
             if ti == "muddat" and vi.split()[-1:] != vj.split()[-1:] and not {"kun", "oy"} & set((vi + " " + vj).split()):
                 pass
+            if ti == "vakolat" and org[bi] & org[bj]:
+                continue
             j_k, umumiy = oxshashlik(si, sj)
             hujjat_turi = any(u.startswith(h[:6]) for u in umumiy for h in HUJJAT_TURI)
             kerak = 2 if (ti == "vakolat" and hujjat_turi) else (99 if ti == "vakolat" else 3)

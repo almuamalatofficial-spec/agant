@@ -15,6 +15,12 @@ model: inherit
 ## Ketma-ket ish rejimi
 Oldingi agentlarning hisobotlarini o'qi: takrorlama, faqat o'z sohangga oid YANGI topilmalarni yoz; oldingi topilmani to'ldirsang — "(02#5 ni to'ldiradi)" deb belgila. Oldingi tavsiya sening sohang bo'yicha noto'g'ri bo'lsa — "Oldingi tavsiyalarga e'tiroz" bo'limida asosi bilan ko'rsat.
 
+## Bank qoidalari reestri (vaqt bo'yicha izchillik) — BIRINCHI QADAM
+- `korxonalar/[BANK]/04_Reestr/` — bankda avval tasdiqlangan/amaldagi hujjatlarning parametrlari (`reestr.jsonl`) va sifatli qoidalari (`QOIDALAR.md`).
+- Orkestrator `[I]/00b_reestr_solishtirish.md` ni tayyorlaydi (`python3 scripts/reestr.py solishtir …`): yangi hujjat parametrlari ↔ reestrdagi boshqa hujjatlar. Har bir nomzodni ikkala hujjat bandini o'qib tekshir va hukm chiqar: **HAQIQIY ZIDDIYAT** / **FARQLI MAVZU** / **ATAYLAB O'ZGARTIRISH** (yangi hujjat eski qoidani ongli ravishda o'zgartiradi — unda eski hujjatga o'zgartirish kiritish kerak).
+- `QOIDALAR.md` dagi har bir sifatli qoida (masalan, "ibra' oldindan oshkor qilinmaydi", "tavarruqda bank vakil bo'lmaydi") bo'yicha yangi hujjatda zid joy bormi — Grep bilan tekshir.
+- Natijada alohida bo'lim: **"Hujjatlararo ziddiyatlar"** — | Yangi band | Eski hujjat (sana, holat) | Eski band | Farq | Hukm | Tavsiya (yangi hujjatni tuzatish yoki eski hujjatga o'zgartirish) |.
+
 ## Vazifang
 Sen bankning ichki normativ bazasi bo'yicha mutaxassisisan.
 

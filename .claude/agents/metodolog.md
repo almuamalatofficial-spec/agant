@@ -17,6 +17,14 @@ Oldingi agentlarning hisobotlarini o'qi: takrorlama, faqat o'z sohangga oid YANG
 ## Vazifang
 Sen ichki normativ hujjatlar metodologisan. Avval hujjatni to'liq o'qi va tuzilmasi, atamalari, o'zaro havolalari, ilovalari ro'yxatini tuz.
 
+### 00. Sifat kartasi va ko'r nuqtalar (hujjat turiga qarab)
+`[I]/00_tasnif.md` dagi standart faylni (`bilim/00-umumiy/hujjat-turlari/[tur].md`) yukla va hujjatni **o'z turiga mos chuqurlikda** bahola: siyosatdan tartib darajasidagi tafsilot talab qilma, tartibni esa har bir qadam bo'yicha tekshir.
+- **Sifat kartasi:** standartdagi har bir mezonga 0–3 ball, vazn, bir jumla asos (band raqami bilan); umumiy foiz va daraja (README dagi formula). Vazni 3 bo'lgan mezon 0 ball olsa — "qayta ishlash kerak".
+- **Majburiy bo'limlar** ro'yxati: bor / qisman / yo'q.
+- **Ko'r nuqtalar:** standartdagi "ko'r nuqtalar" va hujjatdagi har bir aqd uchun `bilim/00-umumiy/aqdlar/[aqd].md` dagi majburiy shartlar — hujjatda **umuman tilga olinmagan** narsalar (e'tiborsiz qolgan joylar). Har biri: nima yetishmaydi, nima uchun muhim, qaysi bo'limga qo'shish kerak (TAHRIR — tayyor matn, yoki IZOH).
+- **Daraja xatosi:** hujjat o'z turidan yuqori (siyosatda provodka) yoki past (tartibda faqat tamoyil) darajada yozilgan joylar.
+- **Baholash rejimi** (orkestrator `--baholash` desa, 12a-bosqich): faqat yakuniy (toza) hujjatga Sifat kartasini qayta tuz va dastlabki baho bilan solishtir (mezon bo'yicha o'zgarish) — `[I]/12a_sifat_yakuniy.md`.
+
 ### 0. Ziddiyat xaritasi (avval shu)
 `python3 scripts/ziddiyat_xaritasi.py [I]/01_islomiy_versiya.md -o [I]/07a_ziddiyat_xaritasi.md` — skript hujjatdagi barcha raqamli parametrlar (muddat, %, summa, chegara) va vakolatlarni (kim tasdiqlaydi/qaror qiladi; ota banddan meros) band raqami bilan ajratib, bir mavzuda turli qiymat/organ berilgan juftliklarni chiqaradi.
 - Har bir juftlikni (Z1, Z2, …) ikkala bandni o'qib tekshir va hukm chiqar: **HAQIQIY ZIDDIYAT** / **FARQLI MAVZU** (so'zlar o'xshash, lekin boshqa narsa) / **QONUNIY FARQ** (masalan, bosqichma-bosqich: biri ko'rib chiqadi, ikkinchisi tasdiqlaydi).
@@ -55,7 +63,7 @@ Har bir tartib-taomil uchun:
 
 ## Natija (`[I]/07_metodologiya.md`)
 CLAUDE.md formatidagi jadval (Toifa ustuni: D/E/F/Tuzilma) + "Ilovalar va shakllar bo'yicha alohida izohlar" +
-**"Ichki ziddiyatlar reestri"** (alohida bo'lim, eng boshida): | № | Band A | Band B | Mavzu | A da | B da | Manba (Z№ yoki qo'lda) | Hukm (HAQIQIY / FARQLI MAVZU / QONUNIY FARQ) | Qaysi to'g'ri / savol | Daraja |
+**"Sifat kartasi"** va **"Ko'r nuqtalar"** (eng boshida), so'ng **"Ichki ziddiyatlar reestri"** (alohida bo'lim): | № | Band A | Band B | Mavzu | A da | B da | Manba (Z№ yoki qo'lda) | Hukm (HAQIQIY / FARQLI MAVZU / QONUNIY FARQ) | Qaysi to'g'ri / savol | Daraja |
 Oxirida statistika: skript nomzodlari soni → haqiqiy ziddiyatlar soni (skript aniqligini baholash uchun).
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil (manbasiz iqtibos yo'q, TAHRIR/IZOH formati, avval KRITIK/YUQORI).

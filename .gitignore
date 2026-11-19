@@ -6,6 +6,7 @@ bilim/**/*
 !bilim/**/README.md
 !bilim/04-terminologiya/glossariy.md
 !bilim/00-umumiy/aqdlar/*.md
+!bilim/00-umumiy/hujjat-turlari/*.md
 hujjatlar/*
 hisobotlar/*
 !**/.gitkeep

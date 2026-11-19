@@ -40,6 +40,11 @@ III QISM /tasdiqdan-keyin
  ⛔ NN-4  mahsulot egasi va komplaens joriy etishni tasdiqlaydi
 ```
 
+Sifat va izchillik:
+- `bilim/00-umumiy/hujjat-turlari/` — 9 ta hujjat turi (siyosat, nizom, tartib, yo'riqnoma, metodika, shartnoma, oferta, mahsulot pasporti, TT) bo'yicha chuqurlik darajasi, majburiy bo'limlar, 0–3 balllik mezonlar va "ko'r nuqtalar" → metodolog **Sifat kartasi** (boshida va yakunda).
+- `scripts/ziddiyat_xaritasi.py` — hujjat ICHIDAGI raqam va vakolat ziddiyatlari nomzodlari → metodolog "Ichki ziddiyatlar reestri".
+- `korxonalar/[BANK]/04_Reestr/` + `scripts/reestr.py` — **bank qoidalari reestri**: har tasdiqlangan hujjat parametrlari va sifatli qoidalari saqlanadi; har yangi hujjat avvalgilari bilan solishtiriladi (bir oy oldingi hujjatga ziddiyat darhol ko'rinadi); tasdiqdan keyin eski hujjatlarga o'zgartirish navbati (`OZGARTIRISH_NAVBATI.md`).
+
 Bilim fayllari: `bilim/00-umumiy/aqdlar/` — 7 ta aqd (murobaha, ijara, mushoraka, muzoraba, vakolat, salam, istisno') bo'yicha nazorat ro'yxatlari; shariat agentlari hujjatdagi aqd turiga qarab keraklisini yuklaydi.
 
 ## Ustunlik qoidalari (qisqacha)
