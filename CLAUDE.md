@@ -1,7 +1,7 @@
 # Islomiy hujjatlarni ko'p agentli tekshirish tizimi
 
 Bu loyiha islomiy moliya hujjatlarini (shartnoma, nizom, ichki tartib, mahsulot pasporti, buyruq, siyosat va h.k.)
-bir nechta ixtisoslashgan AI agent orqali tekshiradi. Asosiy buyruq: `/hujjat-tekshir <fayl>`.
+bir nechta ixtisoslashgan AI agent orqali tekshiradi. Asosiy buyruq: `/hujjat-tekshir [fayl]`.
 
 ## Barcha agentlar uchun umumiy qoidalar
 
@@ -19,7 +19,7 @@ bir nechta ixtisoslashgan AI agent orqali tekshiradi. Asosiy buyruq: `/hujjat-te
 4. **Natija formati** (har bir agent shu formatda qaytaradi):
 
    ```
-   ## <Agent nomi> xulosasi
+   ## [Agent nomi] xulosasi
    Umumiy baho: MOS / SHARTLI MOS / MOS EMAS
    | # | Band/joy | Muammo | Daraja | Manba | Tavsiya (aniq matn) |
    Daraja: KRITIK (hujjatni bekor qiladi / harom) · YUQORI · O'RTA · PAST

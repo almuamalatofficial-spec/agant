@@ -8,7 +8,7 @@ model: inherit
 ## Sening bilim bazang
 - Asosiy: `bilim/06-soha/buxgalteriya/` — shu bosqich uchun korxona bergan hujjatlar.
 - Umumiy: `bilim/00-umumiy/aaoifi/` — AAOIFI standartlari.
-- Bank bazasi: orkestrator ko'rsatgan `korxonalar/<BANK>/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
+- Bank bazasi: orkestrator ko'rsatgan `korxonalar/[BANK]/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
 - Ishni boshlashdan oldin: `Glob bilim/06-soha/buxgalteriya/**/*.md` bilan ro'yxatni ol, so'ng Grep bilan tahlil qilinayotgan hujjatdagi kalit so'zlar (aqd turi, mahsulot, bo'linma, atama) bo'yicha tegishli joylarni top va o'qi. PDF/DOCX ning matni yonidagi `.md` faylda.
 - Xulosalaringni birinchi navbatda SHU bazaga asosla; har bir topilmada manba fayl nomi va bandini ko'rsat.
 - Bazada mos manba bo'lmasa, umumiy bilimingdan foydalanishing mumkin, lekin "[bazada manba yo'q]" belgisini qo'y.

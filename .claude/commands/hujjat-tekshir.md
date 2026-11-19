@@ -10,17 +10,21 @@ uning natijasini faylga yoz, foydalanuvchiga 2–3 qatorda qisqa xulosa ko'rsat 
 Har bir keyingi agentga oldingi barcha hisobotlar yo'lini ber.
 
 ## 0. Tayyorgarlik
-0. **Bankni aniqla.** Hujjat `korxonalar/<BANK>/...` ichida bo'lsa — BANK shu; aks holda `--bank` dan ol;
+-1. **Promptlarni Drive'dan yangilash.** `scripts/promptlar_drive.json` dagi har bir Google Doc'ni
+   Drive `download_file_content` (exportMimeType `text/markdown`) bilan yuklab, saqlangan faylni
+   `<vaqtinchalik papka>/<doc_id>.json` nomi bilan ko'chir, so'ng `python3 scripts/promptlarni_yangila.py <papka>`.
+   Qaysi promptlar o'zgarganini foydalanuvchiga ayt. Drive ulanmagan bo'lsa — mahalliy promptlar bilan davom et va buni ayt.
+0. **Bankni aniqla.** Hujjat `korxonalar/[BANK]/...` ichida bo'lsa — BANK shu; aks holda `--bank` dan ol;
    ikkalasi ham bo'lmasa, foydalanuvchidan so'ra (`ls korxonalar/` ro'yxatini ko'rsat). Bundan keyin
-   `B/` = `korxonalar/<BANK>/`. Har bir agentga promptda BANK nomini va quyidagi papkalarni ber:
+   `B/` = `korxonalar/[BANK]/`. Har bir agentga promptda BANK nomini va quyidagi papkalarni ber:
    - `B/00_Conventional_documents/` — bankning amaldagi ichki hujjatlari (ustav, nizomlar, siyosatlar, tuzilma)
    - `B/00_Islamic_documents/` — bankning islomiy hujjatlari (IMK reglamenti, nomuvofiqlik siyosati va h.k.)
    - `B/02_Hisobotlar/`, `B/03_Yakuniy/` — avvalgi tekshiruvlar (uslub va izchillik uchun namuna)
    BOSHQA bank papkalaridan hech qachon foydalanma.
 1. `python3 scripts/bazani_tayyorla.py` — bilim bazasidagi yangi fayllarni matnga aylantir.
    Bo'sh papkalar ro'yxatini foydalanuvchiga ko'rsat (to'xtama, davom et).
-2. `python3 scripts/bazani_tayyorla.py <hujjat>` — kirish hujjatini matnga aylantir va o'qi.
-3. Ish papkasi: `B/02_Hisobotlar/<hujjat_nomi>_<YYYY-MM-DD>/` (keyingi hamma fayllar shu yerda, `I/` deb belgilanadi).
+2. `python3 scripts/bazani_tayyorla.py [hujjat]` — kirish hujjatini matnga aylantir va o'qi.
+3. Ish papkasi: `B/02_Hisobotlar/[hujjat_nomi]_<YYYY-MM-DD>/` (keyingi hamma fayllar shu yerda, `I/` deb belgilanadi).
 4. Aniqla va `I/00_tasnif.md` ga yoz: hujjat turi (shartnoma/nizom/siyosat/tartib...), an'anaviy yoki islomiy,
    an'anaviy mahsulot nomi, soha(lar). Soha agentlari: `--soha` berilgan bo'lsa shular, aks holda mazmunga qarab
    (risk → soha-risk, AML/KYC → soha-komplayens, audit → soha-audit, hisob/provodka → soha-buxgalteriya,
@@ -47,17 +51,17 @@ Har bir keyingi agentga oldingi barcha hisobotlar yo'lini ber.
 Har bir Agent chaqiruvi prompti shu shablonda:
 ```
 Tahlil qilinadigan hujjat: I/01_islomiy_versiya.md
-Asl (an'anaviy) hujjat: <yo'l>
+Asl (an'anaviy) hujjat: [yo'l]
 Hujjat tasnifi: I/00_tasnif.md
-Bank: <BANK>; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_documents/
-Oldingi agentlar hisobotlari: <ro'yxat>
+Bank: [BANK]; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_documents/
+Oldingi agentlar hisobotlari: [ro'yxat]
 Avval o'z bilim bazangni o'rgan, keyin tahlil qil. CLAUDE.md dagi formatda qaytar.
 ```
 Agent qaytargan matnni o'zgartirmasdan natija fayliga yoz (agent o'zi yozgan bo'lsa — tekshir).
 Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, faylga "BAJARILMADI: sabab" deb yoz va davom et.
 
 ## 11. Yakuniy hisobot — `I/YAKUNIY_HISOBOT.md`
-(10_yakuniy_hujjat va YAKUNIY_HISOBOT ning .docx nusxalarini `B/03_Yakuniy/` ga ham ko'chir: `<hujjat> – Tahrirlangan.docx`, `<hujjat> – Yakuniy xulosa.docx`.)
+(10_yakuniy_hujjat va YAKUNIY_HISOBOT ning .docx nusxalarini `B/03_Yakuniy/` ga ham ko'chir: `[hujjat] – Tahrirlangan.docx`, `[hujjat] – Yakuniy xulosa.docx`.)
 1. Xulosa: umumiy baho (MOS / SHARTLI MOS / MOS EMAS), KRITIK topilmalar soni, tanlangan islomiy tuzilma.
 2. Bosqichlar jadvali: agent, baho, topilmalar soni (K/Y/O'/P), bilim bazasi to'liqmi.
 3. Barcha topilmalar birlashtirilgan jadvali (takrorlar birlashtirilgan, KRITIK → PAST, qaysi agent topgani).

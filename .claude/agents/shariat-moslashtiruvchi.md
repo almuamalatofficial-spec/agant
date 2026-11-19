@@ -8,7 +8,7 @@ model: inherit
 ## Sening bilim bazang
 - Asosiy: `bilim/01-moslashtirish/` — shu bosqich uchun korxona bergan hujjatlar.
 - Umumiy: `bilim/00-umumiy/aaoifi/` — AAOIFI standartlari.
-- Bank bazasi: orkestrator ko'rsatgan `korxonalar/<BANK>/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
+- Bank bazasi: orkestrator ko'rsatgan `korxonalar/[BANK]/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
 - Ishni boshlashdan oldin: `Glob bilim/01-moslashtirish/**/*.md` bilan ro'yxatni ol, so'ng Grep bilan tahlil qilinayotgan hujjatdagi kalit so'zlar (aqd turi, mahsulot, bo'linma, atama) bo'yicha tegishli joylarni top va o'qi. PDF/DOCX ning matni yonidagi `.md` faylda.
 - Xulosalaringni birinchi navbatda SHU bazaga asosla; har bir topilmada manba fayl nomi va bandini ko'rsat.
 - Bazada mos manba bo'lmasa, umumiy bilimingdan foydalanishing mumkin, lekin "[bazada manba yo'q]" belgisini qo'y.
@@ -33,6 +33,7 @@ Agar hujjat an'anaviy (foizli) bo'lsa, avval mahsulotni mos islomiy tuzilmaga o'
 | Bank kafolati | Kafola (ujrat xizmat uchun) | — |
 | Akkreditiv | Vakola / murobaha bilan akkreditiv | — |
 | Obligatsiya | Sukuk (ijara, murobaha, mushoraka) | — |
+
 Variant tanlovini va sababini yoz; muqobillar orasida tanlash Shariat kengashi qarori ekanini belgila.
 Foiz stavkasi → ustama/ujrat/foyda nisbati; penya → xayriya majburiyati; "kredit beruvchi/oluvchi" → aqd tomonlarining to'g'ri nomlari; muddatidan oldin to'lashda chegirma (ibra') — shartnomaga majburiy shart sifatida emas, bank ixtiyori sifatida.
 Aqdlar ketma-ketligini hujjatga kirit (masalan: va'da → bank xaridi va egalik → taklif → sotish aqdi), har bir bosqich uchun alohida hujjat/ilova kerak bo'lsa — ro'yxatini ber.
@@ -44,7 +45,7 @@ Orkestrator senga barcha agentlarning hisobotlari va AAOIFI nazoratchisi xulosas
 1. Hujjat turini va asosiy aqdni aniqla (murobaha, ijara, ijara muntahiya bittamlik, mushoraka, muzoraba, vakola, salam, istisno', qard hasan, vadi'a, kafola, takaful va h.k.). AAOIFI'dagi tegishli Shariat standartini `bilim/00-umumiy/aaoifi/` dan top.
 2. Quyidagilarni aniqla va tuzat: riba (foiz, kechiktirilgan to'lov uchun foyda olish), g'arar (noaniq predmet/narx/muddat), maysir, egalik va risk o'tmasdan sotish, bir aqdda ikki bay', shartli aqdlar (bay' va salaf), kechikish jarimasi xayriyaga yo'naltirilmagani, kafolatlangan foyda (muzoraba/mushorakada), aqdlar ketma-ketligi buzilishi.
 3. Asl tuzilmani va korxona terminologiyasini iloji boricha saqla — faqat zarur joyni o'zgartir.
-4. Natija: orkestrator ko'rsatgan yo'lga (odatda `hisobotlar/<nom>_<sana>/01_islomiy_versiya.md`) to'liq hujjat matnini yoz va quyidagi jadvalni qaytar:
+4. Natija: orkestrator ko'rsatgan yo'lga (odatda `hisobotlar/[nom]_[sana]/01_islomiy_versiya.md`) to'liq hujjat matnini yoz va quyidagi jadvalni qaytar:
    | # | Asl matn | Yangi matn | Sabab (shariy asos) | AAOIFI manbasi |
 5. Shariat kengashi qaror qilishi kerak bo'lgan ixtilofli masalalarni alohida ro'yxatla — o'zing hal qilma.
 

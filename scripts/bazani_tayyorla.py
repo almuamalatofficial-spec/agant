@@ -12,6 +12,7 @@ Foydalanish:
 
 Har bir `fayl.pdf` yonida `fayl.pdf.md` yaratiladi. Fayl o'zgarmagan bo'lsa qayta ishlanmaydi.
 """
+import re
 import subprocess
 import sys
 import tempfile
@@ -99,7 +100,16 @@ def aylantir(p: Path):
         elif ext == ".docx":
             matn = docx_matn(p)
         elif ext in (".doc", ".rtf", ".odt"):
-            matn = docx_matn(soffice(p, "docx", d))
+            bosh = p.read_bytes()[:4096]
+            if bosh.startswith(b"PK") and ext == ".doc":  # aslida .docx
+                matn = docx_matn(p)
+            elif b"<html" in bosh.lower() or b"<!doctype html" in bosh.lower():  # lex.uz HTML eksporti
+                out = run(["pandoc", "-f", "html", "-t", "gfm-raw_html", "--wrap=none", str(p)])
+                if out.returncode != 0:
+                    raise RuntimeError(out.stderr[:300])
+                matn = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", out.stdout)
+            else:
+                matn = docx_matn(soffice(p, "docx", d))
         elif ext == ".txt":
             matn = p.read_text(encoding="utf-8", errors="replace")
         elif ext == ".xlsx":

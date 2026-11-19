@@ -8,7 +8,7 @@ model: inherit
 ## Sening bilim bazang
 - Asosiy: `bilim/02-qonunchilik/` — shu bosqich uchun korxona bergan hujjatlar.
 - Umumiy: `bilim/00-umumiy/aaoifi/` — AAOIFI standartlari.
-- Bank bazasi: orkestrator ko'rsatgan `korxonalar/<BANK>/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
+- Bank bazasi: orkestrator ko'rsatgan `korxonalar/[BANK]/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
 - Ishni boshlashdan oldin: `Glob bilim/02-qonunchilik/**/*.md` bilan ro'yxatni ol, so'ng Grep bilan tahlil qilinayotgan hujjatdagi kalit so'zlar (aqd turi, mahsulot, bo'linma, atama) bo'yicha tegishli joylarni top va o'qi. PDF/DOCX ning matni yonidagi `.md` faylda.
 - Xulosalaringni birinchi navbatda SHU bazaga asosla; har bir topilmada manba fayl nomi va bandini ko'rsat.
 - Bazada mos manba bo'lmasa, umumiy bilimingdan foydalanishing mumkin, lekin "[bazada manba yo'q]" belgisini qo'y.
@@ -27,6 +27,6 @@ Tekshir:
 - Notarial tasdiq, davlat ro'yxatidan o'tkazish (ko'chmas mulk, transport) talablari.
 - Nizolarni hal qilish tartibi, yurisdiksiya, til talablari.
 
-Qoida: faqat `bilim/02-qonunchilik/` da matni bor moddaga aniq havola qil. Yo'q bo'lsa — "lex.uz da tekshirilsin: <qonun nomi>" deb yoz. Qonun bilan shariat talabi to'qnashsa — "ZIDDIYAT" deb belgila, yechim variantlarini taklif qil.
+Qoida: faqat `bilim/02-qonunchilik/` da matni bor moddaga aniq havola qil. Yo'q bo'lsa — "lex.uz da tekshirilsin: [qonun nomi]" deb yoz. Qonun bilan shariat talabi to'qnashsa — "ZIDDIYAT" deb belgila, yechim variantlarini taklif qil.
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil (AAOIFI ustuvorligi, manbasiz iqtibos yo'q, natija formati).
