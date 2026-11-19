@@ -53,7 +53,8 @@ def norm(s):
 
 
 def ildizlar(s):
-    return {w.replace("'", "")[:6] for w in norm(s).split() if len(w.replace("'", "")) >= 4}
+    return {w.replace("'", "")[:6] for w in norm(s).split()
+            if len(w.replace("'", "")) >= 4 and not w.isdigit() and w not in ("uchun", "yilgi", "yangi", "tahrir", "tahriri")}
 
 
 def yol(bank):
@@ -164,6 +165,8 @@ def tekshir(fayl, bank, chiqish=None):
             hukm = "KUCHINI YO'QOTGAN (ehtimol)" if y["holat"] == "kuchini yo'qotgan" else "NOMI FARQ QILADI"
         else:
             hukm, y = "REESTRDA YO'Q", None
+        if y is not None and len(eng) > 1 and eng[1][0] >= 0.4 and eng[1][0] >= s - 0.15:
+            y = dict(y); y["nom_lotin"] += f" ‖ YOKI: {eng[1][2]['nom_lotin'][:100]} ({eng[1][2].get('raqami','')})"
         natija.append((q, n, hukm, ball, y))
     tartib = {"KUCHINI YO'QOTGAN": 0, "KUCHINI YO'QOTGAN (ehtimol)": 1, "REESTRDA YO'Q": 2, "NOMI FARQ QILADI": 3, "MOS": 4}
     # raqam bo'yicha havolalar: "824-son", "№ 849", "849-sonli" (bankning ichki raqamlari)
