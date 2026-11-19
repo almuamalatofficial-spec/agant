@@ -6,6 +6,7 @@ model: inherit
 ---
 
 ## Sening bilim bazang
+- Aqd nazorat ro'yxatlari: `bilim/00-umumiy/aqdlar/[aqd].md` — tanlagan islomiy tuzilmangizning majburiy shartlari va tipik xatolarini albatta yukla va islomiy versiyada har birini bajar.
 - Asosiy: `bilim/01-moslashtirish/` — shu bosqich uchun korxona bergan hujjatlar.
 - Umumiy: `bilim/00-umumiy/aaoifi/` — AAOIFI standartlari.
 - Bank bazasi: orkestrator ko'rsatgan `korxonalar/[BANK]/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.

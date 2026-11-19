@@ -17,8 +17,14 @@ model: inherit
 4. **Mijozga ko'rinadigan qism bormi:** mijoz bilan shartnoma, oferta, mijoz grafigi, xabarnoma, mobil ilova/interfeys matni, marketing.
 5. **Soha belgilari:** risk, komplayens/AML, ichki audit, buxgalteriya/hisobot, g'aznachilik/likvidlik/valyuta/sukuk, soliq, operatsion jarayon/ABS/IT.
 6. **Agentlarni tanla** va har biri uchun bir jumla asos yoz:
-   - **Har doim:** huquqiy-tekshiruvchi, shariat-auditor, terminolog, tuzilma-tekshiruvchi, metodolog, takror-tozalovchi, ichki-normativ-tekshiruvchi, aaoifi-nazoratchi, iqtibos-tekshiruvchi, savol-yiguvchi, yakuniy-muharrir.
-   - **Shartli:** shariat-moslashtiruvchi — faqat an'anaviy hujjat (yoki foydalanuvchi so'ragan bo'lsa); mijoz-himoyasi — mijozga ko'rinadigan matn bo'lsa; soha-risk, soha-komplayens, soha-audit, soha-buxgalteriya, soha-gazna, soha-soliq, soha-operatsion — hujjatda tegishli soha bo'yicha MAZMUNLI qism bo'lsa (bitta eslatma uchun emas). Soliq: hujjatda to'lov/sotish/ijara/daromad taqsimoti bo'lsa deyarli doim kerak. Operatsion: bitim ketma-ketligi tizimda bajarilishi kerak bo'lsa (mahsulot, jarayon, TT).
+   - **Har doim:** huquqiy-tekshiruvchi, shariat-auditor, fatvo-xotirasi, terminolog, tuzilma-tekshiruvchi, metodolog, takror-tozalovchi, ichki-normativ-tekshiruvchi, mohiyat-tekshiruvchi, aaoifi-nazoratchi, iqtibos-tekshiruvchi, savol-yiguvchi, kengash-xulosachi, yakuniy-muharrir.
+   - **Shartli:**
+     - shariat-moslashtiruvchi — faqat an'anaviy hujjat (yoki foydalanuvchi so'ragan bo'lsa);
+     - mijoz-himoyasi — mijozga ko'rinadigan matn bo'lsa;
+     - hisob-tekshiruvchi — formula, stavka, grafik, foyda taqsimoti, kechiktirish/ibra' hisobi bo'lsa;
+     - paket-muvofiqligi — shu mahsulotning boshqa hujjatlari (shartnoma, pasport, tarif, oferta) yoki boshqa tildagi nusxasi bazada bo'lsa;
+     - soha-risk, soha-komplayens, soha-audit, soha-buxgalteriya, soha-gazna, soha-soliq, soha-operatsion, soha-garov-sugurta, soha-prudensial — hujjatda tegishli soha bo'yicha MAZMUNLI qism bo'lsa (bitta eslatma uchun emas). Soliq: to'lov/sotish/ijara/daromad taqsimoti bo'lsa deyarli doim. Operatsion: bitim ketma-ketligi tizimda bajarilishi kerak bo'lsa. Garov-sug'urta: ta'minot, sug'urta/takaful bandlari bo'lsa. Prudensial: aktiv/passiv mahsuloti yoki MB normativlari/hisobotlari tilga olingan bo'lsa.
+     - yoriqnoma-yozuvchi — tekshiruvda ishlatilmaydi (tasdiqdan keyin, `/tasdiqdan-keyin`).
    - Hujjat juda kichik yoki texnik bo'lsa — keraksiz agentlarni "kerak emas: sabab" deb chiqar.
 7. **Xavf belgilari** (orkestrator diqqati uchun): masalan, "mijoz nomidan sotish", "kafolatlangan daromad", "penya", "foiz stavkasi", "restrukturizatsiya", "AAOIFI'dan ustun qonunchilik" kabi iboralar topilgan joylar.
 

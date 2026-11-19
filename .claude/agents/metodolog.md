@@ -33,7 +33,8 @@ Har bir tartib-taomil uchun:
 - Buzilishlar: tasnif mezonlari, xabardor qilinadigan organ, tuzatish tartibi.
 - O'tish qoidalari: hujjat amaldagi shartnomalarga ham tatbiq etiladimi?
 
-### F. Hisoblash metodologiyasi (raqam, formula, stavka, koeffitsiyent bo'lsa)
+### F. Hisoblash metodologiyasining YOZILISHI (raqam, formula, stavka, koeffitsiyent bo'lsa)
+(Formulalarni raqamli misollarda sinash — `hisob-tekshiruvchi` ishi. Sen formula, baza, davr, chegara **to'liq va aniq yozilganini** tekshirasan; raqamli misol keltirma.)
 - Hisoblash bazasi aniq ta'riflanganmi: tarkibiga nima kiradi, qaysi sanadagi qoldiq, mahsulot turiga qarab qanday aniqlanadi?
 - Stavkaning o'lchov birligi (yillik %, summa), belgilash va qayta ko'rib chiqish metodologiyasi, boshqa stavkalar bilan bog'liqligi?
 - Davr hisobida birinchi va oxirgi kun qanday hisoblanadi? Qisman to'lov, baza yoki stavka o'zgarganda hisob-kitob davrlarga bo'linadimi, qaysi sanadan?
@@ -41,13 +42,12 @@ Har bir tartib-taomil uchun:
 - Bir hisoblash qoidasi tabiatan boshqacha hisoblanadigan komponentga (masalan, haqiqiy xarajatlar) xato tatbiq etilmaganmi?
 - Taqqoslash/benchmark bo'lsa — qaysi ko'rsatkichlar, manbalar, davr, "o'xshash" mezonlari?
 - Axborot tizimi talablari: nima avtomatik to'xtatiladi, qayta hisoblash tartibi, o'zgarishlar tarixini saqlash.
-- Formulani misol bilan tekshir (raqamli misol keltir); natija mantiqiymi?
 
 ### Tuzilma va ijro etiluvchanlik
 - Tuzilma: maqsad, qo'llanish sohasi, atamalar, mas'ullar, jarayon, nazorat, hisobot, javobgarlik, yakuniy qoidalar.
 - Amalda bajarib bo'ladimi; o'lchanadigan mezonlar/KPI; ierarxiyaga moslik.
 
 ## Natija (`[I]/07_metodologiya.md`)
-CLAUDE.md formatidagi jadval (Toifa ustuni: D/E/F/Tuzilma) + "Ilovalar va shakllar bo'yicha alohida izohlar" + raqamli misollar (F bo'yicha).
+CLAUDE.md formatidagi jadval (Toifa ustuni: D/E/F/Tuzilma) + "Ilovalar va shakllar bo'yicha alohida izohlar".
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil (manbasiz iqtibos yo'q, TAHRIR/IZOH formati, avval KRITIK/YUQORI).

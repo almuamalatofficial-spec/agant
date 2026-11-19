@@ -19,30 +19,32 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 
 ## Bosqichlar (qat'iy tartibda; tasnifda "kerak emas" bo'lganlari o'tkazib yuboriladi)
 
-**I QISM — tahlil, ziddiyatlar va savollar**
+**I QISM — tahlil, ziddiyatlar va savollar** (`/orkestrator`)
 
 | # | Agent | Kirish | Natija fayli |
 |---|---|---|---|
 | 0 | tasniflovchi | asl hujjat | `I/00_tasnif.md` |
 | 1 | shariat-moslashtiruvchi (faqat an'anaviy hujjat) | asl hujjat | `I/01_islomiy_versiya.md`, `I/01_ozgarishlar.md` |
+| ⛔ | **NN-1** (faqat 1-bosqich bo'lsa) | — | to'xta, quyida |
 | 2 | huquqiy-tekshiruvchi | 01 + tasnif | `I/02_huquqiy.md` |
 | 3 | shariat-auditor | **faqat** `01_islomiy_versiya.md` + `02_huquqiy.md` (`01_ozgarishlar.md` BERILMAYDI) | `I/03_shariat_audit.md` |
-| 4 | terminolog | 01 + 02–03 | `I/04_terminologiya.md` |
+| 3.5 | fatvo-xotirasi | 01 + 03 | `I/03_5_fatvo_xotirasi.md` |
+| 4 | terminolog | 01 + oldingilar | `I/04_terminologiya.md` |
 | 5 | tuzilma-tekshiruvchi | 01 + oldingilar | `I/05_tuzilma.md` |
 | 5.5 | mijoz-himoyasi (mijozga ko'rinadigan matn bo'lsa) | 01 + oldingilar | `I/05_5_mijoz_himoyasi.md` |
-| 6.x | soha agentlari (tanlanganlari, har biri alohida): 6.1 risk, 6.2 komplayens, 6.3 audit, 6.4 buxgalteriya, 6.5 g'azna, 6.6 soliq, 6.7 operatsion | 01 + oldingilar | `I/06_1_risk.md` … `I/06_7_operatsion.md` |
+| 6.x | soha agentlari (tanlanganlari, har biri alohida): 6.1 risk, 6.2 komplayens, 6.3 audit, 6.4 buxgalteriya, 6.5 g'azna, 6.6 soliq, 6.7 operatsion, 6.8 garov-sug'urta, 6.9 prudensial | 01 + oldingilar | `I/06_1_risk.md` … `I/06_9_prudensial.md` |
 | 7 | metodolog | 01 + oldingilar | `I/07_metodologiya.md` |
+| 7.2 | hisob-tekshiruvchi (formula/stavka/grafik bo'lsa) | 01 + 07 + soha | `I/07_2_hisob.md`, `I/07_2_hisob_misollar.py` |
 | 7.5 | takror-tozalovchi (avval `python3 scripts/takrorlarni_top.py I/01_islomiy_versiya.md -o I/07b_takrorlar_xom.md`) | 01 + xom ro'yxat + oldingilar | `I/07_takrorlar.md` |
 | 8 | ichki-normativ-tekshiruvchi | 01 + oldingilar | `I/08_ichki_normativ.md` |
-| 9 | aaoifi-nazoratchi (standartlar matritsasi + VETO) | 01 + 02–08 | `I/09_aaoifi_nazorat.md` |
+| 8.2 | paket-muvofiqligi (paket hujjatlari yoki til nusxalari bo'lsa) | 01 + paket | `I/08_2_paket.md` |
+| 8.5 | mohiyat-tekshiruvchi (**mustaqil**: boshqa hisobotlar BERILMAYDI) | 01 + tasnif + paket | `I/08_5_mohiyat.md` |
+| 9 | aaoifi-nazoratchi (standartlar matritsasi + VETO) | 01 + 02–08.5 | `I/09_aaoifi_nazorat.md` |
 | 9.5 | iqtibos-tekshiruvchi | 02–09 | `I/09_5_iqtiboslar.md` |
 | — | **orkestrator: ziddiyatlarni hal qilish** (quyidagi qoidalar) | 02–09.5 | `I/10_ziddiyatlar.md` |
 | 10 | savol-yiguvchi | 02–09.5 + 10_ziddiyatlar | `I/10_savollar.json`, `I/10_Savollar.docx`, `I/10_savollar.md` |
-
-10-bosqichdan keyin **TO'XTA**:
-- `I/10_Savollar.docx` ni Drive'dagi bankning `02_Hisobotlar` papkasiga yukla (`create_file`, `disableConversionToGoogleType: true`, contentMimeType `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, fayl havolasi `sha256:…:[yo'l]` orqali) va havolani foydalanuvchiga ber;
-- `I/YAKUNIY_HISOBOT.md` ning dastlabki variantini tuz (12-bo'lim, 1–8-bandlar);
-- foydalanuvchiga ayt: "Savollar faylidagi sariq JAVOB ustunini qisqa to'ldiring, so'ng `/javoblarni-kirit` deb yozing".
+| 10.5 | kengash-xulosachi | shariat hisobotlari + 10 | `I/10_5_kengash_xulosasi.md`, `– IMK uchun xulosa.docx` |
+| ⛔ | **NN-2** | — | to'xta, quyida |
 
 **II QISM — javoblardan keyin** (`/javoblarni-kirit`)
 
@@ -50,6 +52,30 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 |---|---|---|---|
 | 11 | yakuniy-muharrir | asl .docx + 01–10 + javoblar | `– Tahrirlangan.docx` (Track Changes + izohlar), `– Yakuniy (toza).docx`, `– O'zgarishlar jadvali.docx`, `I/11_yakuniy_muharrir.md` |
 | 12 | orkestrator | hammasi | `I/YAKUNIY_HISOBOT.md` + `.docx` |
+| ⛔ | **NN-3** | — | to'xta, quyida |
+
+**III QISM — tasdiqdan keyin** (`/tasdiqdan-keyin`, faqat NN-3 dagi tasdiqdan so'ng)
+
+| # | Agent | Kirish | Natija |
+|---|---|---|---|
+| 13 | yoriqnoma-yozuvchi | tasdiqlangan yakuniy hujjat + IMK qarori | `– Xodim yo'riqnomasi.docx`, `– Mijoz uchun savol-javob.docx` |
+| ⛔ | **NN-4** | — | to'xta, quyida |
+
+## INSON NAZORAT NUQTALARI (NN)
+AI xulosasi maslahat xarakterida — quyidagi nuqtalarda orkestrator **to'xtaydi**, kim nimani ko'rishi kerakligini aniq aytadi va inson javobisiz keyingi qismga o'tmaydi. Har bir NN natijasini `I/NN_qarorlar.md` ga yoz (kim, sana, qaror).
+
+| NN | Qachon | Kim ko'radi | Nimani ko'radi | Qaror |
+|---|---|---|---|---|
+| **NN-1** | 1-bosqichdan keyin (an'anaviy hujjat islomiylashtirilganda) | **IMK a'zosi** (shariat) | `01_ozgarishlar.md`: tanlangan islomiy tuzilma (masalan, murobaha yoki IMBT), aqdlar ketma-ketligi | Tuzilma ma'qulmi? Ha → 2-bosqichga o'tiladi; Yo'q → boshqa tuzilma bilan 1-bosqich qayta. (Noto'g'ri tuzilmani 20 ta agent tekshirishining ma'nosi yo'q.) |
+| **NN-2** | 10.5-bosqichdan keyin | **IMK a'zosi** — "IMK" savollari va `IMK uchun xulosa.docx`; **yurist** — "Yurist" savollari; **hujjat muallifi** — "Muallif" savollari | `10_Savollar.docx` (sariq JAVOB ustuni), `IMK uchun xulosa.docx` | Savollarga qisqa javob → `/javoblarni-kirit` |
+| **NN-3** | 12-bosqichdan keyin | **yurist** — barcha huquqiy tahrirlar; **IMK a'zosi** — shariat bilan bog'liq tahrirlar va ochiq savollar; **muallif** — qolganlari | `– Tahrirlangan.docx` (Word'da har bir o'zgarishni Qabul qilish/Rad etish), `– O'zgarishlar jadvali.docx`, `YAKUNIY_HISOBOT.docx` | Tahrirlar qabul qilinadi → hujjat IMK (fatvo) va Boshqaruv tasdig'iga kiritiladi. Tasdiq faktini (qaror raqami, sana) orkestratorga bering → `/tasdiqdan-keyin` |
+| **NN-4** | 13-bosqichdan keyin | **mahsulot egasi / filial tarmog'i**, **komplaens** | Xodim yo'riqnomasi va mijoz FAQ | Joriy etish uchun tasdiq |
+
+To'xtaganda foydalanuvchiga xabar shakli: "⛔ NN-x: [kim] [qaysi fayl]ni ko'rib, [qanday qaror] qabul qilishi kerak. Fayllar: [havolalar]. Tayyor bo'lgach: [keyingi buyruq]."
+
+10-bosqichdan keyin (NN-2 oldidan) qo'shimcha:
+- `I/10_Savollar.docx` va `IMK uchun xulosa.docx` ni Drive'dagi bankning `02_Hisobotlar` papkasiga yukla (`create_file`, `disableConversionToGoogleType: true`, contentMimeType `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, fayl havolasi `sha256:…:[yo'l]` orqali) va havolalarni ber;
+- `I/YAKUNIY_HISOBOT.md` ning dastlabki variantini tuz (12-bo'lim, 1–8-bandlar).
 
 ## Agent chaqiruvi shabloni
 ```
@@ -58,7 +84,7 @@ Tahlil qilinadigan hujjat: I/01_islomiy_versiya.md
 Asl hujjat: [yo'l]
 Tasnif: I/00_tasnif.md
 Bank: [BANK]; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_documents/ (boshqa bank papkalari — TAQIQ)
-Oldingi hisobotlar: [ro'yxat]   ← shariat-auditor uchun faqat 02_huquqiy.md; 01_ozgarishlar.md hech kimga berilmaydi, faqat yakuniy-muharrirga
+Oldingi hisobotlar: [ro'yxat]   ← shariat-auditor uchun faqat 02_huquqiy.md; mohiyat-tekshiruvchiga hech qanday hisobot berilmaydi; 01_ozgarishlar.md faqat yakuniy-muharrirga
 Natijani [fayl] ga yoz. Menga faqat qaytar: umumiy baho, K/Y/O'/P soni, eng muhim 3 topilma, e'tirozlar soni.
 ```
 Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, faylga "BAJARILMADI: sabab" deb yoz va davom et.
@@ -74,7 +100,11 @@ Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, fayl
 | Organlar vakolati, tasdiqlash tartibi, bo'linmalar | tuzilma-tekshiruvchi (Ustav, IMK nizomi asosida) | |
 | Ichki hujjatlar ierarxiyasi va ziddiyati | ichki-normativ-tekshiruvchi | |
 | Atama va yozilish | terminolog (qonun + lug'at) | Atama shariy mazmunni o'zgartirsa — shariat-auditor bilan kelishiladi. |
-| Hisob, soliq, risk o'lchovi, likvidlik, IT/ketma-ketlikni tizimda bajarish | tegishli soha agenti | Faqat shariat va qonun chegarasida. |
+| Hisob, soliq, risk o'lchovi, likvidlik, prudensial normativlar, garov/sug'urta, IT/ketma-ketlikni tizimda bajarish | tegishli soha agenti | Faqat shariat va qonun chegarasida. |
+| Formula va hisob-kitob natijasi (raqamda) | hisob-tekshiruvchi | Raqamli misol matndagi talqindan ustun: matn "foiz emas" desa-yu, hisob foizli xulq ko'rsatsa — hisob natijasi asos bo'ladi. |
+| Bitimning iqtisodiy mohiyati (hiyla) | mohiyat-tekshiruvchi + aaoifi-nazoratchi | Mohiyat "hiyla" (yuqori ishonch) desa va shariat auditori "mos" desa — ehtiyotkor variant: KRITIK, IMK qaroriga. |
+| Oldingi IMK qarorlariga moslik | fatvo-xotirasi | Oldingi IMK qarori IMK uni o'zgartirmaguncha ustun. |
+| Paket va til nusxalari | paket-muvofiqligi | Ustuvor hujjat — yuqori turuvchi yoki eng so'nggi tasdiqlangan; davlat tilidagi matn. |
 | Mijozga oshkor qilish, mijoz huquqlari | mijoz-himoyasi | Qonun talabi bo'lsa — huquqiy bilan birga. |
 | Hujjat tuzilishi, mexanizm, formula | metodolog | |
 
@@ -111,6 +141,8 @@ Tahrirlangan, toza va jadval .docx fayllarini hamda YAKUNIY_HISOBOT.docx ni `B/0
 2. **Bosqichlar jadvali:** agent | baho | K/Y/O'/P | iqtiboslar ishonchliligi | bilim bazasi to'liqmi.
 3. **Barcha topilmalar birlashtirilgan jadvali** (takrorlar birlashtirilgan; KRITIK → PAST; qaysi agent(lar); Turi TAHRIR/IZOH; iqtibos holati).
 4. **Terminologiya jadvali:** Hujjatdagi atama | Rasmiy/tavsiya etilgan atama | Manba.
+4a. **Mohiyat xulosasi** (8.5) va **oldingi IMK qarorlariga moslik** (3.5) — har biri 2–3 jumla.
+4b. **Hisob-kitob testlari** (7.2): shariat jihatidan xavfli xulqlar.
 5. **Ziddiyatlar** va ularning hal qilinishi (`10_ziddiyatlar.md` qisqacha); inson qarori kutilayotganlar — highlight.
 6. **VETO qilingan tavsiyalar.**
 7. **Boshqa hujjatlarga ta'sir:** o'zgartirilishi yoki bekor qilinishi kerak bo'lgan hujjatlar (ichki-normativ, huquqiy, buxgalteriya hisobotlaridan).

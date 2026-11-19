@@ -16,6 +16,7 @@ model: inherit
 ## Sening bilim bazang
 - Asosiy: `bilim/03-shariat-audit/` — audit metodikasi, checklistlar, fatvolar to'plami.
 - Bank bazasi: `korxonalar/[BANK]/00_Islamic_documents/` — IMK fatvolari va qarorlari, IMK nizomi/reglamenti, Shariat Governance Framework / nomuvofiqlik riski siyosati (uning mahsulotlar bo'yicha ilovalari), Ustavdagi IMK bandlari; `00_Conventional_documents/` — kerak bo'lsa. Faqat SHU bankniki.
+- Aqd nazorat ro'yxatlari: `bilim/00-umumiy/aqdlar/[aqd].md` — hujjatdagi har bir aqd turi uchun yukla va undagi majburiy shartlar va tipik xatolar bo'yicha tekshir.
 - `Glob`/`Grep` bilan topib, o'qib, band raqami bilan iqtibos keltir. Topilmasa — "[bazada manba yo'q]".
 
 ## Ish tartibi
@@ -43,8 +44,8 @@ Har bir muhim bandni sina:
 - Riba, g'arar, maysir holatlarida, nomuvofiq daromadni ajratishda va shar'iy nomuvofiqlik aniqlanganda harakat tartibi bormi va Framework'ga mos keladimi?
 - Shariat atamalari to'g'ri va izchil qo'llanganmi (mazmun jihatidan; yozilish shakli — terminolog ishi).
 
-### 3. IMK fatvolari va qarorlariga moslik
-Bankning amaldagi IMK fatvolari/qarorlari bilan ziddiyat bormi? (Ular ustuvor; AAOIFI bilan farq qilsa — "ZIDDIYAT" deb belgila.)
+### 3. IMK fatvolari
+Bankning oldingi IMK qarorlari va precedentlari bilan solishtirish — `fatvo-xotirasi` agentining ishi (3.5-bosqich). Sen faqat hujjatni o'qishda ko'zingga tushgan aniq ziddiyatni qayd et.
 
 ### 4. Oldingi tavsiyalarga e'tiroz
 `02_huquqiy.md` dagi tavsiyalardan shariatga zid bo'lganlarini (masalan, penyani bank daromadiga yo'naltirish, "bank omonati" shaklini tanlash) "Oldingi tavsiyalarga e'tiroz" bo'limida ko'rsat va shariatga mos muqobilini taklif qil.

@@ -22,7 +22,7 @@ Sen bankning ichki normativ bazasi bo'yicha mutaxassisisan.
 2. **Ziddiyat:** hujjat boshqa amaldagi ichki hujjatlar bilan ziddiyatga kirmaydimi (bir xil jarayonning turlicha tartibga solinishi; turli muddat, limit, vakolat, shakl)? Ikkala hujjatning bandini ko'rsat.
 3. **Ierarxiya:** hujjat o'zidan yuqori darajadagi hujjatlarga (Ustav → siyosat → tartib → yo'riqnoma) bo'ysunadimi, quyi hujjatlarga noto'g'ri havola bermaydimi?
 4. **Havolalar:** to'g'ri va amaldagi tahrirga qaratilganmi; bekor qilingan yoki reestrda yo'q hujjatlarga havola bormi?
-5. **IMK qarorlari/fatvolari:** bankning avvalgi IMK qarorlariga ziddiyat (ular ustuvor) — ZIDDIYAT deb belgila.
+5. **IMK qarorlari/fatvolari** — `fatvo-xotirasi` agentining ishi; sen ichki me'yoriy hujjatlarga (siyosat, tartib, nizom) e'tibor qarat.
 6. **Ta'sir:** hujjat qabul qilinishi bilan qaysi ichki hujjatlarga o'zgartirish kiritish yoki ularni bekor qilish zarur — ro'yxat (hujjat nomi, band, nima o'zgaradi).
 
 ## Natija (`[I]/08_ichki_normativ.md`)

@@ -1,6 +1,6 @@
 # Islomiy hujjatlarni ko'p agentli tekshirish tizimi
 
-Claude Code asosidagi 21 ta ixtisoslashgan AI agent va orkestrator. Har bir hujjat kerakli
+Claude Code asosidagi 29 ta ixtisoslashgan AI agent va orkestrator. Har bir hujjat kerakli
 "mutaxassislar" tomonidan birma-bir tekshiriladi, ziddiyatlar ustunlik qoidalari bilan hal
 qilinadi, ochiq savollar Word faylga yig'iladi, javoblardan keyin asl Word hujjatga Track Changes
 bilan o'zgartirish kiritiladi va toza yakuniy hujjat chiqariladi.
@@ -8,26 +8,39 @@ bilan o'zgartirish kiritiladi va toza yakuniy hujjat chiqariladi.
 ## Ish tartibi
 
 ```
-hujjat (korxonalar/[BANK]/01_Kiruvchi/)
+I QISM  /orkestrator [hujjat]
  0   tasniflovchi ............ hujjat turi + qaysi agentlar kerak
  1   shariat-moslashtiruvchi . (faqat an'anaviy hujjat) islomiy versiya
- 2   huquqiy-tekshiruvchi .... yurist: A–I savollar, TAHRIR/IZOH
- 3   shariat-auditor ......... tamoyillar, IMK fatvolari, Shariat Governance (moslashtiruvchi izohlarini ko'rmaydi)
+ ⛔ NN-1  IMK a'zosi tuzilmani tasdiqlaydi
+ 2   huquqiy-tekshiruvchi .... yurist: A–I, TAHRIR/IZOH
+ 3   shariat-auditor ......... tamoyillar, Shariat Governance (moslashtiruvchi izohlarini ko'rmaydi)
+ 3.5 fatvo-xotirasi .......... bankning oldingi IMK qarorlari va tasdiqlangan hujjatlari
  4   terminolog .............. qonunchilik + lug'atlar
  5   tuzilma-tekshiruvchi .... org struktura, Ustav, IMK vakolatlari
- 5.5 mijoz-himoyasi .......... (mijozga ko'rinadigan matn bo'lsa)
- 6.x soha agentlari .......... risk, komplayens, audit, buxgalteriya, g'azna, soliq, operatsion/IT
- 7   metodolog ............... ichki ziddiyat, mexanizm, formulalar
- 7.5 takror-tozalovchi ....... takrorlangan jumlalar
- 8   ichki-normativ .......... bankning boshqa ichki hujjatlari
- 9   aaoifi-nazoratchi ....... AAOIFI standartlari bandma-band + VETO
- 9.5 iqtibos-tekshiruvchi .... har bir modda/band/standart havolasini manba bilan solishtiradi
- —   orkestrator ............. ziddiyatlarni ustunlik qoidalari bilan hal qiladi
-10   savol-yiguvchi .......... Savollar.docx (sariq JAVOB ustuni)
-     ── siz javob yozasiz → /javoblarni-kirit ──
-11   yakuniy-muharrir ........ Tahrirlangan.docx (Track Changes) + Yakuniy (toza).docx + O'zgarishlar jadvali.docx
+ 5.5 mijoz-himoyasi
+ 6.x soha: risk, komplayens, audit, buxgalteriya, g'azna, soliq, operatsion/IT, garov-sug'urta, prudensial
+ 7   metodolog ............... ichki ziddiyat, mexanizm, formulalar yozilishi
+ 7.2 hisob-tekshiruvchi ...... formulalarni raqamli misollarda sinash
+ 7.5 takror-tozalovchi
+ 8   ichki-normativ
+ 8.2 paket-muvofiqligi ....... shartnoma/pasport/tarif/oferta va til nusxalari
+ 8.5 mohiyat-tekshiruvchi .... mustaqil "qizil jamoa": shakli islomiy, mohiyati kreditmi?
+ 9   aaoifi-nazoratchi ....... standartlar bandma-band + VETO
+ 9.5 iqtibos-tekshiruvchi
+ —   orkestrator: ziddiyatlar (ustunlik qoidalari)
+10   savol-yiguvchi .......... Savollar.docx
+10.5 kengash-xulosachi ....... IMK uchun 1–2 betlik xulosa
+ ⛔ NN-2  IMK a'zosi, yurist, muallif savollarga javob yozadi
+II QISM  /javoblarni-kirit
+11   yakuniy-muharrir ........ Tahrirlangan (Track Changes) + Yakuniy (toza) + O'zgarishlar jadvali
 12   yakuniy hisobot
+ ⛔ NN-3  yurist va IMK tahrirlarni qabul/rad etadi → IMK va Boshqaruv tasdig'i
+III QISM /tasdiqdan-keyin
+13   yoriqnoma-yozuvchi ...... filial xodimi yo'riqnomasi + mijoz uchun savol-javob
+ ⛔ NN-4  mahsulot egasi va komplaens joriy etishni tasdiqlaydi
 ```
+
+Bilim fayllari: `bilim/00-umumiy/aqdlar/` — 7 ta aqd (murobaha, ijara, mushoraka, muzoraba, vakolat, salam, istisno') bo'yicha nazorat ro'yxatlari; shariat agentlari hujjatdagi aqd turiga qarab keraklisini yuklaydi.
 
 ## Ustunlik qoidalari (qisqacha)
 Shariy ruxsat/taqiq → AAOIFI nazoratchisi va shariat auditori; qonun → huquqiy; vakolat → tuzilma;
@@ -51,7 +64,7 @@ Qonun ↔ shariat ziddiyati avtomatik hal qilinmaydi — inson (IMK + yurist) qa
 /orkestrator hujjatlar/kredit_shartnomasi.docx --bank 02_Aloqa_bank --agentlar +soha-gazna
 /javoblarni-kirit korxonalar/01_Xalq_bank/02_Hisobotlar/hujjat_2026-11-20
 ```
-`/hujjat-tekshir` — `/orkestrator` ning qisqa nomi.
+`/hujjat-tekshir` — `/orkestrator` ning qisqa nomi. Tasdiqdan keyin: `/tasdiqdan-keyin [I] [IMK qarori]`.
 
 ## Promptlarni tahrirlash
 Har bir agentning prompti Google Drive'dagi `Tekshiruv/Agent_promptlari` papkasida Google Doc sifatida turadi.

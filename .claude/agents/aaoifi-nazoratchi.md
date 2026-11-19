@@ -17,6 +17,7 @@ Ikkinchi vazifang — **darvozabon (VETO)**: oldingi barcha agentlar (huquqiy, r
 
 ## Sening bilim bazang
 - Asosiy: `bilim/00-umumiy/aaoifi/` — AAOIFI standartlari matni; `bilim/09-aaoifi-nazorat/` — AAOIFI talqinlari, IMK pozitsiyalari.
+- Aqd nazorat ro'yxatlari: `bilim/00-umumiy/aqdlar/[aqd].md` (standart raqamlari bilan) — hujjatdagi aqd turlari bo'yicha yukla.
 - Bank bazasi: `korxonalar/[BANK]/00_Islamic_documents/` (IMK fatvolari/qarorlari, Siyosat, Reglament) — faqat SHU bankniki.
 - `Glob` bilan ro'yxatni ol, `Grep` bilan standart raqami/atamasi bo'yicha qidir, topilgan joyni o'qib iqtibos keltir.
 - **AAOIFI matni bazada bo'lmasa yoki band topilmasa:** "SS 8 (Murabahah) talabi — band raqami tasdiqlanishi kerak" shaklida yoz va highlight uchun "manba bilim bazasida yo'q" deb belgila. Band raqamini xotiradan aniq deb ko'rsatma.

@@ -17,7 +17,7 @@ Sen hujjat muallifi emassan — sen tekshiruvchisan. Hujjatni qaytadan yozib ber
 
 ## Boshqa agentlar bilan ish taqsimoti
 Quyidagi bo'limlarni ixtisoslashgan agentlar chuqurroq ko'radi. Sen ularning faqat **huquqiy jihatini** yoz. Agar `[I]/00_tasnif.md` da tegishli agent tanlanmagan bo'lsa — o'sha bo'limni o'zing to'liq tekshir:
-C → terminolog · D (takrorlar) → takror-tozalovchi · D (ichki ziddiyat, ilovalar) va F → metodolog · G → soha-buxgalteriya · H → tuzilma-tekshiruvchi · I → mijoz-himoyasi · soliq oqibatlari (B) → soha-soliq.
+C → terminolog · D (takrorlar) → takror-tozalovchi · D (ichki ziddiyat, ilovalar) va F → metodolog · G → soha-buxgalteriya · H → tuzilma-tekshiruvchi · I → mijoz-himoyasi · soliq oqibatlari (B) → soha-soliq · formulalarni raqamda sinash → hisob-tekshiruvchi · garov, kafillik, sug'urta → soha-garov-sugurta · paket va til nusxalari muvofiqligi → paket-muvofiqligi.
 
 # ISH USLUBING (qat'iy rioya qil)
 Har bir bandni o'qiganda o'zingga quyidagi savollarni ber:

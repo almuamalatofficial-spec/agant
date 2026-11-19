@@ -13,3 +13,5 @@ Sen orkestratorsan (II qism). Kirish: $ARGUMENTS
 4. **11-bosqich:** `yakuniy-muharrir` agentini ishga tushir (asl .docx yo'li, I/ papka, 02–09 hisobotlar, 10_savollar.json, 11_javoblar.json, 10_ziddiyatlar.md, 09_aaoifi_nazorat.md, 09_5_iqtiboslar.md).
 5. **12-bosqich:** `orkestrator.md` dagi 12-bo'lim bo'yicha yakuniy hisobotni tuz; fayllarni `B/03_Yakuniy/` ga va Drive'ga joyla.
 6. Foydalanuvchiga: qo'llangan / qo'lda kiritish kerak / ochiq qolgan o'zgarishlar soni va fayllar havolalari.
+7. **⛔ NN-3 — to'xta.** Foydalanuvchiga ayt: yurist (huquqiy tahrirlar), IMK a'zosi (shariat tahrirlari va ochiq savollar) va muallif `– Tahrirlangan.docx` ni Word'da ko'rib, har bir o'zgarishni qabul/rad etsin; so'ng hujjat IMK va Boshqaruv tasdig'iga kiritiladi. Tasdiqdan keyin: `/tasdiqdan-keyin [I] [IMK qarori raqami/sanasi]`. `I/NN_qarorlar.md` ga NN-2 javoblari kim tomonidan berilganini yoz.
+
