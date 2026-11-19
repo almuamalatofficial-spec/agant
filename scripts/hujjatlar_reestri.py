@@ -10,6 +10,7 @@ Faqat SHU bank reestri ishlatiladi (CLAUDE.md 4-band) — islomiy hujjatlar ro'y
 import: varaqlarni o'qiydi. Asosiy reestr varag'i (sarlavhada "Ҳужжат номи"/"Hujjat nomi" va "тури"/"turi")
 — holati "amalda"; nomida "кучини йўқот"/"kuchini yo'qot" bo'lgan varaq — "kuchini yo'qotgan"; qolgan oddiy
 ro'yxat (masalan IBD varag'i) — "ro'yxatda (rekvizitsiz)". Kirill nomlar lotinga o'giriladi (solishtirish uchun).
+islomiy_hujjatlar.jsonl (ixtiyoriy, qo'lda): rasmiy reestrga hali kirmagan islomiy hujjatlar va loyihalar — tekshirishda qo'shiladi.
 tekshir: hujjatdagi qo'shtirnoqli va "... siyosati/tartibi/nizomi/..." ko'rinishidagi havolalarni ajratadi va reestrdan
 eng yaqin yozuvni topadi: MOS / NOMI FARQ QILADI (rasmiy nomi berilgan) / KUCHINI YO'QOTGAN / REESTRDA YO'Q.
 """
@@ -138,6 +139,9 @@ def tekshir(fayl, bank, chiqish=None):
         print(f"OGOHLANTIRISH: {p} yo'q — avval bankning rasmiy hujjatlar reestrini import qiling.")
         return
     reestr = [json.loads(l) for l in p.read_text(encoding="utf-8").splitlines() if l.strip()]
+    isl = p.parent / "islomiy_hujjatlar.jsonl"  # rasmiy reestrga hali kirmagan islomiy hujjatlar (loyihalar) — qo'lda yuritiladi
+    if isl.exists():
+        reestr += [json.loads(l) for l in isl.read_text(encoding="utf-8").splitlines() if l.strip()]
     for y in reestr:
         y["_i"] = ildizlar(y["nom"])
     matn = Path(fayl).read_text(encoding="utf-8")
