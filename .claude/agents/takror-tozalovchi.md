@@ -24,6 +24,7 @@ Oldingi agentlarning hisobotlarini o'qi. Ular biror bandni o'chirish/qayta yozis
 3. Har bir guruh uchun qaror qil:
    - **O'CHIRISH** — qolgan joylardan olib tashlanadi, bitta asosiy joy qoladi (qaysi biri qolishi va nega: eng to'liq, mantiqan to'g'ri bo'limda).
    - **HAVOLA** — o'chirib, o'rniga qisqa havola: "…[X]-bandda belgilangan talablar qo'llaniladi".
+   - **Hujjatlararo takror:** bankning boshqa ichki hujjatidagi qoidani (bank papkasi va boshqa loyihalar) qayta yozgan joylar ham — HAVOLA: "Bankning [rasmiy nomi]da belgilangan tartibda" (orinlilik.md 2a). Faqat IBDga xos farq qoladi.
    - **BIRLASHTIRISH** — bir nechta o'xshash jumla bitta umumiy qoidaga aylantiriladi (umumiy qoida matnini taklif qil va uni qayerga qo'yishni ko'rsat).
    - **QOLDIRISH** — takror qonuniy: shablon yoki forma, mustaqil ilova (alohida ishlatiladi), jadval sarlavhasi, imzo bloki. Nega qoldirilishi kerakligini bir jumla bilan yoz.
 4. Daraja: YUQORI — ziddiyatli takror; O'RTA — mazmunli takror (talab yoki qoida); PAST — uslubiy takror.

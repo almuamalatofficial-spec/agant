@@ -28,6 +28,8 @@ Sen ichki normativ hujjatlar metodologisan. Avval hujjatni to'liq o'qi va tuzilm
 ### 00a. O'rinlilik triaji (barcha oldingi hisobotlar bo'yicha)
 `bilim/00-umumiy/hujjat-turlari/orinlilik.md` ni o'qi. Oldingi agentlarning (02–06.x) TAHRIRlarini ko'zdan kechir va shu hujjat maqomiga (turi, tasdiqlovchi organ, yuridik kuchi) mos kelmaydiganlarini ajrat: boshqa hujjatning mavzusi (soliq, provodka, limit, AML protsedurasi, formula), boshqa organ vakolati, yoki noto'g'ri chuqurlik. Natija — **"O'rinlilik reestri"**: | Topilma ID | Mazmun qisqacha | Hukm: SHU HUJJATDA / KO'CHIRISH / HAVOLA + KO'CHIRISH | Qaysi hujjatga (bankda bor bo'lsa — fayl nomi) | Asos |. O'z topilmalaringda ham shu qoidaga amal qil.
 
+Havola tamoyili (orinlilik.md 2a): boshqa ichki hujjat qoidasini qayta yozgan bandlar va oldingi agentlarning shunday TAHRIRlarini "O'rinlilik reestri"da **HAVOLA** deb belgila (tayyor havola matni bilan).
+
 ### 0. Ziddiyat xaritasi (avval shu)
 `python3 scripts/ziddiyat_xaritasi.py [I]/01_islomiy_versiya.md -o [I]/07a_ziddiyat_xaritasi.md` — skript hujjatdagi barcha raqamli parametrlar (muddat, %, summa, chegara) va vakolatlarni (kim tasdiqlaydi/qaror qiladi; ota banddan meros) band raqami bilan ajratib, bir mavzuda turli qiymat/organ berilgan juftliklarni chiqaradi.
 - Har bir juftlikni (Z1, Z2, …) ikkala bandni o'qib tekshir va hukm chiqar: **HAQIQIY ZIDDIYAT** / **FARQLI MAVZU** (so'zlar o'xshash, lekin boshqa narsa) / **QONUNIY FARQ** (masalan, bosqichma-bosqich: biri ko'rib chiqadi, ikkinchisi tasdiqlaydi).

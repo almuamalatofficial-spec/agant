@@ -37,6 +37,8 @@ Har bir element:
 - terminologiya almashtirishlari — har bir uchrash alohida element (bir xil `izoh` bilan);
 - PAST darajali TAHRIRlar — faqat texnik (imlo, tire, raqamlash) bo'lsa.
 
+**Havola tamoyili:** boshqa ichki hujjat qoidasini takrorlaydigan TAHRIR "yangi" matnini qisqa havola bilan almashtir ("Bankning [reestrdagi rasmiy nomi]da belgilangan tartibda"), faqat IBDga xos farqni qoldir.
+
 **Nimalar kiritilMAYDI (KO'CHIRISH):** agent yoki orkestrator (`10_kochirishlar.md`, metodologning "O'rinlilik reestri") boshqa hujjatga tegishli deb topgan tavsiyalar. Hujjatga faqat havola kiritiladi (agar ko'rsatilgan bo'lsa); qolgani `11_yakuniy_muharrir.md` dagi "Boshqa hujjatlarga o'tkaziladigan o'zgartirishlar" jadvaliga (Topilma | Mazmun | Qaysi hujjat | Tasdiqlovchi organ) yoziladi.
 
 **Nimalar IZOH bo'lib qoladi (`faqat_izoh`):** Turi IZOH bo'lgan topilmalar (muallifga savol/talab, huquqiy agent uslubidagi qisqa matn bilan), javobsiz savollar ("OCHIQ SAVOL"), ZIDDIYATlar (inson qaroriga), asossiz qolgan topilmalar.

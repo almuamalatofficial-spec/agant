@@ -40,6 +40,14 @@ Qoidalar:
 | IT tizimidagi nazoratlar | Texnik topshiriq, IT reglamenti | Tartibda — nazorat nuqtasi talabi |
 | Shariat qarori, purifikatsiya tartibi | IMK qarori, shariat komplayens/purifikatsiya tartibi | Havola |
 
+## 2a. Havola tamoyili (bankning tanlovi)
+Boshqa ichki hujjatda belgilangan qoida bu hujjatga **ko'chirilmaydi — havola qilinadi**. Shunda asosiy hujjat o'zgarsa, unga havola qilgan hujjatlarni o'zgartirish talab qilinmaydi va ikki hujjat bir-biridan uzoqlashib, ziddiyat paydo bo'lmaydi.
+- Havola shakli: "Bankning [reestrdagi rasmiy nomi]da belgilangan tartibda" yoki "... [rasmiy nomi]ga muvofiq". Band raqami faqat zarur bo'lsa (u o'zgarishi mumkin); raqam va sanani har safar yozish shart emas — hujjat birinchi tilga olinganda yoki "Normativ asoslar" ro'yxatida bir marta yetarli.
+- Hujjat nomi rasmiy reestrdagidek yoziladi (`[I]/00d_hujjat_nomlari.md`). Qabul qilinmagan (loyiha) hujjatga havola — IZOH bilan: "hujjat tasdiqlangunga qadar qaysi tartib qo'llanadi?".
+- Istisno: qoidaning shu hujjatda o'zgacha (IBDga xos) qo'llanishi bo'lsa — faqat o'sha farq yoziladi, umumiy qoida havola bilan ("... qo'llaniladi, bundan quyidagilar mustasno: ...").
+- Qonun va MB normalarini qayta yozish o'rniga ham havola (1-bo'limdagi qoida).
+- Agentlar: boshqa hujjatdan ko'chirilgan (yoki unga deyarli mos) matn ko'rsalar — TAHRIR: matn o'rniga havola. Yangi TAHRIR yozishda ham boshqa hujjat qoidasini takrorlamaydi, havola beradi.
+
 ## 3. Agent qanday yozadi
 - Mazmun to'g'ri, lekin o'rni boshqa hujjatda → **Turi: KO'CHIRISH**. Tavsiya: "[Tegishli hujjat] da aks ettirilsin: [qisqa mazmun]". Bu hujjatga kerak bo'lsa — faqat havola uchun TAHRIR (masalan: "Soliq oqibatlari Bankning soliq hisobi siyosatiga muvofiq aniqlanadi.").
 - Tegishli hujjat bankda yo'q yoki bazada topilmadi → KO'CHIRISH + "hujjat bazada topilmadi — bankda bormi yoki yangisini tayyorlash kerakmi?" (Aniqlanmagan savollar).
