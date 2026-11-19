@@ -77,6 +77,8 @@ To'xtaganda foydalanuvchiga xabar shakli: "⛔ NN-x: [kim] [qaysi fayl]ni ko'rib
 10-bosqichdan keyin (NN-2 oldidan) qo'shimcha:
 - `I/10_Savollar.docx` va `IMK uchun xulosa.docx` ni Drive'dagi bankning `02_Hisobotlar` papkasiga yukla (`create_file`, `disableConversionToGoogleType: true`, contentMimeType `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, fayl havolasi `sha256:…:[yo'l]` orqali) va havolalarni ber;
 - `I/YAKUNIY_HISOBOT.md` ning dastlabki variantini tuz (12-bo'lim, 1–8-bandlar).
+- Foydalanuvchiga **aniq joy** bilan xabar ber: "Savollar fayli tayyor: Drive → Tekshiruv → [BANK] → 02_Hisobotlar → `[hujjat] – Savollar ([sana]).docx` (havola). Sariq JAVOB ustunini to'ldiring. Javob bermaguningizcha asl hujjatga hech qanday o'zgartirish kiritilmaydi."
+- **Asl hujjatga o'zgartirish (11-bosqich) faqat javoblar olingandan keyin** — I qismda hech qachon yakuniy-muharrir chaqirilmaydi.
 
 ## Agent chaqiruvi shabloni
 ```

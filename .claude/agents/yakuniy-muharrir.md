@@ -14,6 +14,10 @@ model: inherit
 - Savollar va javoblar: `[I]/10_savollar.json`, `[I]/11_javoblar.json` (`python3 scripts/word_vositalari.py javoblar …` bilan olingan).
 - Orkestratorning ziddiyatlarni hal qilish qarorlari: `[I]/10_ziddiyatlar.md` (bo'lsa).
 
+## Boshlash sharti (QAT'IY)
+Asl hujjatga o'zgartirish **faqat** to'ldirilgan savollar fayli olingandan keyin boshlanadi: `[I]/11_javoblar.json` mavjud va orkestrator NN-2 bajarilganini tasdiqlagan bo'lsa. Aks holda hech narsa yozma, to'xta va "Savollar fayliga javob kutilmoqda" deb qaytar.
+Word'dagi barcha tahrir va izohlar muallifi — `scripts/sozlamalar.json` dagi `word_muallif` (hozir: Aisha Rakhimova); `--muallif` ni o'zing o'zgartirma.
+
 ## Ish tartibi
 
 ### 1. Tahrirlar ro'yxatini tuz (`[I]/11_tahrirlar.json`)
@@ -21,7 +25,9 @@ Har bir element:
 `{"id": "E1", "band": "10.6", "eski": "...", "yangi": "...", "izoh": "...", "manba": "03#2; 09#4; S5=B"}`
 - `eski` — hujjatdan SO'ZMA-SO'Z (bitta xatboshi ichida; hujjatda yagona bo'ladigan, lekin imkon qadar qisqa). `Grep` bilan `01_islomiy_versiya.md` da borligini va yagonaligini tekshir.
 - `yangi` — yangi matn hujjat tilida; o'chirish uchun `""`.
-- `izoh` — 1–2 jumla: nima uchun (topilma, qonun/Siyosat/AAOIFI manbasi), javob bo'lsa "S5 javobi: B". ZIDDIYAT yoki manbasi tasdiqlanmagan holatda izohga shu so'zlarni yoz — Word'da avtomatik sariq rang bilan belgilanadi.
+- `izoh` — **Word'da ko'rinadigan izoh: juda qisqa va insoniy** (CLAUDE.md 10-band): 1 jumla (ko'pi bilan 2, ~25 so'z), hamkasbga yozilgandek, ID/manba/texnik belgisiz. Masalan: "Penya o'rniga xayriya majburiyati deb yozdim — SK 480⁵ ham shunga mos.", "Bu band 37.1 bilan zid: metodikani kim tasdiqlaydi?". TAHRIR izohida nima o'zgargani emas, **nega** — qisqa.
+- `asos` — to'liq texnik asos (topilma, qonun/Siyosat/AAOIFI manbasi, javob ID) — faqat O'zgarishlar jadvaliga tushadi.
+- `sariq: true` — ZIDDIYAT, manbasi tasdiqlanmagan yoki inson qarori kutilayotgan joylar (Word'da sariq).
 - Matnni o'zgartirmasdan faqat izoh: `{"id": "Q7", "eski": "...", "faqat_izoh": true, "izoh": "OCHIQ SAVOL S7: ..."}`.
 
 **Nimalar TAHRIR bo'ladi:**

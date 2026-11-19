@@ -17,9 +17,10 @@
    python3 scripts/word_vositalari.py jadval tahrirlar.json Ozgarishlar_jadvali.docx
 
 3) Asl Word hujjatga tahrir rejimida (Track Changes) o'zgartirish kiritish:
-   python3 scripts/word_vositalari.py tahrir asl.docx tahrirlar.json natija.docx [--muallif "Al Muamalat AI"]
-   tahrirlar.json: [{"id": "E1", "eski": "hujjatdagi aniq matn", "yangi": "yangi matn ('' = o'chirish)",
-                     "izoh": "sabab va manba", "band": "10.6"}]
+   python3 scripts/word_vositalari.py tahrir asl.docx tahrirlar.json natija.docx [--muallif "Ism Familiya"]  (standart: scripts/sozlamalar.json)
+   tahrirlar.json: [{"id": "E1", "band": "10.6", "eski": "hujjatdagi aniq matn", "yangi": "yangi matn ('' = o'chirish)",
+                     "izoh": "Word'dagi qisqa, insoniy izoh (1–2 jumla)", "asos": "to'liq texnik asos (jadval uchun)",
+                     "manba": "03#2; S5=B", "sariq": false}]
    "sariq": true — o'zgarish sariq fon bilan belgilanadi (izohida ZIDDIYAT / "manba yo'q" bo'lsa — avtomatik).
    "faqat_izoh": true bo'lsa — matn o'zgarmaydi, faqat izoh biriktiriladi (masalan, ochiq savol).
    Har bir tahrir: eski matn o'chirilgan (qizil), yangi matn qo'shilgan (yashil) ko'rinadi, yoniga izoh qo'yiladi.
@@ -40,6 +41,10 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
 JAVOB_USTUNI = "JAVOB"
+_SOZ = json.loads((Path(__file__).resolve().parent / "sozlamalar.json").read_text(encoding="utf-8")) \
+    if (Path(__file__).resolve().parent / "sozlamalar.json").exists() else {}
+MUALLIF = _SOZ.get("word_muallif", "Reviewer")
+INITSIAL = _SOZ.get("word_initsial", "RV")
 
 
 # ---------------------------------------------------------------- savollar
@@ -71,7 +76,7 @@ def savollar(json_yol, docx_yol):
     yo.add_run(f"har bir savol uchun faqat sariq «{JAVOB_USTUNI}» ustuniga qisqa javob yozing — variant harfi (masalan, «A»), "
                "«ha/yo'q», raqam yoki bir-ikki jumla. Boshqa ustunlarni o'zgartirmang. Javob berilmagan savol "
                "bo'yicha hujjatga o'zgartirish kiritilmaydi va u izoh sifatida qoladi.")
-    sarlavha = ["№", "ID", "Kimga", "Bosqich", "Band", "Savol", "Kontekst / nega muhim", "Variantlar", "AI tavsiyasi", JAVOB_USTUNI]
+    sarlavha = ["№", "ID", "Kimga", "Bosqich", "Band", "Savol", "Kontekst / nega muhim", "Variantlar", "Tavsiya", JAVOB_USTUNI]
     eni = [0.8, 1.0, 1.6, 1.8, 1.4, 5.0, 4.5, 4.0, 3.2, 4.2]
     t = doc.add_table(rows=1, cols=len(sarlavha))
     t.style = "Table Grid"
@@ -189,6 +194,7 @@ class Tahrirchi:
         self.sana = dt.datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
         self.rid = 9000
         self.sariq = False
+        self.initsial = INITSIAL
 
     def _id(self):
         self.rid += 1
@@ -211,7 +217,7 @@ class Tahrirchi:
         if self.sariq:
             for r in tanlangan:
                 _sariq(r)
-        self.doc.add_comment([Run(r, p) for r in tanlangan], text=izoh, author=self.muallif, initials="AI")
+        self.doc.add_comment([Run(r, p) for r in tanlangan], text=izoh, author=self.muallif, initials=self.initsial)
         return True
 
     def qol(self, p, eski, yangi, izoh):
@@ -273,22 +279,23 @@ class Tahrirchi:
             try:
                 from docx.text.run import Run
                 izoh_runlari = [Run(x, p) for x in oxirgi.iter(qn("w:r"))] or [Run(birinchi, p)]
-                self.doc.add_comment(izoh_runlari, text=izoh, author=self.muallif, initials="AI")
+                self.doc.add_comment(izoh_runlari, text=izoh, author=self.muallif, initials=self.initsial)
             except Exception:
                 pass
         return True
 
 
-def tahrir(asl, tahrir_json, chiqish, muallif="Al Muamalat AI"):
+def tahrir(asl, tahrir_json, chiqish, muallif=None):
     doc = Document(asl)
-    t = Tahrirchi(doc, muallif)
+    t = Tahrirchi(doc, muallif or MUALLIF)
+    t.initsial = INITSIAL if not muallif else "".join(w[0] for w in muallif.split()[:2]).upper()
     royxat = json.loads(Path(tahrir_json).read_text(encoding="utf-8"))
     hisobot = {"qollandi": [], "topilmadi": []}
     for e in royxat:
         ok = False
         for p in _paragraflar(doc):
-            izoh = f'[{e.get("id", "")}] {e.get("izoh", "")}'.strip()
-            t.sariq = bool(e.get("sariq")) or bool(SARIQ_SOZLAR.search(izoh))
+            izoh = (e.get("izoh") or "").strip()  # Word izohi: qisqa, insoniy; ID va texnik asos bu yerga yozilmaydi
+            t.sariq = bool(e.get("sariq")) or bool(SARIQ_SOZLAR.search(izoh + " " + e.get("asos", "")))
             bajar = t.izoh_qoy(p, e["eski"], izoh) if e.get("faqat_izoh") else t.qol(p, e["eski"], e.get("yangi", ""), izoh)
             if bajar:
                 ok = True
@@ -367,7 +374,7 @@ def jadval(tahrir_json, chiqish, sarlavha="O'zgarishlar jadvali"):
     for n, e in enumerate(royxat, 1):
         tur = "Izoh" if e.get("faqat_izoh") else ("O'chirish" if not e.get("yangi") else "Tahrir")
         q = [str(n), e.get("id", ""), e.get("band", ""), tur, e.get("eski", ""), "" if e.get("faqat_izoh") else e.get("yangi", ""),
-             (e.get("izoh", "") + (f" [{e['manba']}]" if e.get("manba") else "")).strip(), holat.get(e.get("id", ""), "")]
+             ((e.get("asos") or e.get("izoh", "")) + (f" [{e['manba']}]" if e.get("manba") else "")).strip(), holat.get(e.get("id", ""), "")]
         row = t.add_row()
         for i, v in enumerate(q):
             row.cells[i].text = v
@@ -396,5 +403,5 @@ if __name__ == "__main__":
     elif a[0] == "jadval":
         jadval(a[1], a[2])
     else:
-        m = a[a.index("--muallif") + 1] if "--muallif" in a else "Al Muamalat AI"
+        m = a[a.index("--muallif") + 1] if "--muallif" in a else None
         tahrir(a[1], a[2], a[3], m)

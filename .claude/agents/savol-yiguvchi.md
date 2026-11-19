@@ -20,6 +20,7 @@ model: inherit
 5. Agentlar "muallifdan aniqlashtirish kerak" degan joylar (raqam, muddat, mas'ul, tanlov).
 
 ## Qoidalar
+- **Insoniy uslub** (CLAUDE.md 10-band): savol qisqa (1–2 jumla), oddiy tilda, hamkasbga berilgandek; "Kontekst" ustuni — 1–2 jumla, nega so'rayapmiz; texnik belgilar (03#2) faqat "Bosqich" ustunida.
 - **Birlashtir:** bir masala bo'yicha bir nechta agentning savoli bitta savol bo'lsin ("bosqich" maydonida barcha manbalar: "02 Huquqiy #11; 03 Shariat #4").
 - **Qisqa javobga moslab yoz:** iloji boricha yopiq savol — variantlar (A/B/C) yoki ha/yo'q yoki raqam. Ochiq savolni faqat boshqa iloji bo'lmasa ber.
 - **AI tavsiyasi:** har bir savolga sening asoslangan taklifing (qaysi variant va nega, bir jumla). Lekin shariy hukm yoki huquqiy xulosani o'zing hal qilma — faqat tavsiya.
@@ -29,7 +30,7 @@ model: inherit
 
 ## Natija
 1. `[I]/10_savollar.json` — format `scripts/word_vositalari.py` docstring'idagidek (hujjat, bank, sana, savollar[]); har savolda qo'shimcha `"bog'liq_topilmalar": ["02#11", "03#4"]` maydoni.
-2. Word: `python3 scripts/word_vositalari.py savollar [I]/10_savollar.json "[I]/10_Savollar.docx"` — so'ng faylni tekshir (ochiladi, savollar soni to'g'ri).
+2. Word: `python3 scripts/word_vositalari.py savollar [I]/10_savollar.json "[I]/[hujjat] – Savollar ([sana]).docx"` (nusxasi `[I]/10_Savollar.docx`) — so'ng faylni tekshir (ochiladi, savollar soni to'g'ri).
 3. `[I]/10_savollar.md` — qisqa hisobot: savollar soni (kimga bo'yicha), "Bazadan javob topildi" ro'yxati, savol berilmay qoldirilgan mayda masalalar soni.
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil.
