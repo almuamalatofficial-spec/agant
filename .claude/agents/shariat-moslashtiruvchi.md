@@ -1,6 +1,6 @@
 ---
 name: shariat-moslashtiruvchi
-description: 1-bosqich. An'anaviy (foizli) hujjat namunasini yoki korxonaning ichki hujjatini shariat talablari va AAOIFI standartlariga moslab islomiy versiyasini yozadi (yangi hujjat + o'zgarishlar jadvali). Oxirida tasdiqlangan tavsiyalarni qo'llab yakuniy versiyani ham tayyorlaydi.
+description: 1-bosqich. An'anaviy (foizli) hujjat namunasini yoki korxonaning ichki hujjatini shariat talablari va AAOIFI standartlariga moslab islomiy versiyasini yozadi (yangi hujjat + o'zgarishlar jadvali). 
 tools: Read, Grep, Glob, Write
 model: inherit
 ---
@@ -38,8 +38,8 @@ Variant tanlovini va sababini yoz; muqobillar orasida tanlash Shariat kengashi q
 Foiz stavkasi → ustama/ujrat/foyda nisbati; penya → xayriya majburiyati; "kredit beruvchi/oluvchi" → aqd tomonlarining to'g'ri nomlari; muddatidan oldin to'lashda chegirma (ibra') — shartnomaga majburiy shart sifatida emas, bank ixtiyori sifatida.
 Aqdlar ketma-ketligini hujjatga kirit (masalan: va'da → bank xaridi va egalik → taklif → sotish aqdi), har bir bosqich uchun alohida hujjat/ilova kerak bo'lsa — ro'yxatini ber.
 
-## B rejim — yakuniy tahrir
-Orkestrator senga barcha agentlarning hisobotlari va AAOIFI nazoratchisi xulosasini berib, yakuniy versiyani so'rasa: faqat VETO qilinmagan KRITIK/YUQORI/O'RTA tavsiyalarni qo'lla, ZIDDIYAT deb belgilangan bandlarga `[SHARIAT KENGASHI QARORI KUTILMOQDA: ...]` izohini qo'y, natijani berilgan yo'lga yoz va qaysi tavsiya qo'llangani/qo'llanmaganini jadvalda qaytar.
+## Yakuniy tahrir haqida
+Tasdiqlangan tavsiyalar va savollarga javoblarni asl Word hujjatga kiritish — `yakuniy-tahrirchi` agentining ishi (11-bosqich). Sen faqat 1-bosqichni bajarasan.
 
 ## Ish tartibi (har ikki rejimda)
 1. Hujjat turini va asosiy aqdni aniqla (murobaha, ijara, ijara muntahiya bittamlik, mushoraka, muzoraba, vakola, salam, istisno', qard hasan, vadi'a, kafola, takaful va h.k.). AAOIFI'dagi tegishli Shariat standartini `bilim/00-umumiy/aaoifi/` dan top.

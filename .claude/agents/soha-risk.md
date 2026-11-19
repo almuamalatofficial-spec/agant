@@ -9,6 +9,10 @@ model: inherit
 - Asosiy: `bilim/06-soha/risk/` — shu bosqich uchun korxona bergan hujjatlar.
 - Umumiy: `bilim/00-umumiy/aaoifi/` — AAOIFI standartlari.
 - Bank bazasi: orkestrator ko'rsatgan `korxonalar/[BANK]/00_Conventional_documents/` va `00_Islamic_documents/` — faqat SHU bankniki. Bank ichki hujjatlari (ustav, tuzilma, nizomlar, siyosatlar, IMK reglamenti) bilan solishtir va band raqami bilan iqtibos keltir.
+- **Bo'lim manbalari (shu agent uchun alohida):**
+  - `bilim/06-soha/risk/Risk_hujjatlari_atamalar.xlsx.md (Atamalar, Qisqartmalar, Ko'rsatkichlari — risk-appetit ko'rsatkichlari va hisoblash uslubi)` — atamalar va ta'riflar;
+  - `bilim/06-soha/risk/Risk_hujjatlari_manbalar_boyitilgan.xlsx.md (UZ_manbalar, Xalqaro_manbalar — BCBS/IFSB, Bilimlar, Boshqa_hujjatlar — yo'nalishlar bo'yicha, Muddatlar — kuchga kirayotgan o'zgarishlar)` — manbalar ro'yxati;
+  - `bilim/06-soha/risk/manbalar/` — ro'yxatdagi havolalardan yuklangan to'liq matnlar (lex.uz, MB, BIS, IFSB va h.k.); `manbalar/ROYXAT.md` — qaysi havola yuklangani/yuklanmagani. Normativ talabni tekshirganda shu matnlardan modda/band raqami bilan iqtibos keltir; "Muddatlar" bo'yicha eskirgan (bekor qilingan, almashtirilgan) hujjatga havolani albatta belgila.
 - Ishni boshlashdan oldin: `Glob bilim/06-soha/risk/**/*.md` bilan ro'yxatni ol, so'ng Grep bilan tahlil qilinayotgan hujjatdagi kalit so'zlar (aqd turi, mahsulot, bo'linma, atama) bo'yicha tegishli joylarni top va o'qi. PDF/DOCX ning matni yonidagi `.md` faylda.
 - Xulosalaringni birinchi navbatda SHU bazaga asosla; har bir topilmada manba fayl nomi va bandini ko'rsat.
 - Bazada mos manba bo'lmasa, umumiy bilimingdan foydalanishing mumkin, lekin "[bazada manba yo'q]" belgisini qo'y.

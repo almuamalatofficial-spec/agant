@@ -20,10 +20,17 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-FORMATLAR = {".pdf", ".docx", ".doc", ".rtf", ".odt", ".txt", ".xlsx", ".xls",
+FORMATLAR = {".pdf", ".docx", ".doc", ".rtf", ".odt", ".txt", ".html", ".htm", ".xlsx", ".xls",
              ".pptx", ".vsdx", ".png", ".jpg", ".jpeg"}
 OCR_TILLAR = "uzb+uzb_cyrl+rus+eng"
 OCR = "--ocrsiz" not in sys.argv
+
+
+def rel(p: Path) -> str:
+    try:
+        return str(p.relative_to(ROOT))
+    except ValueError:
+        return str(p)
 
 
 def run(cmd, **kw):
@@ -47,6 +54,26 @@ def pdf_matn(p: Path) -> str:
         for i, rasm in enumerate(sorted(Path(d).glob("s-*.png")), 1):
             qismlar.append(f"\n\n<!-- sahifa {i} -->\n" + ocr_rasm(rasm))
     return "> Eslatma: matn OCR orqali olingan — raqam va atamalarda xato bo'lishi mumkin, asl PDF bilan solishtiring.\n" + "".join(qismlar)
+
+
+def html_matn(p: Path) -> str:
+    """Veb-sahifa (lex.uz va boshqalar) -> matn. lex.uz da faqat hujjat matni olinadi."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(p.read_bytes(), "lxml")
+    for t in soup(["script", "style", "noscript", "nav", "header", "footer", "form", "button"]):
+        t.decompose()
+    for t in soup.select(".lx_no_select, .COMMENT, .INDEXES_ON_REF, .CHANGES_ORIGINS, .dropdown-menu"):
+        t.decompose()
+    bandlar = soup.select(".ACT_TEXT, .ACT_TITLE, .CLAUSE_DEFAULT, .TEXT_HEADER_DEFAULT, .ACT_FORM, .ACT_EMBLEM_TITLE, .BY_DEFAULT, .ACT_TITLE_APPL")
+    if not bandlar:
+        bandlar = [t for t in soup.select(".lx_elem") if not t.find_parent(class_="lx_elem")]
+    if bandlar:
+        qatorlar = [b.get_text(" ", strip=True) for b in bandlar]
+    else:
+        qatorlar = [ln.strip() for ln in (soup.body or soup).get_text("\n").splitlines()]
+    tugma = re.compile(r"(Ҳужжатга таклиф юбориш|Аудиони тинглаш|Ҳужжат элементидан ҳавола олиш|Hujjatga taklif yuborish|Audioni tinglash|Hujjat elementidan havola olish)\s*")
+    qatorlar = [tugma.sub("", q).strip() for q in qatorlar]
+    return "\n\n".join(q for q in qatorlar if q)
 
 
 def docx_matn(p: Path) -> str:
@@ -110,6 +137,8 @@ def aylantir(p: Path):
                 matn = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", out.stdout)
             else:
                 matn = docx_matn(soffice(p, "docx", d))
+        elif ext in (".html", ".htm"):
+            matn = html_matn(p)
         elif ext == ".txt":
             matn = p.read_text(encoding="utf-8", errors="replace")
         elif ext == ".xlsx":
@@ -122,7 +151,7 @@ def aylantir(p: Path):
             matn = pdf_matn(soffice(p, "pdf", d))
         else:  # rasm
             matn = "> Eslatma: rasm OCR orqali o'qildi.\n\n" + ocr_rasm(p) if OCR else ""
-    chiqish.write_text(f"<!-- manba: {p.relative_to(ROOT)} -->\n# {p.stem}\n\n{matn}", encoding="utf-8")
+    chiqish.write_text(f"<!-- manba: {rel(p)} -->\n# {p.stem}\n\n{matn}", encoding="utf-8")
     return len(matn.strip())
 
 
@@ -145,15 +174,15 @@ def main() -> None:
                 n = fut.result()
                 if n is not None:
                     yangi += 1
-                    print(f"  + {f.relative_to(ROOT)}", flush=True)
+                    print(f"  + {rel(f)}", flush=True)
                     if n < 50:
                         boshlar.append(f)
             except Exception as e:  # bitta buzuq fayl butun jarayonni to'xtatmasin
                 xato += 1
-                print(f"  ! {f.relative_to(ROOT)}: {e}", file=sys.stderr, flush=True)
+                print(f"  ! {rel(f)}: {e}", file=sys.stderr, flush=True)
     print(f"Jami: {len(fayllar)} fayl, {yangi} ta yangilandi, {xato} ta xato.")
     for f in boshlar:
-        print(f"  (matn deyarli yo'q) {f.relative_to(ROOT)}")
+        print(f"  (matn deyarli yo'q) {rel(f)}")
 
 
 if __name__ == "__main__":
