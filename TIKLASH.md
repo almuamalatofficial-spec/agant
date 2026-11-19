@@ -19,6 +19,7 @@ Claude quyidagilarni bajaradi:
 4. **Havolalardagi manbalar** (lex.uz, BIS, IFSB…): `python3 scripts/havolalarni_yukla.py scripts/havolalar.json`.
 5. **Matnga aylantirish:** `python3 scripts/bazani_tayyorla.py --ocrsiz`, so'ng fonda `python3 scripts/bazani_tayyorla.py` (OCR; kerak bo'lsa
    `apt-get install -y tesseract-ocr tesseract-ocr-uzb tesseract-ocr-uzb-cyrl tesseract-ocr-rus`).
-6. **Promptlar** — `scripts/promptlar_drive.json` dagi Google Doc'lar bilan sinxron (orkestratorning -1 qadami).
+6. **Bank qoidalari reestri:** Drive'dagi har bir bankning `04_Reestr` papkasidan `QOIDALAR.md`, `OZGARTIRISH_NAVBATI.md`, `reestr.jsonl` ni `korxonalar/[BANK]/04_Reestr/` ga yukla; papka bo'lmasa — `python3 scripts/reestr.py boshlash --bank [BANK]` (amaldagi islomiy hujjatlar va 03_Yakuniy dan qayta quriladi).
+7. **Promptlar** — `scripts/promptlar_drive.json` dagi Google Doc'lar bilan sinxron (orkestratorning -1 qadami).
 
 Tekshiruv: `ls .claude/agents | wc -l` (29), `find bilim korxonalar -name "*.*.md" | wc -l`.
