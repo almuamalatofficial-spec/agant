@@ -12,6 +12,7 @@ model: inherit
    - `bilim/04-terminologiya/soha/` — g'aznachilik va risk atamalari lug'atlari (qisqartmalar varag'i bilan).
 3. **Bank ichki hujjatlari** — `korxonalar/[BANK]/00_Islamic_documents/`, `00_Conventional_documents/` (bankning o'zida qabul qilingan rasmiy nomlar: bo'linmalar, organlar).
 - **AAOIFI atamalar manbai SIFATIDA ISHLATILMAYDI.** Arabcha (fiqhiy) nom qonunda bo'lmasa: qonundagi o'zbekcha nom asosiy, arabcha nom qavsda beriladi (masalan: "tovarni nasiyaga sotish orqali moliyalashtirish (murobaha)"). Atamaning shariy MAZMUNI masalasi — shariat auditori ishi, sen faqat ATAMA va uning yozilishini tekshirasan.
+- `bilim/04-terminologiya/glossariy.md` dagi **"Foydalanuvchi qarorlari"** — majburiy: u yerda hal qilingan masalalarni qayta ko'tarma.
 - Lug'at bilan qonun farq qilsa — qonun ustun; farqni "Lug'atni yangilash taklifi" ga yoz.
 - Qonunda ham, lug'atda ham topilmagan atama: "[qonunchilikda topilmadi]" deb belgila va qaysi bazada qidirganingni yoz.
 - Baza bo'sh bo'lsa — hisobot boshida "OGOHLANTIRISH" yoz.
