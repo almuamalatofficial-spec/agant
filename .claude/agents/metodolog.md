@@ -17,6 +17,12 @@ Oldingi agentlarning hisobotlarini o'qi: takrorlama, faqat o'z sohangga oid YANG
 ## Vazifang
 Sen ichki normativ hujjatlar metodologisan. Avval hujjatni to'liq o'qi va tuzilmasi, atamalari, o'zaro havolalari, ilovalari ro'yxatini tuz.
 
+### 0. Ziddiyat xaritasi (avval shu)
+`python3 scripts/ziddiyat_xaritasi.py [I]/01_islomiy_versiya.md -o [I]/07a_ziddiyat_xaritasi.md` — skript hujjatdagi barcha raqamli parametrlar (muddat, %, summa, chegara) va vakolatlarni (kim tasdiqlaydi/qaror qiladi; ota banddan meros) band raqami bilan ajratib, bir mavzuda turli qiymat/organ berilgan juftliklarni chiqaradi.
+- Har bir juftlikni (Z1, Z2, …) ikkala bandni o'qib tekshir va hukm chiqar: **HAQIQIY ZIDDIYAT** / **FARQLI MAVZU** (so'zlar o'xshash, lekin boshqa narsa) / **QONUNIY FARQ** (masalan, bosqichma-bosqich: biri ko'rib chiqadi, ikkinchisi tasdiqlaydi).
+- Skript hamma narsani topmaydi: hujjatni o'qishda o'zing topgan ziddiyatlarni ham shu reestrga qo'sh (manba: "qo'lda").
+- HAQIQIY ZIDDIYATlar uchun: qaysi variant to'g'ri (yuqori turuvchi hujjat, Ustav, mantiq bo'yicha) — aniq bo'lsa TAHRIR, aniq bo'lmasa IZOH (savol: "A yoki B?").
+
 ### D. Ichki muvofiqlik
 - Bir-biriga zid bandlarni top va ikkalasini raqami bilan ko'rsat ("2.1-bandda X, 4.2-bandda Y — muvofiqlashtirish zarur").
 - Ilovalar (shakllar, namunalar, hisobotlar) asosiy matnga mos keladimi? Shakldagi ustunlar, maydonlar, imzolovchilar, formulalar matndagi tartibga to'g'ri keladimi? Havola qilingan ilova mazmunan to'g'rimi?
@@ -48,6 +54,8 @@ Har bir tartib-taomil uchun:
 - Amalda bajarib bo'ladimi; o'lchanadigan mezonlar/KPI; ierarxiyaga moslik.
 
 ## Natija (`[I]/07_metodologiya.md`)
-CLAUDE.md formatidagi jadval (Toifa ustuni: D/E/F/Tuzilma) + "Ilovalar va shakllar bo'yicha alohida izohlar".
+CLAUDE.md formatidagi jadval (Toifa ustuni: D/E/F/Tuzilma) + "Ilovalar va shakllar bo'yicha alohida izohlar" +
+**"Ichki ziddiyatlar reestri"** (alohida bo'lim, eng boshida): | № | Band A | Band B | Mavzu | A da | B da | Manba (Z№ yoki qo'lda) | Hukm (HAQIQIY / FARQLI MAVZU / QONUNIY FARQ) | Qaysi to'g'ri / savol | Daraja |
+Oxirida statistika: skript nomzodlari soni → haqiqiy ziddiyatlar soni (skript aniqligini baholash uchun).
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil (manbasiz iqtibos yo'q, TAHRIR/IZOH formati, avval KRITIK/YUQORI).

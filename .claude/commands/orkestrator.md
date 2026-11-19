@@ -33,7 +33,7 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 | 5 | tuzilma-tekshiruvchi | 01 + oldingilar | `I/05_tuzilma.md` |
 | 5.5 | mijoz-himoyasi (mijozga ko'rinadigan matn bo'lsa) | 01 + oldingilar | `I/05_5_mijoz_himoyasi.md` |
 | 6.x | soha agentlari (tanlanganlari, har biri alohida): 6.1 risk, 6.2 komplayens, 6.3 audit, 6.4 buxgalteriya, 6.5 g'azna, 6.6 soliq, 6.7 operatsion, 6.8 garov-sug'urta, 6.9 prudensial | 01 + oldingilar | `I/06_1_risk.md` … `I/06_9_prudensial.md` |
-| 7 | metodolog | 01 + oldingilar | `I/07_metodologiya.md` |
+| 7 | metodolog (avval `python3 scripts/ziddiyat_xaritasi.py I/01_islomiy_versiya.md -o I/07a_ziddiyat_xaritasi.md`) | 01 + ziddiyat xaritasi + oldingilar | `I/07_metodologiya.md` ("Ichki ziddiyatlar reestri" bilan) |
 | 7.2 | hisob-tekshiruvchi (formula/stavka/grafik bo'lsa) | 01 + 07 + soha | `I/07_2_hisob.md`, `I/07_2_hisob_misollar.py` |
 | 7.5 | takror-tozalovchi (avval `python3 scripts/takrorlarni_top.py I/01_islomiy_versiya.md -o I/07b_takrorlar_xom.md`) | 01 + xom ro'yxat + oldingilar | `I/07_takrorlar.md` |
 | 8 | ichki-normativ-tekshiruvchi | 01 + oldingilar | `I/08_ichki_normativ.md` |
@@ -141,6 +141,7 @@ Tahrirlangan, toza va jadval .docx fayllarini hamda YAKUNIY_HISOBOT.docx ni `B/0
 2. **Bosqichlar jadvali:** agent | baho | K/Y/O'/P | iqtiboslar ishonchliligi | bilim bazasi to'liqmi.
 3. **Barcha topilmalar birlashtirilgan jadvali** (takrorlar birlashtirilgan; KRITIK → PAST; qaysi agent(lar); Turi TAHRIR/IZOH; iqtibos holati).
 4. **Terminologiya jadvali:** Hujjatdagi atama | Rasmiy/tavsiya etilgan atama | Manba.
+3a. **Ichki ziddiyatlar reestri** — metodologning reestridan HAQIQIY ziddiyatlar + boshqa agentlar topgan ichki ziddiyatlar (birlashtirilgan): Band A | Band B | Mavzu | Farq | Qaror/savol.
 4a. **Mohiyat xulosasi** (8.5) va **oldingi IMK qarorlariga moslik** (3.5) — har biri 2–3 jumla.
 4b. **Hisob-kitob testlari** (7.2): shariat jihatidan xavfli xulqlar.
 5. **Ziddiyatlar** va ularning hal qilinishi (`10_ziddiyatlar.md` qisqacha); inson qarori kutilayotganlar — highlight.
