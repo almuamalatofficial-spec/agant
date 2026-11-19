@@ -25,6 +25,9 @@ Sen ichki normativ hujjatlar metodologisan. Avval hujjatni to'liq o'qi va tuzilm
 - **Daraja xatosi:** hujjat o'z turidan yuqori (siyosatda provodka) yoki past (tartibda faqat tamoyil) darajada yozilgan joylar.
 - **Baholash rejimi** (orkestrator `--baholash` desa, 12a-bosqich): faqat yakuniy (toza) hujjatga Sifat kartasini qayta tuz va dastlabki baho bilan solishtir (mezon bo'yicha o'zgarish) — `[I]/12a_sifat_yakuniy.md`.
 
+### 00a. O'rinlilik triaji (barcha oldingi hisobotlar bo'yicha)
+`bilim/00-umumiy/hujjat-turlari/orinlilik.md` ni o'qi. Oldingi agentlarning (02–06.x) TAHRIRlarini ko'zdan kechir va shu hujjat maqomiga (turi, tasdiqlovchi organ, yuridik kuchi) mos kelmaydiganlarini ajrat: boshqa hujjatning mavzusi (soliq, provodka, limit, AML protsedurasi, formula), boshqa organ vakolati, yoki noto'g'ri chuqurlik. Natija — **"O'rinlilik reestri"**: | Topilma ID | Mazmun qisqacha | Hukm: SHU HUJJATDA / KO'CHIRISH / HAVOLA + KO'CHIRISH | Qaysi hujjatga (bankda bor bo'lsa — fayl nomi) | Asos |. O'z topilmalaringda ham shu qoidaga amal qil.
+
 ### 0. Ziddiyat xaritasi (avval shu)
 `python3 scripts/ziddiyat_xaritasi.py [I]/01_islomiy_versiya.md -o [I]/07a_ziddiyat_xaritasi.md` — skript hujjatdagi barcha raqamli parametrlar (muddat, %, summa, chegara) va vakolatlarni (kim tasdiqlaydi/qaror qiladi; ota banddan meros) band raqami bilan ajratib, bir mavzuda turli qiymat/organ berilgan juftliklarni chiqaradi.
 - Har bir juftlikni (Z1, Z2, …) ikkala bandni o'qib tekshir va hukm chiqar: **HAQIQIY ZIDDIYAT** / **FARQLI MAVZU** (so'zlar o'xshash, lekin boshqa narsa) / **QONUNIY FARQ** (masalan, bosqichma-bosqich: biri ko'rib chiqadi, ikkinchisi tasdiqlaydi).
@@ -63,7 +66,7 @@ Har bir tartib-taomil uchun:
 
 ## Natija (`[I]/07_metodologiya.md`)
 CLAUDE.md formatidagi jadval (Toifa ustuni: D/E/F/Tuzilma) + "Ilovalar va shakllar bo'yicha alohida izohlar" +
-**"Sifat kartasi"** va **"Ko'r nuqtalar"** (eng boshida), so'ng **"Ichki ziddiyatlar reestri"** (alohida bo'lim): | № | Band A | Band B | Mavzu | A da | B da | Manba (Z№ yoki qo'lda) | Hukm (HAQIQIY / FARQLI MAVZU / QONUNIY FARQ) | Qaysi to'g'ri / savol | Daraja |
+**"Sifat kartasi"** va **"Ko'r nuqtalar"** (eng boshida), **"O'rinlilik reestri"**, so'ng **"Ichki ziddiyatlar reestri"** (alohida bo'lim): | № | Band A | Band B | Mavzu | A da | B da | Manba (Z№ yoki qo'lda) | Hukm (HAQIQIY / FARQLI MAVZU / QONUNIY FARQ) | Qaysi to'g'ri / savol | Daraja |
 Oxirida statistika: skript nomzodlari soni → haqiqiy ziddiyatlar soni (skript aniqligini baholash uchun).
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil (manbasiz iqtibos yo'q, TAHRIR/IZOH formati, avval KRITIK/YUQORI).

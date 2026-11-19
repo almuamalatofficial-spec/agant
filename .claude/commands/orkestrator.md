@@ -98,6 +98,9 @@ Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, fayl
 ## ZIDDIYATLARNI HAL QILISH — USTUNLIK QOIDALARI
 9.5-bosqichdan keyin barcha hisobotlardagi tavsiyalarni **band bo'yicha** guruhla. Bitta bandga ikki yoki undan ortiq agent bir-biriga zid tavsiya bergan bo'lsa (yoki "Oldingi tavsiyalarga e'tiroz" bo'lsa), quyidagi qoidalarni **tartib bilan** qo'lla va natijani `I/10_ziddiyatlar.md` ga yoz.
 
+### 0. O'rinlilik filtri (birinchi navbatda)
+Har bir TAHRIRni `bilim/00-umumiy/hujjat-turlari/orinlilik.md` bo'yicha tekshir: mazmuni boshqa hujjatga tegishli (soliq → soliq hisobi siyosati, provodka → hisob sxemalari, limit → risk siyosati, protsedura → tartib) yoki hujjatning tasdiqlovchi organi vakolatidan tashqari bo'lsa — **KO'CHIRISH** ga aylantir. Bu hujjatga faqat havola qoladi (zarur bo'lsa). KO'CHIRISHlar ro'yxati `I/10_kochirishlar.md` ga (| № | Topilma ID | Mazmun | Qaysi hujjatga | Tasdiqlovchi organ | Bu hujjatda havola kerakmi |) va tasdiqdan keyin `B/04_Reestr/OZGARTIRISH_NAVBATI.md` ga yoziladi. Agentlar o'zi KO'CHIRISH deb belgilagan bo'lsa — tekshirib tasdiqla. Shubhali holat (tegishli hujjat bankda bormi, noma'lum) — savolga.
+
 ### 1. Masala turi bo'yicha vakolatli agent
 | Masala turi | Vakolatli (ustun) agent | Izoh |
 |---|---|---|

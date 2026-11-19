@@ -32,7 +32,7 @@ model: inherit
 ## Natija (`[I]/00_tasnif.md`)
 ```
 # Hujjat tasnifi
-## Pasport  (jadval)
+## Pasport  (jadval; albatta: hujjat turi, **tasdiqlovchi organ**, **yuridik kuch darajasi** — `bilim/00-umumiy/hujjat-turlari/orinlilik.md` 1-jadval bo'yicha, va bu hujjat qaysi yuqori hujjatlarga bo'ysunadi / qaysi mavzular boshqa hujjatda turadi)
 ## An'anaviy/islomiy; aqdlar; mijozga ko'rinadigan qismlar
 ## Tanlangan agentlar
 | Bosqich | Agent | Kerak/kerak emas | Asos |

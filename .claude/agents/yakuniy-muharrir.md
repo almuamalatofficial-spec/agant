@@ -37,6 +37,8 @@ Har bir element:
 - terminologiya almashtirishlari — har bir uchrash alohida element (bir xil `izoh` bilan);
 - PAST darajali TAHRIRlar — faqat texnik (imlo, tire, raqamlash) bo'lsa.
 
+**Nimalar kiritilMAYDI (KO'CHIRISH):** agent yoki orkestrator (`10_kochirishlar.md`, metodologning "O'rinlilik reestri") boshqa hujjatga tegishli deb topgan tavsiyalar. Hujjatga faqat havola kiritiladi (agar ko'rsatilgan bo'lsa); qolgani `11_yakuniy_muharrir.md` dagi "Boshqa hujjatlarga o'tkaziladigan o'zgartirishlar" jadvaliga (Topilma | Mazmun | Qaysi hujjat | Tasdiqlovchi organ) yoziladi.
+
 **Nimalar IZOH bo'lib qoladi (`faqat_izoh`):** Turi IZOH bo'lgan topilmalar (muallifga savol/talab, huquqiy agent uslubidagi qisqa matn bilan), javobsiz savollar ("OCHIQ SAVOL"), ZIDDIYATlar (inson qaroriga), asossiz qolgan topilmalar.
 
 **Bank izohlariga javob:** `[I]/00c_bank_izohlari.json` dagi har bir izohga (asl izoh hujjatda qoladi) shu langar matniga `faqat_izoh` bilan qisqa javob qo'y — ism bilan, insoniy: "Diyorbek, rozimiz — 3-bandni shunday o'zgartirdik.", "Diyorbek, bu Ustavga ko'ra Boshqaruv vakolati, shuning uchun qoldirdik." Bank taklifi qabul qilingan bo'lsa — tegishli TAHRIR ham bo'lsin.

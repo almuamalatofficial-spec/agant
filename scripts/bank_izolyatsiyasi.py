@@ -46,7 +46,8 @@ def main():
             continue
         for f in (ROOT / "korxonalar" / b).rglob("*"):
             n = nom(f).lower()
-            if f.is_file() and len(n) >= 14 and n not in oz and not re.fullmatch(r"[\d\s._()-]+", n):
+            if f.is_file() and len(n) >= 14 and n not in oz and not re.fullmatch(r"[\d\s._()-]+", n) \
+                    and not re.match(r"^\d{2}[a-z]?_", n):  # tizimning texnik fayllari (00c_bank_izohlari, 07a_…)
                 begona[n] = b
     naqsh = [(b, re.compile(rx, re.I)) for b, rxs in BANK_NOMLARI.items() if b != a.bank for rx in rxs]
     naqsh += [(b, re.compile(re.escape(b), re.I)) for b in banklar if b != a.bank]
@@ -58,7 +59,7 @@ def main():
         for i, q in enumerate(f.read_text(encoding="utf-8", errors="ignore").splitlines(), 1):
             ql = q.lower()
             for b, rx in naqsh:
-                if rx.search(q) and not re.search(r"(ishlatilmadi|chiqarib tashlan|foydalanilmadi|olinmadi|TAQIQ|o'qilmadi|o‘qilmadi)", q, re.I):
+                if rx.search(q) and not re.search(r"(ishlatilmadi|boshqa bank|chiqarib tashlan|foydalanilmadi|olinmadi|TAQIQ|o'qilmadi|o‘qilmadi)", q, re.I):
                     topildi.append((f.name, i, b, rx.pattern, q.strip()[:200]))
             for n, b in begona.items():
                 if n in ql:

@@ -22,7 +22,7 @@ Bu loyiha islomiy moliya hujjatlarini (shartnoma, nizom, ichki tartib, mahsulot 
 ## [Agent nomi] xulosasi
 Umumiy baho: MOS / SHARTLI MOS / MOS EMAS
 | # | Band/joy | Turi | Muammo | Daraja | Manba | Tavsiya |
-Turi: TAHRIR (to'g'ri variant aniq — matnga kiritiladi) yoki IZOH (muallifdan ma'lumot/qaror kerak — savol yoki talab)
+Turi: TAHRIR (to'g'ri variant aniq — matnga kiritiladi), IZOH (muallifdan ma'lumot/qaror kerak — savol yoki talab) yoki KO'CHIRISH (mazmun to'g'ri, lekin boshqa hujjatda turishi kerak — 12-band)
 Daraja: KRITIK (qonun/ustav/shariatga zid, hujjatni bekor qiladi — tasdiqlab bo'lmaydi) · YUQORI (tuzatilmasa huquqiy yoki operatsion xavf) · O'RTA (aniqlashtirish talab etiladi) · PAST (uslubiy/tahririy)
 Tavsiya: TAHRIR uchun — O'chirildi: "[hujjatdagi aniq matn]" → Kiritildi: "[yangi matn]" + bir jumla asos;
          IZOH uchun — muallifga savol/talab matni (masalan: "…aniqlashtirishingizni so'raymiz", "…belgilansin", "…muvofiqlashtirilsin").
@@ -41,4 +41,5 @@ Aniqlanmagan savollar: ...
     - texnik belgilar (03#2, E12, S5, "[bazada manba yo'q]") faqat hisobotlar va jadvallarda — Word matni va izohlarida emas.
     **Word izohlari** — juda qisqa (odatda 1 jumla, ko'pi bilan 2; ~25 so'zgacha), hamkasbga yozilgandek: savol yoki aniq iltimos. Misollar: "Bu yerda IMK xulosasi kerak emasmi?", "Muddat kalendar kunmi yoki ish kunimi?", "4.4-band bilan mos emas — bittasini qoldiraylik.", "Qisqartmani birinchi marta to'liq yozdim."
 11. **Bank izohlari.** Asl hujjatdagi bank xodimlarining izohlari (`[I]/00c_bank_izohlari.md`, B1, B2, …) — mijozning savollari: o'z sohangdagi har biriga hisobotda alohida **"Bank izohlariga javob"** bo'limida javob ber (Bn | Javob: rozimiz / qisman / rozi emasmiz | Asos | TAHRIR yoki savol). Bank taklifini ko'r-ko'rona qabul qilma: Ustav, qonun, shariat va bankning boshqa hujjatlari bilan tekshir.
-12. **Mas'uliyat:** AI xulosasi maslahat xarakterida. Yakuniy fatvo — Shariat kengashi (IMK), yakuniy huquqiy xulosa — litsenziyali yurist tomonidan beriladi. Har bir hisobot oxirida shu eslatma bo'lsin.
+12. **O'rinlilik (hujjat maqomi va yuridik kuchi).** Har bir o'zgartirish faqat to'g'ri emas, shu hujjatga tegishli ham bo'lsin. Hujjat turi, tasdiqlovchi organi va yuridik kuchini (`00_tasnif.md`) hisobga ol: quyi hujjat yuqorisiga zid bo'lmaydi va o'z organi vakolatidan chiqmaydi; siyosatga tartib tafsiloti, tartibga boshqa hujjatning mavzusi yozilmaydi. Masalan, soliq agenti to'g'ri tuzatish topsa-yu, soliq masalasi soliq hisobi siyosatida turishi kerak bo'lsa — Turi **KO'CHIRISH**: "[hujjat] da aks ettirilsin", bu hujjatda ko'pi bilan havola. Matritsa: `bilim/00-umumiy/hujjat-turlari/orinlilik.md`. KO'CHIRISH yakuniy matnga kiritilmaydi, bankning o'zgartirish navbatiga tushadi.
+13. **Mas'uliyat:** AI xulosasi maslahat xarakterida. Yakuniy fatvo — Shariat kengashi (IMK), yakuniy huquqiy xulosa — litsenziyali yurist tomonidan beriladi. Har bir hisobot oxirida shu eslatma bo'lsin.
