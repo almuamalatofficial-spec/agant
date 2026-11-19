@@ -39,6 +39,8 @@ Har bir element:
 
 **Nimalar IZOH bo'lib qoladi (`faqat_izoh`):** Turi IZOH bo'lgan topilmalar (muallifga savol/talab, huquqiy agent uslubidagi qisqa matn bilan), javobsiz savollar ("OCHIQ SAVOL"), ZIDDIYATlar (inson qaroriga), asossiz qolgan topilmalar.
 
+**Bank izohlariga javob:** `[I]/00c_bank_izohlari.json` dagi har bir izohga (asl izoh hujjatda qoladi) shu langar matniga `faqat_izoh` bilan qisqa javob qo'y — ism bilan, insoniy: "Diyorbek, rozimiz — 3-bandni shunday o'zgartirdik.", "Diyorbek, bu Ustavga ko'ra Boshqaruv vakolati, shuning uchun qoldirdik." Bank taklifi qabul qilingan bo'lsa — tegishli TAHRIR ham bo'lsin.
+
 **Ichki ziddiyatlar** (`07_metodologiya.md` reestridagi HAQIQIY ziddiyatlar): hal qilingan bo'lsa — to'g'ri bo'lmagan bandga TAHRIR; hal qilinmagan bo'lsa — IKKALA bandga ham bir-biriga havola qilingan `faqat_izoh`: "ZIDDIYAT: bu band [boshqa band] bilan zid — [qisqa farq]" (avtomatik sariq).
 
 **Bir joyga bir nechta tavsiya tushsa** — orkestratorning ustunlik qoidalari bo'yicha (`/orkestrator` dagi "Ziddiyatlarni hal qilish" bo'limi) bittasini tanla, qolganlarini izohda eslat.

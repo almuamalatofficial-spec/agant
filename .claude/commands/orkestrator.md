@@ -14,6 +14,7 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 2. `python3 scripts/bazani_tayyorla.py [hujjat]` — kirish hujjatini matnga aylantir.
 3. Ish papkasi: `B/02_Hisobotlar/[hujjat_nomi]_[YYYY-MM-DD]/` (bundan keyin `I/`).
 4. **Tasniflovchi** agentini ishga tushir → `I/00_tasnif.md` (hujjat turi, an'anaviy/islomiy, aqdlar, mijozga ko'rinadigan qismlar, kerakli agentlar asosi bilan). `--agentlar +x,-y` berilgan bo'lsa — tasnifni shunga moslab tuzat. Tanlangan agentlar ro'yxatini foydalanuvchiga ko'rsat.
+4b. **Bank izohlari:** asl Word hujjatda izohlar bo'lsa (bank xodimlari qoldirgan) — `python3 scripts/izohlarni_ajrat.py [asl.docx] -o I/00c_bank_izohlari.md --json I/00c_bank_izohlari.json`. Har bir agentga beriladi; har bir izoh (B1, B2, …) uchun tegishli agent(lar) belgilanadi (tuzilma/vakolat → tuzilma; qonun → huquqiy; shariat → shariat-auditor; limit/risk → soha-risk; hisob → buxgalteriya va h.k.). Tekshiruv oxirida har bir Bn ga javob borligini tekshir — javobsiz qolgani savollar fayliga tushadi.
 4a. **Reestr bilan solishtirish:** `python3 scripts/reestr.py solishtir I/01_islomiy_versiya.md --bank [BANK] --nom "[hujjat nomi]" -o I/00b_reestr_solishtirish.md` (reestr bo'lmasa — avval `python3 scripts/reestr.py boshlash --bank [BANK]`). Natija ichki-normativ-tekshiruvchi (asosiy) va fatvo-xotirasiga beriladi.
 5. `--faqat` berilgan bo'lsa — faqat shu raqamli bosqichlar.
 6. Hujjat islomiy bo'lsa (1-bosqich yo'q): asl matnni `I/01_islomiy_versiya.md` ga ko'chir (izohlarsiz toza nusxa: `pandoc [asl.docx] -t gfm-raw_html --wrap=none --track-changes=accept -o I/01_islomiy_versiya.md`).
@@ -88,6 +89,7 @@ Asl hujjat: [yo'l]
 Tasnif: I/00_tasnif.md
 Bank: [BANK]; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_documents/ (boshqa bank papkalari — TAQIQ)
 Oldingi hisobotlar: [ro'yxat]   ← shariat-auditor uchun faqat 02_huquqiy.md; mohiyat-tekshiruvchiga hech qanday hisobot berilmaydi; 01_ozgarishlar.md faqat yakuniy-muharrirga
+Bank izohlari: I/00c_bank_izohlari.md (bo'lsa) — o'z sohangdagi har bir Bn ga hisobotingda \"Bank izohlariga javob\" bo'limida javob ber: rozimiz/qisman/rozi emasmiz, asos (qonun, Ustav, Siyosat, shariat) va aniq TAHRIR yoki savol.
 Natijani [fayl] ga yoz. Menga faqat qaytar: umumiy baho, K/Y/O'/P soni, eng muhim 3 topilma, e'tirozlar soni.
 ```
 **Bank izolyatsiyasi nazorati** — har bir agentdan keyin: `python3 scripts/bank_izolyatsiyasi.py I --bank [BANK] -o I/_izolyatsiya.md`. Boshqa bank hujjatiga tayangan topilma bo'lsa — o'sha topilmani hisobotdan olib tashla (yoki agentni "faqat [BANK] hujjatlari bilan" ko'rsatmasi bilan qayta ishga tushir) va foydalanuvchiga ayt. Yakuniy hisobotga "Bank izolyatsiyasi: buzilish yo'q / N ta tuzatildi" qatorini yoz.

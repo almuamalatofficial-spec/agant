@@ -17,6 +17,7 @@ model: inherit
 4. **Iqtibos tekshiruvi natijalari:** `09_5` dagi "Asossiz qolgan topilmalar" va MANBA BAZADA YO'Q holatidagi muhim manbalar — "Shu manba bormi / qaysi tahriri amalda? (fayl yoki havola yuboring)" yoki "Topilma asossiz qoldi — saqlab qolinsinmi?".
 4a. **Turi IZOH bo'lgan KRITIK/YUQORI topilmalar** — muallifdan qaror yoki ma'lumot so'raydiganlari (yopiq savolga aylantir).
 4b. **"[bazada manba yo'q]" / "[qonunchilikda topilmadi]"** belgili muhim topilmalar. Bular uchun savol: "Shu manba bormi/qaysi tahriri amalda? (fayl yoki havola yuboring)". Mayda (PAST) topilmalar uchun savol berma.
+4c. **Bank izohlari** (`[I]/00c_bank_izohlari.md`): har bir Bn uchun agentlar javobini yig'. Javob aniq bo'lsa — savol berma, `10_savollar.md` dagi "Bank izohlariga javoblar" jadvaliga yoz; agentlar kelishmasa yoki bank qarori kerak bo'lsa — savol (kimga: Muallif/bank), variantlari bilan.
 5. Agentlar "muallifdan aniqlashtirish kerak" degan joylar (raqam, muddat, mas'ul, tanlov).
 
 ## Qoidalar
