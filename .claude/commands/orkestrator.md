@@ -90,6 +90,7 @@ Bank: [BANK]; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_docume
 Oldingi hisobotlar: [ro'yxat]   ← shariat-auditor uchun faqat 02_huquqiy.md; mohiyat-tekshiruvchiga hech qanday hisobot berilmaydi; 01_ozgarishlar.md faqat yakuniy-muharrirga
 Natijani [fayl] ga yoz. Menga faqat qaytar: umumiy baho, K/Y/O'/P soni, eng muhim 3 topilma, e'tirozlar soni.
 ```
+**Bank izolyatsiyasi nazorati** — har bir agentdan keyin: `python3 scripts/bank_izolyatsiyasi.py I --bank [BANK] -o I/_izolyatsiya.md`. Boshqa bank hujjatiga tayangan topilma bo'lsa — o'sha topilmani hisobotdan olib tashla (yoki agentni "faqat [BANK] hujjatlari bilan" ko'rsatmasi bilan qayta ishga tushir) va foydalanuvchiga ayt. Yakuniy hisobotga "Bank izolyatsiyasi: buzilish yo'q / N ta tuzatildi" qatorini yoz.
 Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, faylga "BAJARILMADI: sabab" deb yoz va davom et.
 
 ## ZIDDIYATLARNI HAL QILISH — USTUNLIK QOIDALARI
