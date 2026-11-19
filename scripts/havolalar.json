@@ -1,0 +1,974 @@
+[
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-2720359",
+"nom": "Bank aktivlar o‘sishini moliyalashtirishi va ko‘zda tutilmagan (nomaqbul) yo‘qotishlarsiz majburiyatlarining o‘z vaqtida bajarilishini ta’minlash imko",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-1374865",
+"nom": "Hujjatlar bo‘lib, ular mazkur hujjatlarni chiqargan yuridik shaxs bilan ularning egasi o‘rtasidagi mulkiy huquqlarni yoki qarz munosabatlarini tasdiql",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-5421525",
+"nom": "Nizomda: Bankning chet el valyutasidagi talablari miqdori uning chet el valyutasidagi majburiyatlari miqdoriga mos (teng) bo‘lmagan holatdagi valyuta ",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-3212190",
+"nom": "Mijoz va hamkorlar haqidagi ma’lumotlarni o‘rganish.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-390573",
+"nom": "Fuqarolarning jamg‘arib boriladigan pensiya ta’minoti tizimi; Departament uning mablag‘larini joylashtirish va qaytarilishini nazorat qiladi.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://uzce.uz",
+"nom": "Ishtirokchilari chet el valyutasi orqali ish yurituvchi savdo faoliyatini tashkil qilishda yordam beruvchi valyuta bozori infratuzilmasi elementi; DQQ",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4107843",
+"nom": "Iqtisodiyot va moliya vazirligi o‘tkazadigan elektron auksion hamda O‘zRVB savdo tizimida DQQni tanlov asosida eng yaxshi narxlarda joylashtirish uchu",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-2681",
+"nom": "Qonundagi “bank” ta’rifi faqat rezident banklarni nazarda tutadi; xorijiy banklarni “norezident banklar” yoki “xorijiy kontragent banklar” deb alohida",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.swift.com/standards",
+"nom": "Xalqaro banklararo to‘lov xabarlarini uzatish tizimi.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4790646",
+"nom": "Hisobvaraq egasining o‘z hisobvarag‘idan belgilangan summani oluvchiga o‘tkazish haqidagi bankka bergan topshirig‘i; naqd pulsiz hisob-kitoblarning as",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-111189",
+"nom": "Kreditor qarz oluvchiga belgilangan limit va muddat doirasida mablag‘larni bir yoki bir necha qismda berish majburiyatini oladigan moliyalashtirish sh",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.isda.org/",
+"nom": "Ikki kontragent o‘rtasidagi barcha kelgusi bitimlarga taalluqli umumiy shartlarni (tasdiqlash, hisob-kitob, defolt, yopish-netting) belgilovchi ramkav",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.globalfxc.org/fx_global_code.htm",
+"nom": "Valyutani joriy kurs bo‘yicha odatda bitimdan keyin ikki ish kuni ichida (T+2) yoki tezroq yetkazib berish sharti bilan oldi-sotdi qilish.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4975566",
+"nom": "Bir valyutani boshqa valyutaga ayirboshlash (sotib olish/sotish) operatsiyasi – birjada yoki banklar bilan bevosita.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+"nom": "Nominal – qimmatli qog‘ozda ko‘rsatilgan qiymat. Diskont – nominaldan past sotib olinganda farq; mukofot (premiya) – nominaldan yuqori sotib olinganda",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-81499",
+"nom": "O‘zbekiston Respublikasi rezidenti hisoblanmaydigan, xorijda ro‘yxatdan o‘tgan bank.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-3697778",
+"nom": "Tijorat banklari majburiyatlarining Markaziy bank belgilagan normativlar bo‘yicha Markaziy bankdagi alohida hisobvaraqqa depozitga o‘tkaziladigan qism",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://cbu.uz",
+"nom": "Markaziy bankning pul-kredit siyosatidagi asosiy foiz stavkasi; banklararo stavkalar unga nisbatan belgilanishi mumkin. 2026-yil 11-noyabr holatiga 14",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-6567",
+"nom": "Aksiyadorlik jamiyati sof aktivlarining qonunda belgilangan foizidan oshadigan bitim; bunday bitimlar Kuzatuv kengashi yoki aksiyadorlar umumiy yig‘il",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/acts/7793613",
+"nom": "Bank regulyativ kapitalining tavakkalchilik darajasi bo‘yicha tortilgan aktivlarga nisbati orqali o‘lchanadigan, Markaziy bank belgilaydigan minimal t",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-6436466",
+"nom": "Bankning o‘z majburiyatlarini o‘z vaqtida va qo‘shimcha yo‘qotishlarsiz bajara olmaslik ehtimoli.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/bcbs/publ/d368.htm",
+"nom": "Foiz stavkalari o‘zgarishi natijasida bank daromadi va kapitali qiymatining kamayish ehtimoli.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/publ/bcbs241.htm",
+"nom": "Valyuta bitimida bank o‘z valyutasini to‘lab, kontragentdan qarshi valyutani olmay qolish ehtimoli.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/publ/bcbs248.htm",
+"nom": "Kun davomida to‘lovlarni o‘z vaqtida amalga oshirish uchun vakillik hisobvaraqlarida yetarli mablag‘ mavjudligi.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-283717",
+"nom": "Jinoiy daromadlarni qonuniylashtirish, terrorizm va ommaviy qirg‘in qurolini tarqatishni moliyalashtirishning oldini olish bo‘yicha ichki nazorat tizi",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.wolfsberg-group.org/",
+"nom": "Xorijiy banklar va XMIlar korrespondent munosabat o‘rnatishda so‘raydigan standart AML/KYC so‘rovnomasi.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-41760",
+"nom": "Bank mijozlarining hisobvaraqlari, operatsiyalari va o‘zlari haqidagi, bank muhofaza qiladigan ma’lumotlar.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html",
+"nom": "Kontragent, to‘lov va bitimlarni BMT, milliy va xalqaro sanksiya ro‘yxatlari bo‘yicha tekshirish.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-8099403",
+"nom": "Banklar va bank faoliyati to‘g‘risidagi qonunchilikka hamda islomiy moliya standartlariga muvofiq amalga oshiriladigan bank faoliyati.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4674902",
+"nom": "Banklar va mikromoliya tashkilotlari tomonidan qonunchilikda belgilangan tartibda, islomiy moliya standartlari asosida amalga oshiriladigan faoliyat (",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/acts/8339242",
+"nom": "Bank faoliyati litsenziyasiga ega bank islomiy operatsiyalar uchun alohida litsenziya oladi (amaliyotda – “islomiy darcha”); qaror 2 oy ichida qabul q",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://cis.aaoifi.com/",
+"nom": "Islom huquqi va axloq qoidalari majmui; islomiy moliyada bitimlarning joizligi mezoni.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://cis.aaoifi.com/ru/?p=1736",
+"nom": "Qarz yoki ayirboshlashda oldindan belgilangan har qanday qo‘shimcha to‘lov; islomiy moliyada qat’iy taqiqlanadi. An’anaviy foizli banklararo depozit v",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.ifsb.org/guidance-notes/",
+"nom": "Banklararo likvidlikni joylashtirish/jalb qilish uchun birja tovarlari (metallar) asosida tuziladigan murobaha; an’anaviy banklararo depozitning islom",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://aaoifi.com/ss-30-monetization-tawarruq/?lang=en",
+"nom": "Tovarni nasiyaga sotib olib, uchinchi shaxsga naqdga sotish orqali naqd mablag‘ olish. Tashkiliy (organized) tavarruq ko‘plab fiqh kengashlari tomonid",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.iifm.net/",
+"nom": "Mablag‘ egasi vakilga uni investitsiya qilishni topshiradi; kutilgan daromad ko‘rsatiladi, ortiqchasi vakilga rag‘bat sifatida qolishi mumkin. Banklar",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://cis.aaoifi.com/ar/?p=1695",
+"nom": "Valyutani valyutaga ayirboshlash; ikkala tomon qiymati bitim majlisida (spot asosida) haqiqiy yoki konstruktiv tarzda qo‘lga olinishi shart, kechiktir",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.ifsb.org/wp-content/uploads/2023/10/IFSB-23_En.pdf",
+"nom": "6. Islomiy moliya – fiqhiy va xalqaro atamalar",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.isda.org/a/45iDE/press030110.html",
+"nom": "Islomiy xejirlash bitimlari uchun yagona xalqaro bosh kelishuv (2010); ISDA arxitekturasiga asoslangan, shariat talablariga moslangan.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.ifsb.org/",
+"nom": "Islomiy faoliyatning shariatga muvofiqligini ta’minlovchi tizim: shariat kengashi, ichki shariat nazorati (review) va audit.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.ifsb.org/?p=10116",
+"nom": "Islomiy institutlarda likvidlik riskini aniqlash, o‘lchash va nazorat qilish tamoyillari; islomiy LCR/NSFR hisob-kitobi alohida yo‘riqnomada berilgan.",
+"varaq": "Atamalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-6445145",
+"nom": "O‘zbekiston Respublikasi Konstitutsiyasi (yangi tahrir)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-72266",
+"nom": "Asosiy havola – jamlangan amaldagi matn; qo‘shimcha havola – O‘RQ-582 (yangi tahrir qonuni).",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4590452",
+"nom": "Asosiy havola – jamlangan amaldagi matn; qo‘shimcha havola – O‘RQ-582 (yangi tahrir qonuni).",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4581969",
+"nom": "Islomiy darcha ochilsa, 5¹-moddadagi 6 turdagi operatsiyalar g‘aznachilik faoliyatiga ham taalluqli bo‘ladi.",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4562834",
+"nom": "Nizom 18–19-bandlar (OVP, konversion operatsiyalar); Tartib 11–14-§",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-2662539",
+"nom": "Nizom 15, 17-bandlar (emissiya, DQQ, repo); Tartib 15–17-§",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-2382409",
+"nom": "Nizom 15, 17-bandlar (aksiyalar emissiyasi); 18-band (yirik bitimlar uchun Kuzatuv kengashi ruxsati)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-4575786",
+"nom": "Tartib (to‘lov topshiriqnomalari, SWIFT orqali to‘lovlar)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-6257288",
+"nom": "Nizom 13, 21, 23, 26-bandlar (tayinlash, intizomiy va moddiy javobgarlik)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-6257345",
+"nom": "Nizom 13, 21, 23, 26-bandlar (tayinlash, intizomiy va moddiy javobgarlik)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-8339142",
+"nom": "Qo‘shimcha havola – 2026-yil iyuldagi o‘zgartish (islomiy bank faoliyati bilan bog‘liq paket).",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-8354396",
+"nom": "Banklar va banklar guruhlarining tavakkalchiliklarni boshqarish tizimiga doir talablar to‘g‘risidagi nizom",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-1370900",
+"nom": "O‘zbekiston Respublikasi banklarida buxgalteriya hisobini yuritish va buxgalteriya ishlarini tashkil qilish tartibi to‘g‘risidagi yo‘riqnoma",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-8072098",
+"nom": "O‘zbekiston Respublikasi banklarida buxgalteriya hisobini yuritish va buxgalteriya ishlarini tashkil qilish tartibi to‘g‘risidagi yo‘riqnoma",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-6777448",
+"nom": "Banklar, nobank kredit tashkilotlari va kredit byurolariga nisbatan choralar va sanksiyalar qo‘llash tartibi to‘g‘risidagi nizom",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/docs/-8175105",
+"nom": "Banklar, nobank kredit tashkilotlari va kredit byurolariga nisbatan choralar va sanksiyalar qo‘llash tartibi to‘g‘risidagi nizom",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://lex.uz/acts/8473203",
+"nom": "Banklarda aktivlar sifatini tasniflash va ehtimoliy yo‘qotishlar uchun zaxiralar shakllantirish tartibi to‘g‘risidagi nizom (yangi)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://cbu.uz/uz/monetary-policy/standards-required-reserves/",
+"nom": "Markaziy bank rasmiy sayti – normativ hujjatlar, SVOP auksionlari, majburiy zaxira normativlari",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.gazeta.uz/oz/2026/03/28/islomiy-bank/",
+"nom": "“O‘zbekiston Respublikasining ayrim qonun hujjatlariga O‘zbekistonda islomiy bank faoliyatini joriy etishga qaratilgan qo‘shimcha va o‘zgartirishlar k",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.spot.uz/oz/2026/07/21/islamic-banking",
+"nom": "Bank faoliyatiga ruxsat berish tartibi va shartlari to‘g‘risidagi nizomga o‘zgartirishlar (islomiy bank va “islomiy darcha” litsenziyasi)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.uzdaily.uz/uz/adliya-vazirligi-tomonidan-islomiy-banklar-faoliyatini-tartibga-soluvchi-normativ-huquqiy-hujjatlar-davlat-royxatidan-otkazildi/",
+"nom": "Islomiy bank faoliyati uchun 10 ta idoraviy hujjatga kiritilgan o‘zgartirishlar (risk-menejment, yirik tavakkalchilik, korporativ boshqaruv, omonatlar",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://kun.uz/news/2026/10/26/ozbekistonda-islomiy-bank-faoliyati-ucun-ilk-litsenziya-berildi",
+"nom": "Birinchi islomiy bank faoliyati litsenziyasi (Open bank, 1-I-son) – amaliy namuna",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/basel_framework/",
+"nom": "Basel Framework (jamlangan Bazel standartlari)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/publ/bcbs144.htm",
+"nom": "Principles for Sound Liquidity Risk Management and Supervision",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/publ/bcbs238.htm",
+"nom": "Nizom 15–16-bandlar (likvidlik koeffitsiyentlari)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/bcbs/publ/d295.htm",
+"nom": "6. Xorijiy manbalar – Bazel qo‘mitasi (BIS)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/bcbs/publ/d328.htm",
+"nom": "Nizom 2-§ va 6–8-§ (tuzilma, vakolatlar, javobgarlik)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.bis.org/bcbs/publ/d573.htm",
+"nom": "Core Principles for effective banking supervision (qayta ko‘rilgan)",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.icmagroup.org/",
+"nom": "Global Master Repurchase Agreement (GMRA) – repo bitimlari",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.lma.eu.com/",
+"nom": "LMA – sindikatsiyalangan va ikki tomonlama kredit shartnomalari namunalari",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.sbp.org.pk/assets/documents/circulars/IFPD-2026-C3-Appendix-A.pdf",
+"nom": "Qo‘shimcha havola – Pokiston Markaziy bankining SS 30 ni qabul qilish to‘g‘risidagi 2026-yilgi sirkulyari (regulyator namunasi).",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://aaoifi.com/",
+"nom": "AAOIFI buxgalteriya standartlari: FAS 28 (Murobaha va kechiktirilgan to‘lovli sotuvlar), FAS 33 (Sukuk, aksiya va shunga o‘xshash instrumentlarga inve",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.ifsb.org/wp-content/uploads/2023/10/FAQs-for-IFSB-12_En.pdf",
+"nom": "IFSB-12 – Islomiy moliya xizmatlari ko‘rsatuvchi institutlarda likvidlik riskini boshqarish tamoyillari",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://iifa-aifi.org/",
+"nom": "Xalqaro islom fiqh akademiyasi (IIFA) qarorlari, jumladan tavarruq bo‘yicha 179 (19/5)-qaror",
+"varaq": "Manbalar"
+},
+{
+"soha": "gazna",
+"url": "https://www.iilm.com/",
+"nom": "Islomiy darcha uchun yuqori likvidli aktivlar (Nizom 14–15-bandlar)",
+"varaq": "Manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-4581969",
+"nom": "Amalda. Senat 2019-yil 11-oktabrda ma’qullagan, Prezident 5-noyabrda imzolagan",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-4590452",
+"nom": "“O‘zbekiston Respublikasining Markaziy banki to‘g‘risida”gi Qonun (yangi tahrir)",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-6436466",
+"nom": "“Banklar va banklar guruhlarining tavakkalchiliklarni boshqarish tizimiga doir talablar to‘g‘risida”gi Nizom — ASOSIY TAYANCH",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://cbu.uz/uz/documents/3331/2135624/",
+"nom": "Amalda. Hujjatlaringiz ushbu o‘zgarishlarni hisobga olganini tekshiring",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-4888804",
+"nom": "“Tijorat banklarida korporativ boshqaruv to‘g‘risida”gi Nizom",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-4909887",
+"nom": "Amalda. Oxirgi o‘zgartirish — 3252-7 (17.07.2026): islomiy bank faoliyati va “islomiy darcha”ni litsenziyalash, islomiy moliya kengashi va mas’ul rahb",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-6777448",
+"nom": "Amalda; nomi kengaytirilgan (kredit byurolari), 3492-1 bilan o‘zgartirilgan — yangi tartib 07.08.2026 dan kuchga kirgan. Ro‘yxatdan o‘tgan sanani lex.",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-3212190",
+"nom": "Tijorat banklarida jinoiy daromadlarni legallashtirishga, terrorizmni va OQQ tarqatishni moliyalashtirishga qarshi kurashish bo‘yicha ichki nazorat qo",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-41760",
+"nom": "Departament Nizomi, Operatsion hodisalar Tartibi",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-6567",
+"nom": "“Aksiyadorlik jamiyatlari va aksiyadorlarning huquqlarini himoya qilish to‘g‘risida”gi Qonun",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-4811025",
+"nom": "Strategiya davri (2020–2025) tugagan. 2026-yil noyabr holatiga yangi bank tizimi strategiyasi qabul qilingani haqida ma’lumot topilmadi; umumiy asos s",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-579470",
+"nom": "“Markaziy bank tomonidan tijorat banklarining ichki me’yoriy hujjatlariga qo‘yiladigan talablar to‘g‘risida”gi Nizom",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-2720359",
+"nom": "“Tijorat banklarining likvidliligini boshqarishga qo‘yiladigan talablar to‘g‘risida”gi Nizom (siz yuklagan fayl)",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.lex.uz/en/docs/-8354396",
+"nom": "Amalda (27.07.2026 dan). Nizom amal doirasi mikromoliya banklari va islomiy bank faoliyatini amalga oshiruvchi banklarga kengaytirildi; “kredit siyosa",
+"varaq": "UZ_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d573.htm",
+"nom": "BCBS — Core Principles for effective banking supervision (Banklarni samarali nazorat qilishning asosiy tamoyillari)",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.theiia.org/ThreeLines",
+"nom": "IIA — Three Lines Model (Himoyaning uch chizig‘i)",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs144.htm",
+"nom": "BCBS — Principles for Sound Liquidity Risk Management and Supervision",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs238.htm",
+"nom": "Basel III — Liquidity Coverage Ratio (LCR)",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d295.htm",
+"nom": "Basel III — Net Stable Funding Ratio (NSFR)",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d515.htm",
+"nom": "BCBS — Revisions to the Principles for the Sound Management of Operational Risk (PSMOR)",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/basel_framework/",
+"nom": "Basel Framework (konsolidatsiyalashgan) — OPE (operatsion hodisalarning 7 sinfi), CRE, MAR bo‘limlari",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d450.htm",
+"nom": "Risk siyosati, 16/7 va 16/9-son qarorlar",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://www.coso.org/_files/ugd/3059fc_61ea5985b03c4293960642fdce408eaa.pdf",
+"nom": "COSO — Enterprise Risk Management: Integrating with Strategy and Performance (Executive Summary)",
+"varaq": "Xalqaro_manbalar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/acts/7793613",
+"nom": "2693-son Nizom o‘rniga 2026-yil 1-yanvardan amalda; yirik qarzdorlar kreditlari uchun 100/125/150% risk og‘irliklari",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.lex.uz/uz/docs/8139535",
+"nom": "3697-son Nizomga o‘zgartirishlar (3697-1, 15.04.2026)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/acts/-2703053",
+"nom": "Aktivlar sifatini tasniflash va zaxiralar shakllantirish tartibi to‘g‘risidagi Nizom (№2696)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/acts/8473203",
+"nom": "Ro‘yxatdan o‘tgan, 2027-yil 1-yanvardan kuchga kiradi — hozirdan tayyorlaning",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-3804290",
+"nom": "Bank xizmatlari iste’molchilari bilan munosabatlarda minimal talablar to‘g‘risidagi Nizom (№3030)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs75.htm",
+"nom": "BCBS — Principles for the Management of Credit Risk",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d350.htm",
+"nom": "BCBS — Guidance on credit risk and accounting for expected credit losses",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/",
+"nom": "IFRS 9 Financial Instruments",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.lex.uz/docs/-8339142",
+"nom": "Islomiy bank faoliyati to‘g‘risidagi O‘RQ-1126 qonun munosabati bilan — islomiy darcha uchun muhim",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d368.htm",
+"nom": "BCBS — Interest Rate Risk in the Banking Book (IRRBB)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-5421525",
+"nom": "Amalda; 3301-1 (25.10.2025 dan) va 3301-2 (27.09.2026 dan — islomiy banklarga ham tatbiq etiladi, svop bitimlari hisobi aniqlashtirilgan) bilan o‘zgar",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d516.htm",
+"nom": "2021-yil; boshqaruv, BCP va sinov, xaritalash, uchinchi tomonlar, insidentlar, AKT",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-5960604",
+"nom": "“Kiberxavfsizlik to‘g‘risida”gi Qonun (O‘RQ-764, 15.04.2022)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/4396428",
+"nom": "“Shaxsga doir ma’lumotlar to‘g‘risida”gi Qonun (O‘RQ-547, 2019)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.iso.org/standard/65694.html",
+"nom": "ISO 31000 — Risk management. Guidelines",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.iso.org/standard/75106.html",
+"nom": "ISO 22301 — Business continuity management systems",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.iso.org/standard/27001",
+"nom": "ISO/IEC 27001 — Information security management systems",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-283717",
+"nom": "AML to‘g‘risidagi Qonun (660-II, 26.08.2004)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Fatf-recommendations.html",
+"nom": "AML/CFT xalqaro standarti",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs113.htm",
+"nom": "BCBS — Compliance and the compliance function in banks",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d328.htm",
+"nom": "BCBS — Corporate governance principles for banks",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/acts/-5431666",
+"nom": "Tijorat banklarining ichki auditiga qo‘yiladigan talablar to‘g‘risidagi Nizom (№3302, 07.05.2021)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs223.htm",
+"nom": "BCBS — The internal audit function in banks",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d532.htm",
+"nom": "BCBS — Principles for the effective management and supervision of climate-related financial risks",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.fsb.org/2013/11/r_131118/",
+"nom": "2013-yil 18-noyabr; risk-appetit tizimi (RAF), bayonoti (RAS), limitlar, Kengash va rahbariyat rollari bo‘yicha tamoyillar va atamalar",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/fsi/fsisummaries/psmor.pdf",
+"nom": "Operatsion risk tamoyillarining 3 betlik xulosasi",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/fsi/fsisummaries/cps_for_banking.htm",
+"nom": "BIS FSI Executive Summary — Core Principles",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/acts/-5083195",
+"nom": "“Bir qarz oluvchi, o‘zaro aloqador qarz oluvchilar guruhi, shu jumladan bankka aloqador shaxslar uchun tavakkalchilikning eng ko‘p miqdori to‘g‘risida",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs283.htm",
+"nom": "2014-yil aprel (bcbs283); yirik tavakkalchiliklar va o‘zaro bog‘liq kontragentlar guruhini aniqlash",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-7-financial-instruments-disclosures/",
+"nom": "Kredit, likvidlik va bozor risklarini moliyaviy hisobotda ochib berish talablari; MB 2026-yilda banklarni MHXSga to‘liq o‘tkazishni rejalashtirgan",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bankingsupervision.europa.eu/press/pr/date/2018/html/ssm.pr181109.en.html",
+"nom": "2018-yil noyabr; har biri 7 tamoyil, normativ va iqtisodiy nuqtai nazar. MB 2027-yilda ICAAP talablariga to‘liq o‘tishni rejalashtirgan — ICAAP hujjat",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-7689673",
+"nom": "“O‘zbekiston Respublikasi tijorat banklarining axborot xavfsizligi va kiberxavfsizligiga doir minimal talablar to‘g‘risida”gi Nizom (MB 01.08.2025 19/",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/8007760",
+"nom": "Masofadan moliyaviy xizmatlarda axborot xavfsizligi, kiberxavfsizlik va frod holatlarining oldini olish bo‘yicha minimal talablar to‘g‘risidagi Nizom ",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d605.htm",
+"nom": "2025-yil 10-dekabr (d605); 12 tamoyil (1–9 banklar, 10–12 nazoratchilar uchun), xizmat ko‘rsatuvchi bilan munosabatning hayotiy sikli. MB 2026-yilda a",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.nist.gov/cyberframework",
+"nom": "2024-yil fevral; yangi “Govern” (boshqaruv) funksiyasi qo‘shilgan — axborot xavfsizligi siyosati tuzilmasi uchun qulay asos",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://cbu.uz/uz/press_center/releases/4590807/",
+"nom": "2026-yil sentabr; AML/CFT tizimini modernizatsiya qilish, mijozlarni himoya qilish, fintex nazorati — IT va frod risklari bo‘yicha yo‘nalishni ko‘rsat",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/docs/-6952742",
+"nom": "06.12.2024 dan kuchga kirgan; davlat organlari va ustav fondida davlat ulushi 50% va undan ortiq tashkilotlarga tatbiq etiladi — davlat ishtirokidagi ",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/bcbs/publ/d505.htm",
+"nom": "2014-yil; 2020-yil iyulda qayta ko‘rib chiqilgan (d505). Bankda va guruh darajasida ML/FT risklarini boshqarish",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.iso.org/standard/75080.html",
+"nom": "Komplayens boshqaruv tizimi talablari — komplayens siyosati tuzilmasi uchun",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://wolfsberg-group.org/",
+"nom": "Korrespondent banklar uchun so‘rovnoma (CBDDQ) — xorijiy banklar bilan munosabatlarda amaliy shablon",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.theiia.org/en/standards/2024-standards/global-internal-audit-standards/",
+"nom": "2024-yil yanvarda e’lon qilingan, 09.01.2025 dan amalda; avvalgi IPPF standartlari o‘rnini bosgan",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.imf.org/en/Publications/technical-assistance-reports/Issues/2025/04/04/Republic-of-Uzbekistan-Technical-Assistance-Report-Macro-Stress-Testing-of-the-Uzbek-565686",
+"nom": "2025-yil aprel; MB makro stress-test metodologiyasi — bankning ichki ssenariylarini MB yondashuvi bilan uyg‘unlashtirish uchun",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs239.htm",
+"nom": "2013-yil yanvar; 14 tamoyil: boshqaruv va infratuzilma, ma’lumotlarni agregatsiyalash, risk hisobotlari, nazorat",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publ/bcbs_nl36.htm",
+"nom": "2026-yil 6-yanvar; amaliy muammolar, qo‘lda bajariladigan jarayonlar va sun’iy intellekt uchun ma’lumotlar sifati",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/committees/bcbs/basel-consolidated-guidelines/module/cgo",
+"nom": "2026-yilda e’lon qilingan (CGO, ORR va boshqa modullar); avvalgi alohida PDF ko‘rsatmalarni bir joyga jamlaydi. Basel Framework’dagi iqtiboslarni yang",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.iso.org/standard/72140.html",
+"nom": "Riskni baholashning o‘nlab usuli (bow-tie, FMEA, ssenariy tahlili va boshq.) — RCSA va risk xaritasi metodikasi uchun",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/uz/docs/-8099403",
+"nom": "“O‘zbekiston Respublikasining ayrim qonun hujjatlariga O‘zbekistonda islomiy bank faoliyatini joriy etishga qaratilgan qo‘shimcha va o‘zgartirishlar k",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://lex.uz/acts/8339242",
+"nom": "Islomiy bank va “islomiy darcha” uchun: MB bilan kelishilgan islomiy moliya kengashi (kamida 3 a’zo), mas’ul rahbar (7 yillik tajriba, AAOIFI sertifik",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.ifsb.org/wp-content/uploads/2023/10/IFSB-23_En.pdf",
+"nom": "2021-yil dekabr; foyda taqsimlanadigan investitsiya hisobvaraqlari (PSIA), ko‘chirilgan tijorat riski (alfa omili), islomiy moliya aktivlari bo‘yicha ",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.ifsb.org/wp-content/uploads/2025/07/IFSB-31-Guiding-Principles-for-Effective-Supervision-of-Shariah-Governance-1.pdf",
+"nom": "IFSB-10 — 2009-yil dekabr; IFSB-31 — 2025-yil. Islomiy moliya kengashi, ichki shariat nazorati va auditining vazifalari",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://aaoifi.com/",
+"nom": "Murobaha, ijara, mushoraka, muzoraba va boshqa operatsiyalarning shariat talablari; MB islomiy moliya kengashi milliy standartlarni xalqaro standartla",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.imf.org/en/Publications/CR/Issues/2025/06/23/Republic-of-Uzbekistan-Financial-Sector-Assessment-Program-Financial-System-Stability-567987",
+"nom": "2025-yil iyun (IMF CR 2025/145); O‘zbekistondagi ilk FSAP: tizimli risklar, stress-test natijalari, nazorat bo‘yicha tavsiyalar",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.imf.org/en/Publications/CR/Issues/2025/08/08/Republic-of-Uzbekistan-Financial-Sector-Assessment-Program-Detailed-Assessment-of-569475",
+"nom": "2025-yil avgust (IMF CR 2025/227); MB nazoratining Bazel asosiy tamoyillariga muvofiqligi — qaysi talablar kuchayishini oldindan ko‘rsatadi",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://cbu.uz/en/financial-stability/press-releases/4124468/",
+"nom": "2026-yil iyulda e’lon qilingan; tizimli risklar, makro stress-test natijalari, makroprudensial choralar — stress-ssenariylar uchun",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://cbu.uz/upload/iblock/61b/8p2vh6yofu1107mfp36vuzle4g312nwu/methodology-annual-report-uzb.pdf",
+"nom": "2025-yilda qilingan ishlar va 2026-yilga rejalashtirilgan islohotlar (Bazel III, islomiy moliya, korporativ boshqaruv)",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://cbu.uz/uz/financial-stability/banks-list/procedure/",
+"nom": "Bazel D-SIB ramkasi asosida 4 mezon: hajm, o‘zaro bog‘liqlik, qamrov, murakkablik; ro‘yxat har yili e’lon qilinadi",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/fsi/fsisummaries/exsum_23911.htm",
+"nom": "BIS FSI Executive Summary — Sound management of third-party risk",
+"varaq": "Boshqa_hujjatlar"
+},
+{
+"soha": "risk",
+"url": "https://kun.uz/news/2026/07/15/markaziy-bank-huzurida-islomiy-moliya-kengashi-tashkil-etildi-348cb8",
+"nom": "Milliy islomiy moliya standartlari loyihalarini kuzatib boring",
+"varaq": "Muddatlar"
+},
+{
+"soha": "risk",
+"url": "https://anhor.uz/uzl/news/markaziy-bank-moliya/",
+"nom": "3492-1: choralar va sanksiyalar qo‘llash tartibidagi o‘zgarishlar kuchga kirdi (jarimalar oshirilgan, kredit byurolariga tatbiq)",
+"varaq": "Muddatlar"
+},
+{
+"soha": "risk",
+"url": "https://kun.uz/news/2026/10/26/ozbekistonda-islomiy-bank-faoliyati-ucun-ilk-litsenziya-berildi",
+"nom": "Birinchi islomiy bank litsenziyasi berildi (“Open bank” AJ, 1-I-son)",
+"varaq": "Muddatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.bis.org/publications/consolidated-guidelines-consequential-amendments",
+"nom": "BCBS: Basel Framework iqtiboslarini konsolidatsiyalashgan ko‘rsatmalarga moslash bo‘yicha konsultatsiya muddati",
+"varaq": "Muddatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.spot.uz/oz/2026/01/17/banking-reforms/",
+"nom": "Autsorsing talablarini belgilash, korporativ boshqaruv talablarini takomillashtirish, aktivlar tasnifini Bazel va IFRS 9 ga muvofiqlashtirish, MHXSga ",
+"varaq": "Muddatlar"
+},
+{
+"soha": "risk",
+"url": "https://www.spot.uz/oz/2026/06/16/islamic-financial-standard/",
+"nom": "Milliy islomiy moliya standartlari ishlab chiqiladi; MB IFSB ko‘magida 2026–2030-yillar islomiy moliya “yo‘l xaritasi” ustida ishlamoqda",
+"varaq": "Muddatlar"
+}
+]
