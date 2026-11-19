@@ -38,7 +38,10 @@ def run(cmd, **kw):
 
 
 def ocr_rasm(p: Path) -> str:
-    return run(["tesseract", str(p), "-", "-l", OCR_TILLAR]).stdout
+    import os
+    env = dict(os.environ, OMP_THREAD_LIMIT="1")  # parallel jarayonlarda oqimlar to'qnashmasin
+    return subprocess.run(["tesseract", str(p), "-", "-l", OCR_TILLAR, "--psm", "3"],
+                          capture_output=True, text=True, timeout=600, env=env).stdout
 
 
 def pdf_matn(p: Path) -> str:
@@ -47,9 +50,9 @@ def pdf_matn(p: Path) -> str:
     if len(matn.strip()) / sahifalar > 200:  # matnli PDF
         return matn
     if not OCR:
-        return matn + "\n\n> OGOHLANTIRISH: skanerlangan PDF — OCR o'tkazib yuborildi (--ocrsiz).\n"
+        return "> OGOHLANTIRISH: skanerlangan PDF — OCR o'tkazib yuborildi (--ocrsiz).\n\n" + matn
     with tempfile.TemporaryDirectory() as d:  # skanerlangan PDF -> OCR
-        run(["pdftoppm", "-r", "200", "-gray", "-png", str(p), f"{d}/s"])
+        run(["pdftoppm", "-r", "150", "-gray", "-png", str(p), f"{d}/s"])
         qismlar = []
         for i, rasm in enumerate(sorted(Path(d).glob("s-*.png")), 1):
             qismlar.append(f"\n\n<!-- sahifa {i} -->\n" + ocr_rasm(rasm))
@@ -77,7 +80,7 @@ def html_matn(p: Path) -> str:
 
 
 def docx_matn(p: Path) -> str:
-    out = run(["pandoc", str(p), "-t", "gfm", "--wrap=none", "--track-changes=all"])
+    out = run(["pandoc", "-f", "docx", str(p), "-t", "gfm", "--wrap=none", "--track-changes=all"])
     if out.returncode != 0:
         raise RuntimeError(out.stderr[:300])
     return out.stdout
@@ -119,7 +122,8 @@ def pptx_matn(p: Path) -> str:
 def aylantir(p: Path):
     chiqish = p.with_name(p.name + ".md")
     if chiqish.exists() and chiqish.stat().st_mtime >= p.stat().st_mtime:
-        return None
+        if not (OCR and "OCR o'tkazib yuborildi" in chiqish.read_text(encoding="utf-8", errors="ignore")[:3000]):
+            return None
     ext = p.suffix.lower()
     with tempfile.TemporaryDirectory() as d:
         if ext == ".pdf":
