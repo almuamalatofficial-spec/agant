@@ -71,6 +71,22 @@ def import_xlsx(fayl, bank):
         sarl = " ".join(str(c) for r in rows[:6] for c in r if c).lower()
         kuchsiz = bool(re.search(r"кучини йўқот|kuchini yo'qot|kuchini yo‘qot", ws.title.lower()))
         toliq = ("ҳужжат номи" in sarl or "hujjat nomi" in sarl) and ("тури" in sarl or "turi" in sarl)
+        if "raqami va sanasi" in sarl and "hujjat nomi" in sarl:  # Aloqabank formati: raqam+sana bitta katakda
+            for r in rows:
+                if not r or len(r) < 6 or not r[2] or not r[1] or "raqami" in str(r[1]).lower():
+                    continue
+                rs = str(r[1]).split()
+                raqam = rs[0] if rs else ""
+                sana = re.search(r"\d{2}\.\d{2}\.\d{4}", str(r[1]))
+                nom = " ".join(str(r[2]).split()).strip(" \"“”")
+                izoh = " ".join(str(r[6] or "").split())
+                yozuvlar.append({"nom": nom, "nom_lotin": lotin(nom), "turi": "", "raqami": raqam,
+                                 "sana": sana.group(0) if sana else "", "organ": lotin(" ".join(str(r[5] or "").split())),
+                                 "bolinma": lotin(" ".join(str(r[4] or "").split())), "ozgartirishlar": lotin(izoh),
+                                 "holat": "kuchini yo'qotgan" if re.search(r"kuchini yo|кучини йўқ|bekor", lotin(izoh + " " + nom).lower()) else
+                                          ("o'zgartirish" if re.fullmatch(r"\d+-\d+", raqam) else "amalda"),
+                                 "varaq": ws.title})
+            continue
         for r in rows:
             if not r or not isinstance(r[0], (int, float)) or not r[1]:
                 continue
@@ -129,7 +145,7 @@ def tekshir(fayl, bank, chiqish=None):
     for pos, n in havolalar(matn):
         q = qatorlar.count("\n", 0, pos) + 1
         hi = ildizlar(n)
-        if len(hi) < 2 or re.search(r"banklarida|markaziy bank|vazirlar mahkamasi|qonun", norm(n)):
+        if len(hi) < 2 or re.search(r"banklarida|banklarda|tijorat banklari|markaziy bank|vazirlar mahkamasi|qonun|faoliyatiga ruxsat|valyutani tartibga|\bushbu\b|siyosatidan farq|amaldagi|\bmhxs\b", norm(n)):
             continue  # tashqi normativ hujjat (MB, VM, qonun) — bu reestrda emas
         eng = []
         for y in reestr:
@@ -150,6 +166,20 @@ def tekshir(fayl, bank, chiqish=None):
             hukm, y = "REESTRDA YO'Q", None
         natija.append((q, n, hukm, ball, y))
     tartib = {"KUCHINI YO'QOTGAN": 0, "KUCHINI YO'QOTGAN (ehtimol)": 1, "REESTRDA YO'Q": 2, "NOMI FARQ QILADI": 3, "MOS": 4}
+    # raqam bo'yicha havolalar: "824-son", "№ 849", "849-sonli" (bankning ichki raqamlari)
+    raqamli = {y["raqami"]: y for y in reestr if y.get("raqami")}
+    korildi = set()
+    for m in re.finditer(r"(?:№\s*(\d{2,4}(?:-\d+)?)|(\d{2,4}(?:-\d+)?)\s*-\s*son(?:li)?)", matn):
+        r_ = m.group(1) or m.group(2)
+        if r_ in korildi or r_ not in raqamli:
+            continue
+        korildi.add(r_)
+        y = raqamli[r_]
+        atrof = lotin(matn[max(0, m.start() - 200): m.end() + 200])
+        oxs = len(ildizlar(atrof) & ildizlar(y["nom"])) / max(1, len(ildizlar(y["nom"])))
+        hukm = "KUCHINI YO'QOTGAN" if y["holat"] == "kuchini yo'qotgan" else ("MOS" if oxs >= 0.5 else "RAQAM BOSHQA HUJJATNIKI")
+        natija.append((matn.count("\n", 0, m.start()) + 1, f"№{r_}: …{' '.join(atrof.split())[150:280]}…", hukm, oxs, y))
+    tartib["RAQAM BOSHQA HUJJATNIKI"] = 1
     natija.sort(key=lambda t: (tartib[t[2]], t[0]))
     from collections import Counter
     c = Counter(t[2] for t in natija)
