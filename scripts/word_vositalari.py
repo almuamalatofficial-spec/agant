@@ -11,6 +11,11 @@
 2) To'ldirilgan savollar faylidan javoblarni o'qish:
    python3 scripts/word_vositalari.py javoblar Savollar_javoblar.docx javoblar.json
 
+4) Toza yakuniy versiya (barcha o'zgarishlar qabul qilingan, izohlarsiz):
+   python3 scripts/word_vositalari.py toza tahrirlangan.docx toza.docx
+5) O'zgarishlar jadvali (Word):
+   python3 scripts/word_vositalari.py jadval tahrirlar.json Ozgarishlar_jadvali.docx
+
 3) Asl Word hujjatga tahrir rejimida (Track Changes) o'zgartirish kiritish:
    python3 scripts/word_vositalari.py tahrir asl.docx tahrirlar.json natija.docx [--muallif "Al Muamalat AI"]
    tahrirlar.json: [{"id": "E1", "eski": "hujjatdagi aniq matn", "yangi": "yangi matn ('' = o'chirish)",
@@ -291,20 +296,105 @@ def tahrir(asl, tahrir_json, chiqish, muallif="Al Muamalat AI"):
         (hisobot["qollandi"] if ok else hisobot["topilmadi"]).append(e.get("id"))
     doc.save(chiqish)
     Path(str(chiqish) + ".hisobot.json").write_text(json.dumps(hisobot, ensure_ascii=False, indent=1), encoding="utf-8")
+    holat = {i: "qo'llandi" for i in hisobot["qollandi"]}
+    holat.update({i: "TOPILMADI — qo'lda kiritish kerak" for i in hisobot["topilmadi"]})
+    Path(str(Path(tahrir_json).with_suffix("")) + "_holat.json").write_text(json.dumps(holat, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"qo'llandi: {len(hisobot['qollandi'])}, topilmadi: {len(hisobot['topilmadi'])} -> {chiqish}")
     if hisobot["topilmadi"]:
         print("topilmadi:", ", ".join(map(str, hisobot["topilmadi"])))
 
 
+# ---------------------------------------------------------------- toza versiya va o'zgarishlar jadvali
+def toza(kirish, chiqish):
+    """Barcha tracked changes ni qabul qiladi (ins -> oddiy matn, del -> o'chiriladi), izohlarni olib tashlaydi."""
+    doc = Document(kirish)
+    W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    qismlar = [doc.part] + [r.target_part for r in doc.part.rels.values()
+                            if "header" in r.reltype or "footer" in r.reltype]
+    for part in qismlar:
+        root = part.element
+        for d in list(root.iter(W + "del")) + list(root.iter(W + "moveFrom")):
+            if d.getparent() is not None:
+                d.getparent().remove(d)
+        for tag in ("ins", "moveTo"):
+            for e in list(root.iter(W + tag)):
+                ota = e.getparent()
+                if ota is None:
+                    continue
+                i = ota.index(e)
+                for bola in list(e):
+                    ota.insert(i, bola)
+                    i += 1
+                ota.remove(e)
+        for tag in ("commentRangeStart", "commentRangeEnd"):
+            for e in list(root.iter(W + tag)):
+                e.getparent().remove(e)
+        for e in list(root.iter(W + "commentReference")):
+            r = e.getparent()
+            r.getparent().remove(r) if r.tag == W + "r" else r.remove(e)
+        for e in list(root.iter(W + "rPrChange")) + list(root.iter(W + "pPrChange")):
+            e.getparent().remove(e)
+    # izohlar qismini bo'shatish
+    for rel in list(doc.part.rels.values()):
+        if rel.reltype.endswith("/comments"):
+            cel = rel.target_part.element if hasattr(rel.target_part, "element") else None
+            if cel is not None:
+                for c in list(cel):
+                    cel.remove(c)
+    doc.save(chiqish)
+    print(f"toza versiya -> {chiqish}")
+
+
+def jadval(tahrir_json, chiqish, sarlavha="O'zgarishlar jadvali"):
+    royxat = json.loads(Path(tahrir_json).read_text(encoding="utf-8"))
+    hp = Path(str(Path(tahrir_json).with_suffix("")) + "_holat.json")
+    holat = json.loads(hp.read_text(encoding="utf-8")) if hp.exists() else {}
+    doc = Document()
+    sec = doc.sections[0]
+    sec.orientation = WD_ORIENT.LANDSCAPE
+    sec.page_width, sec.page_height = sec.page_height, sec.page_width
+    for m in ("left_margin", "right_margin", "top_margin", "bottom_margin"):
+        setattr(sec, m, Cm(1.5))
+    doc.styles["Normal"].font.size = Pt(9)
+    doc.add_heading(sarlavha, level=1)
+    ust = ["№", "ID", "Band", "Turi", "Eski matn", "Yangi matn", "Asos / manba", "Holati"]
+    t = doc.add_table(rows=1, cols=len(ust))
+    t.style = "Table Grid"
+    for i, u in enumerate(ust):
+        t.rows[0].cells[i].text = ""
+        t.rows[0].cells[i].paragraphs[0].add_run(u).bold = True
+        _soya(t.rows[0].cells[i], "D9E2F3")
+    for n, e in enumerate(royxat, 1):
+        tur = "Izoh" if e.get("faqat_izoh") else ("O'chirish" if not e.get("yangi") else "Tahrir")
+        q = [str(n), e.get("id", ""), e.get("band", ""), tur, e.get("eski", ""), "" if e.get("faqat_izoh") else e.get("yangi", ""),
+             (e.get("izoh", "") + (f" [{e['manba']}]" if e.get("manba") else "")).strip(), holat.get(e.get("id", ""), "")]
+        row = t.add_row()
+        for i, v in enumerate(q):
+            row.cells[i].text = v
+        if SARIQ_SOZLAR.search(q[6]) or e.get("sariq"):
+            for c in row.cells:
+                _soya(c, "FFF2CC")
+    eni = [0.8, 1.2, 1.6, 1.6, 6.0, 6.0, 5.5, 2.3]
+    for row in t.rows:
+        for i, w in enumerate(eni):
+            row.cells[i].width = Cm(w)
+    doc.save(chiqish)
+    print(f"{len(royxat)} qatorli jadval -> {chiqish}")
+
+
 if __name__ == "__main__":
     a = sys.argv[1:]
-    if not a or a[0] not in ("savollar", "javoblar", "tahrir"):
+    if not a or a[0] not in ("savollar", "javoblar", "tahrir", "toza", "jadval"):
         print(__doc__)
         sys.exit(1)
     if a[0] == "savollar":
         savollar(a[1], a[2])
     elif a[0] == "javoblar":
         javoblar(a[1], a[2])
+    elif a[0] == "toza":
+        toza(a[1], a[2])
+    elif a[0] == "jadval":
+        jadval(a[1], a[2])
     else:
         m = a[a.index("--muallif") + 1] if "--muallif" in a else "Al Muamalat AI"
         tahrir(a[1], a[2], a[3], m)

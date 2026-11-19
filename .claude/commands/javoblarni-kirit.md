@@ -10,6 +10,6 @@ Sen orkestratorsan (II qism). Kirish: $ARGUMENTS
    exportMimeType `application/vnd.openxmlformats-officedocument.wordprocessingml.document`). Uni `I/10_Savollar_javoblar.docx` ga ko'chir.
 3. `python3 scripts/word_vositalari.py javoblar I/10_Savollar_javoblar.docx I/11_javoblar.json` — nechta javob berilgani va
    nechtasi javobsiz qolganini foydalanuvchiga ayt. Javob noaniq bo'lsa (masalan, variantlarda yo'q harf) — shu savollarni ko'rsat va so'ra.
-4. **11-bosqich:** `yakuniy-tahrirchi` agentini ishga tushir (asl .docx yo'li, I/ papka, 02–09 hisobotlar, 10_savollar.json, 11_javoblar.json).
-5. **12-bosqich:** `hujjat-tekshir.md` dagi 12-bo'lim bo'yicha yakuniy hisobotni tuz; fayllarni `B/03_Yakuniy/` ga va Drive'ga joyla.
+4. **11-bosqich:** `yakuniy-muharrir` agentini ishga tushir (asl .docx yo'li, I/ papka, 02–09 hisobotlar, 10_savollar.json, 11_javoblar.json, 10_ziddiyatlar.md, 09_aaoifi_nazorat.md, 09_5_iqtiboslar.md).
+5. **12-bosqich:** `orkestrator.md` dagi 12-bo'lim bo'yicha yakuniy hisobotni tuz; fayllarni `B/03_Yakuniy/` ga va Drive'ga joyla.
 6. Foydalanuvchiga: qo'llangan / qo'lda kiritish kerak / ochiq qolgan o'zgarishlar soni va fayllar havolalari.

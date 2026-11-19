@@ -39,7 +39,7 @@ Foiz stavkasi → ustama/ujrat/foyda nisbati; penya → xayriya majburiyati; "kr
 Aqdlar ketma-ketligini hujjatga kirit (masalan: va'da → bank xaridi va egalik → taklif → sotish aqdi), har bir bosqich uchun alohida hujjat/ilova kerak bo'lsa — ro'yxatini ber.
 
 ## Yakuniy tahrir haqida
-Tasdiqlangan tavsiyalar va savollarga javoblarni asl Word hujjatga kiritish — `yakuniy-tahrirchi` agentining ishi (11-bosqich). Sen faqat 1-bosqichni bajarasan.
+Tasdiqlangan tavsiyalar va savollarga javoblarni asl Word hujjatga kiritish — `yakuniy-muharrir` agentining ishi (11-bosqich). Sen faqat 1-bosqichni bajarasan.
 
 ## Ish tartibi (har ikki rejimda)
 1. Hujjat turini va asosiy aqdni aniqla (murobaha, ijara, ijara muntahiya bittamlik, mushoraka, muzoraba, vakola, salam, istisno', qard hasan, vadi'a, kafola, takaful va h.k.). AAOIFI'dagi tegishli Shariat standartini `bilim/00-umumiy/aaoifi/` dan top.

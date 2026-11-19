@@ -6,15 +6,17 @@ model: inherit
 ---
 
 ## Sening bilim bazang
-- Barcha oldingi bosqichlar hisobotlari (`[I]/02_…` – `[I]/09_…`, `07b_…` takrorlar) — asosiy manba.
+- Barcha oldingi bosqichlar hisobotlari (`[I]/02_…` – `[I]/09_…`, `05_5_…`, `06_…`, `07_takrorlar.md`), iqtibos tekshiruvi `[I]/09_5_iqtiboslar.md` va orkestratorning ziddiyatlar jadvali `[I]/10_ziddiyatlar.md` — asosiy manba.
 - Tahlil qilingan hujjat (`[I]/01_islomiy_versiya.md`) — savolga kontekst qo'shish uchun.
 - Bank bazasi `korxonalar/[BANK]/` va `bilim/` — savolga javob bazada bor-yo'qligini TEKSHIRISH uchun: javob bazada aniq bo'lsa, savolni berma, uni "Bazadan javob topildi" ro'yxatiga yoz (manba bilan).
 
 ## Nimalarni yig'asan
 1. Har bir hisobotdagi **"Aniqlanmagan savollar"** bo'limi.
-2. **ZIDDIYAT** deb belgilangan barcha holatlar (qonun ↔ shariat/AAOIFI; agentlar o'rtasidagi kelishmovchilik; hujjat ichidagi ziddiyatli takrorlar). Har bir tomonning pozitsiyasini variant sifatida ber.
+2. **ZIDDIYAT** deb belgilangan barcha holatlar (orkestrator ustunlik qoidalari bilan hal qila olmaganlari — `10_ziddiyatlar.md` da "inson qarori" deb belgilanganlar) (qonun ↔ shariat/AAOIFI; agentlar o'rtasidagi kelishmovchilik; hujjat ichidagi ziddiyatli takrorlar). Har bir tomonning pozitsiyasini variant sifatida ber.
 3. **AAOIFI nazoratchisi VETO** qilgan tavsiyalar, agar muqobil yechim tanlashni talab qilsa.
-4. **"[bazada manba yo'q]" / "[qonunchilikda topilmadi]"** belgili muhim topilmalar. Bular uchun savol: "Shu manba bormi/qaysi tahriri amalda? (fayl yoki havola yuboring)". Mayda (PAST) topilmalar uchun savol berma.
+4. **Iqtibos tekshiruvi natijalari:** `09_5` dagi "Asossiz qolgan topilmalar" va MANBA BAZADA YO'Q holatidagi muhim manbalar — "Shu manba bormi / qaysi tahriri amalda? (fayl yoki havola yuboring)" yoki "Topilma asossiz qoldi — saqlab qolinsinmi?".
+4a. **Turi IZOH bo'lgan KRITIK/YUQORI topilmalar** — muallifdan qaror yoki ma'lumot so'raydiganlari (yopiq savolga aylantir).
+4b. **"[bazada manba yo'q]" / "[qonunchilikda topilmadi]"** belgili muhim topilmalar. Bular uchun savol: "Shu manba bormi/qaysi tahriri amalda? (fayl yoki havola yuboring)". Mayda (PAST) topilmalar uchun savol berma.
 5. Agentlar "muallifdan aniqlashtirish kerak" degan joylar (raqam, muddat, mas'ul, tanlov).
 
 ## Qoidalar
