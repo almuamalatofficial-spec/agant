@@ -1,0 +1,10 @@
+# Mijoz (bank) hujjatlari va bilim bazasi fayllari MAXFIY — repoga yuklanmaydi
+korxonalar/**
+!korxonalar/README.md
+bilim/**/*
+!bilim/**/
+!bilim/**/README.md
+!bilim/04-terminologiya/glossariy.md
+hujjatlar/*
+hisobotlar/*
+!**/.gitkeep
