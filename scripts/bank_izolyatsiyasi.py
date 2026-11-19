@@ -40,13 +40,20 @@ def main():
 
     banklar = [d.name for d in (ROOT / "korxonalar").iterdir() if d.is_dir()]
     oz = {nom(f).lower() for f in (ROOT / "korxonalar" / a.bank).rglob("*") if f.is_file()}
+    # o'z bankining rasmiy reestridagi nomlar ham "o'ziniki" (umumiy nomlar: "Risklarni boshqarish siyosati" va h.k.)
+    import json
+    for jf in ("hujjatlar_reestri.jsonl", "islomiy_hujjatlar.jsonl"):
+        p = ROOT / "korxonalar" / a.bank / "04_Reestr" / jf
+        if p.exists():
+            oz |= {json.loads(l).get("nom_lotin", "").lower() for l in p.read_text(encoding="utf-8").splitlines() if l.strip()}
+    ozmatn = " || ".join(oz)
     begona = {}
     for b in banklar:
         if b == a.bank:
             continue
         for f in (ROOT / "korxonalar" / b).rglob("*"):
             n = nom(f).lower()
-            if f.is_file() and len(n) >= 14 and n not in oz and not re.fullmatch(r"[\d\s._()-]+", n) \
+            if f.is_file() and len(n) >= 14 and n not in oz and n not in ozmatn and not re.fullmatch(r"[\d\s._()-]+", n) \
                     and not re.match(r"^\d{2}[a-z]?_", n):  # tizimning texnik fayllari (00c_bank_izohlari, 07a_…)
                 begona[n] = b
     naqsh = [(b, re.compile(rx, re.I)) for b, rxs in BANK_NOMLARI.items() if b != a.bank for rx in rxs]
