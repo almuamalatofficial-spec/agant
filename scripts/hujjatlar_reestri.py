@@ -64,6 +64,45 @@ def yol(bank):
     return d / "hujjatlar_reestri.jsonl"
 
 
+def import_docx(fayl, bank, islomiy=False):
+    """Word jadvalidagi reestr. islomiy=True — loyiha doirasida tayyorlangan islomiy hujjatlar ro'yxati
+    (islomiy_hujjatlar.jsonl ga QO'SHILADI), aks holda rasmiy reestr (hujjatlar_reestri.jsonl ga QO'SHILADI)."""
+    import docx
+    d = docx.Document(fayl)
+    yozuvlar = []
+    for tb in d.tables:
+        rows = [[c.text.strip() for c in r.cells] for r in tb.rows]
+        if not rows:
+            continue
+        sar = [lotin(x).lower().replace("xu", "hu").replace("xo", "ho") for x in rows[0]]
+        def ust(*soz):
+            for i, s in enumerate(sar):
+                if any(k in s for k in soz):
+                    return i
+            return None
+        i_nom = ust("nomi", "reestri", "hujjat nomi")
+        i_raq = ust("raqami")
+        i_hol = ust("holati", "izoh")
+        i_tur = next((i for i, s in enumerate(sar) if s.strip() == "hujjat"), None) if islomiy else None
+        i_san = ust("yuborilgan", "sana")
+        for r in rows[1:]:
+            if i_nom is None or not r[i_nom]:
+                continue
+            nom = " ".join(r[i_nom].split()).strip(" «»\"“”")
+            y = {"nom": nom, "nom_lotin": lotin(nom), "raqami": (r[i_raq].replace("№", "").strip() if i_raq is not None else ""),
+                 "turi": lotin(r[i_tur]) if i_tur is not None and i_tur != i_nom else "",
+                 "sana": r[i_san] if i_san is not None else "", "organ": "",
+                 "izoh": lotin(r[i_hol]) if i_hol is not None else ""}
+            y["holat"] = ("islomiy hujjat — loyiha doirasida tayyorlangan, reestrda yo'q" + (f" ({y['izoh']})" if y["izoh"] else "")) if islomiy else "amalda"
+            y["manba"] = Path(fayl).name
+            yozuvlar.append(y)
+    p = yol(bank)
+    maqsad = p.parent / "islomiy_hujjatlar.jsonl" if islomiy else p
+    eski = maqsad.read_text(encoding="utf-8") if maqsad.exists() else ""
+    maqsad.write_text(eski + "".join(json.dumps(y, ensure_ascii=False) + "\n" for y in yozuvlar), encoding="utf-8")
+    print(f"{len(yozuvlar)} yozuv qo'shildi -> {maqsad}")
+
+
 def import_xlsx(fayl, bank):
     import openpyxl
     wb = openpyxl.load_workbook(fayl, read_only=True, data_only=True)
@@ -220,5 +259,12 @@ if __name__ == "__main__":
     ap.add_argument("fayl")
     ap.add_argument("--bank", required=True)
     ap.add_argument("-o", "--chiqish")
+    ap.add_argument("--islomiy", action="store_true", help="docx: loyiha doirasidagi islomiy hujjatlar ro'yxati")
     a = ap.parse_args()
-    import_xlsx(a.fayl, a.bank) if a.buyruq == "import" else tekshir(a.fayl, a.bank, a.chiqish)
+    if a.buyruq == "import":
+        if a.fayl.lower().endswith(".docx"):
+            import_docx(a.fayl, a.bank, a.islomiy)
+        else:
+            import_xlsx(a.fayl, a.bank)
+    else:
+        tekshir(a.fayl, a.bank, a.chiqish)
