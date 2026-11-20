@@ -91,16 +91,37 @@ asl.getparent().remove(asl)
 oxir = joy
 p = doc.add_heading("Ilova 1. Boshqa hujjatlarga ko‘chiriladigan qoidalar (qisqa ro‘yxat)", level=2)
 oxir.addnext(p._p); oxir = p._p
-oxir = para_after(oxir, "Bu qoidalar shu Siyosatga kiritilmaydi. Tasdiqdan keyin bankning o‘zgartirish navbatiga tushadi. "
+oxir = para_after(oxir, "Bu qoidalar shu hujjatga kiritilmaydi. Tasdiqdan keyin bankning o‘zgartirish navbatiga tushadi. "
                          "To‘liq ro‘yxat va havola matnlari «10_kochirishlar.md» faylida.")
-satr = [l for l in Path(kochir_yol).read_text(encoding="utf-8").splitlines() if re.match(r"\| (K|M)\d+ \|", l)]
-qq = []
-for l in satr:
-    c = [x.strip() for x in l.strip().strip("|").split("|")]
-    if c[0].startswith("K"):
-        qq.append((c[0], c[2], c[3], c[4]))
-    else:
-        qq.append((c[0], c[2], c[1], c[4]))
+def kochir_qatorlar(matn):
+    """10_kochirishlar.md jadvallaridan (№, Mazmun, Qaysi hujjatga, Tasdiqlovchi organ) qatorlari.
+    Ustunlar sarlavha bo'yicha topiladi; qator raqami K1/M1 yoki oddiy 1 bo'lishi mumkin."""
+    out, sarl = [], None
+    for l in matn.splitlines():
+        if not l.strip().startswith("|"):
+            sarl = None
+            continue
+        c = [x.strip() for x in l.strip().strip("|").split("|")]
+        if set("".join(c)) <= set("-: "):
+            continue
+        if sarl is None:
+            past = [x.lower() for x in c]
+            def top(*soz):
+                for i, x in enumerate(past):
+                    if any(w in x for w in soz):
+                        return i
+                return None
+            sarl = (top("mazmun", "nima"), top("qaysi hujjat", "hujjatga", "qabul qiluvchi"), top("tasdiqlovchi", "organ"))
+            continue
+        if not re.match(r"^(?:[KM]\d+|\d+)$", c[0]):
+            continue
+        nom = c[0]
+        g = lambda i: c[i] if i is not None and i < len(c) else ""
+        out.append((nom, g(sarl[0]), g(sarl[1]), g(sarl[2])))
+    return out
+
+
+qq = kochir_qatorlar(Path(kochir_yol).read_text(encoding="utf-8"))
 tab = doc.add_table(rows=1, cols=4)
 tab.style = "Table Grid"
 for i, s in enumerate(["№", "Mazmun", "Qaysi hujjatga", "Tasdiqlovchi organ"]):
