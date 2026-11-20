@@ -123,7 +123,8 @@ def havolalar(matn):
             topil.append((m.start(), m.group(1).strip()))
     lot = matn.replace("‘", "'").replace("’", "'").replace("ʻ", "'")
     for m in re.finditer(r"(?:Bankning|Bank|IBD(?:ning)?)\s+((?:[A-ZO'G'][\w'‑-]*\s+){0,2}(?:[\w'‑-]+\s+){1,9}?(?:siyosati|tartibi|nizomi|yo'riqnomasi|metodikasi|metodologiyasi|reglamenti|qoidalari|strategiyasi))\b", lot):
-        topil.append((m.start(), m.group(1).strip()))
+        nomi = m.group(0) if m.group(0).startswith("IBD") else m.group(1)  # "IBD hisob siyosati" — prefiks ham nomning qismi
+        topil.append((m.start(), nomi.strip()))
     # bir xil nomlarni birlashtirish
     ko = {}
     for pos, n in topil:
@@ -153,12 +154,15 @@ def tekshir(fayl, bank, chiqish=None):
         if len(hi) < 2 or re.search(r"banklarida|banklarda|tijorat banklari|markaziy bank|vazirlar mahkamasi|qonun|faoliyatiga ruxsat|valyutani tartibga|\bushbu\b|siyosatidan farq|amaldagi|\bmhxs\b", norm(n)):
             continue  # tashqi normativ hujjat (MB, VM, qonun) — bu reestrda emas
         eng = []
+        islomiy_nom = bool(re.search(r"\bibd\b|\bibf\b|islomiy bank|darcha", lotin(n).lower()))
         for y in reestr:
             if not y["_i"]:
                 continue
             k = len(hi & y["_i"])
             s = k / len(hi | y["_i"]) if hi | y["_i"] else 0
             qamrov = k / len(hi)
+            if islomiy_nom and "loyiha" in y.get("holat", ""):
+                s, qamrov = min(1.0, s + 0.25), min(1.0, qamrov + 0.25)  # "IBD ... siyosati" — avval islomiy loyihalar
             eng.append((s, qamrov, y))
         eng.sort(key=lambda t: -(t[0] + 0.5 * t[1]))
         s, qamrov, y = eng[0] if eng else (0, 0, None)
