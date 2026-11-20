@@ -125,7 +125,7 @@ def boshlash(bank):
     fayllar = [f for f in fayllar if f.name != "README.md" and "Hisobot" not in f.name and "xulosa" not in f.name.lower()]
     for f in fayllar:
         nom = f.name.replace(".docx.md", "").replace(".doc.md", "").replace(".pdf.md", "").replace(".md", "")
-        qosh(f, bank, nom, holat="loyiha" if f.parent.name == "00_Islamic_documents" else "mavjud", sana=dt.date.fromtimestamp(f.stat().st_mtime).isoformat(), asos=f.parent.name)
+        qosh(f, bank, nom, holat="loyiha" if f.parent.name == "00_Islamic_documents" else ("loyiha (03_Yakuniy, tasdiqlanmagan)" if f.parent.name == "03_Yakuniy" else "mavjud"), sana=dt.date.fromtimestamp(f.stat().st_mtime).isoformat(), asos=f.parent.name)
 
 
 if __name__ == "__main__":
