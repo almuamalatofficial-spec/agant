@@ -11,3 +11,4 @@ bilim/**/*
 hujjatlar/*
 hisobotlar/*
 !**/.gitkeep
+__pycache__/
