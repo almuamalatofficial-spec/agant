@@ -9,8 +9,8 @@ AAOIFI standartlari (SS, FAS, GS, AS, Ethics) — BARCHA agentlar foydalanadi.
 | `GS/` | GS 1, 8–22 va GS 13 yo'riqnomasi | alohida fayllar |
 | `AS/` | AS 1–6 (audit) | alohida fayllar |
 | `ES/` | Islomiy moliya mutaxassislari odob-axloq kodeksi | alohida fayl |
-| — | **FAS (moliyaviy hisobot) yo'q** — CPFAS study text hali bo'linmagan (11,5 MB) | Drive AAOIFI papkasi |
-Bo'laklar Drive'da: AAOIFI → "Boblar (SS — CPSS 2024 bo'yicha)". Eski kesilgan matnlar: `manba/eski_kesilgan/` (ishlatilmaydi).
+| `FAS/` | 28 bo'lak: Kontseptual asos (2020) va FAS 1, 3, 4, 7, 10, 14, 21, 23, 24, 26–28, 30–44 — PDF + to'liq matn, `FAS/README.md` | AAOIFI CPFAS study text 2024 (foydalanuvchi 8 qismga bo'lgan) |
+Bo'laklar Drive'da: AAOIFI → "Boblar (SS — CPSS 2024 bo'yicha)" va "Boblar (FAS — CPFAS 2024 bo'yicha)". `manba/AS_merged_full.pdf` — AS 1–6, GS 1, 10–22 va Odob-axloq kodeksining birlashgan nashri (GS/AS/ES dagilar bilan bir xil). Eski kesilgan matnlar: `manba/eski_kesilgan/` (ishlatilmaydi).
 
 ## Qanday to'ldiriladi (birortasi yetarli)
 1. Har bir PDF 10 MB dan kichik qismlarga bo'linib, Drive'ga shu papkaga qo'yiladi (masalan, "Split PDF" bilan 2 qism)
