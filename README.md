@@ -42,7 +42,8 @@ III QISM /tasdiqdan-keyin
 
 Sifat va izchillik:
 - `bilim/00-umumiy/hujjat-turlari/` — 9 ta hujjat turi (siyosat, nizom, tartib, yo'riqnoma, metodika, shartnoma, oferta, mahsulot pasporti, TT) bo'yicha chuqurlik darajasi, majburiy bo'limlar, 0–3 balllik mezonlar va "ko'r nuqtalar" → metodolog **Sifat kartasi** (boshida va yakunda).
-- `scripts/ziddiyat_xaritasi.py` — hujjat ICHIDAGI raqam va vakolat ziddiyatlari nomzodlari → metodolog "Ichki ziddiyatlar reestri".
+- `scripts/ziddiyat_xaritasi.py` — zanjirdan olib tashlangan (2026-11-23: aniqligi 0–5 %); faqat `scripts/reestr.py` parametr ajratish kutubxonasi sifatida ishlatadi.
+- `scripts/bosqich_nazorati.py` — tasnifdagi KERAK bosqichlar bajarilganini tekshiradi (bajarilmasa zanjir to'xtaydi).
 - `korxonalar/[BANK]/04_Reestr/` + `scripts/reestr.py` — **bank qoidalari reestri**: har tasdiqlangan hujjat parametrlari va sifatli qoidalari saqlanadi; har yangi hujjat avvalgilari bilan solishtiriladi (bir oy oldingi hujjatga ziddiyat darhol ko'rinadi); tasdiqdan keyin eski hujjatlarga o'zgartirish navbati (`OZGARTIRISH_NAVBATI.md`).
 
 Bilim fayllari: `bilim/00-umumiy/aqdlar/` — 7 ta aqd (murobaha, ijara, mushoraka, muzoraba, vakolat, salam, istisno') bo'yicha nazorat ro'yxatlari; shariat agentlari hujjatdagi aqd turiga qarab keraklisini yuklaydi.

@@ -29,22 +29,25 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 | 0 | tasniflovchi | asl hujjat | `I/00_tasnif.md` |
 | 1 | shariat-moslashtiruvchi (faqat an'anaviy hujjat) | asl hujjat | `I/01_islomiy_versiya.md`, `I/01_ozgarishlar.md` |
 | ⛔ | **NN-1** (faqat 1-bosqich bo'lsa) | — | to'xta, quyida |
+| **A** | **PARALLEL TO'LQIN** — quyidagilar bir vaqtda ishga tushiriladi (bir xabarda bir nechta Agent chaqiruvi); har biri faqat `01 + 00_tasnif` (+ o'z bilim bazasi) oladi, boshqa agent hisobotlari BERILMAYDI va kutilmaydi. Bir vaqtda ko'pi bilan 8 ta agent; qolganlari birinchilari tugashi bilan | | |
 | 2 | huquqiy-tekshiruvchi | 01 + tasnif | `I/02_huquqiy.md` |
-| 3 | shariat-auditor | **faqat** `01_islomiy_versiya.md` + `02_huquqiy.md` (`01_ozgarishlar.md` BERILMAYDI) | `I/03_shariat_audit.md` |
-| 3.5 | fatvo-xotirasi | 01 + 03 | `I/03_5_fatvo_xotirasi.md` |
-| 4 | terminolog | 01 + oldingilar | `I/04_terminologiya.md` |
-| 5 | tuzilma-tekshiruvchi | 01 + oldingilar | `I/05_tuzilma.md` |
-| 5.5 | mijoz-himoyasi (mijozga ko'rinadigan matn bo'lsa) | 01 + oldingilar | `I/05_5_mijoz_himoyasi.md` |
-| 6.x | soha agentlari (tanlanganlari, har biri alohida): 6.1 risk, 6.2 komplayens, 6.3 audit, 6.4 buxgalteriya, 6.5 g'azna, 6.6 soliq, 6.7 operatsion, 6.8 garov-sug'urta, 6.9 prudensial | 01 + oldingilar | `I/06_1_risk.md` … `I/06_9_prudensial.md` |
-| 7 | metodolog (avval `python3 scripts/ziddiyat_xaritasi.py I/01_islomiy_versiya.md -o I/07a_ziddiyat_xaritasi.md`) | 01 + ziddiyat xaritasi + oldingilar | `I/07_metodologiya.md` ("Ichki ziddiyatlar reestri" bilan) |
-| 7.2 | hisob-tekshiruvchi (formula/stavka/grafik bo'lsa) | 01 + 07 + soha | `I/07_2_hisob.md`, `I/07_2_hisob_misollar.py` |
-| 7.5 | takror-tozalovchi (avval `python3 scripts/takrorlarni_top.py I/01_islomiy_versiya.md -o I/07b_takrorlar_xom.md`) | 01 + xom ro'yxat + oldingilar | `I/07_takrorlar.md` |
-| 8 | ichki-normativ-tekshiruvchi | 01 + oldingilar | `I/08_ichki_normativ.md` |
-| 8.2 | paket-muvofiqligi (paket hujjatlari yoki til nusxalari bo'lsa) | 01 + paket | `I/08_2_paket.md` |
-| 8.5 | mohiyat-tekshiruvchi (**mustaqil**: boshqa hisobotlar BERILMAYDI) | 01 + tasnif + paket | `I/08_5_mohiyat.md` |
-| 9 | aaoifi-nazoratchi (standartlar matritsasi + VETO) | 01 + 02–08.5 | `I/09_aaoifi_nazorat.md` |
+| 3 | shariat-auditor | 01 + tasnif (`01_ozgarishlar.md` BERILMAYDI) | `I/03_shariat_audit.md` |
+| 3.5 | fatvo-xotirasi — **vaqtincha o'chirilgan**: faqat `B/00_IMK_qarorlari/` da IMK qarorlari bo'lsa ishga tushadi | 01 + IMK qarorlari | `I/03_5_fatvo_xotirasi.md` |
+| 4 | terminolog | 01 + tasnif | `I/04_terminologiya.md` |
+| 5 | tuzilma-tekshiruvchi | 01 + tasnif | `I/05_tuzilma.md` |
+| 5.5 | mijoz-himoyasi (mijozga ko'rinadigan matn bo'lsa) | 01 + tasnif | `I/05_5_mijoz_himoyasi.md` |
+| 6.x | soha agentlari (tanlanganlari): 6.1 risk, 6.2 komplayens, 6.3 audit, 6.4 buxgalteriya, 6.5 g'azna, 6.6 soliq, 6.7 operatsion, 6.8 garov-sug'urta, 6.9 prudensial | 01 + tasnif | `I/06_1_risk.md` … `I/06_9_prudensial.md` |
+| 7 | metodolog (tuzilma, ichki ziddiyatlar, mexanizm, formula yozilishi; o'rinlilik — 9.7) | 01 + tasnif | `I/07_metodologiya.md` ("Ichki ziddiyatlar reestri" bilan) |
+| 7.2 | hisob-tekshiruvchi (formula/stavka/grafik bo'lsa) | 01 + tasnif | `I/07_2_hisob.md`, `I/07_2_hisob_misollar.py` |
+| 7.5 | takror-tozalovchi (avval `python3 scripts/takrorlarni_top.py I/01_islomiy_versiya.md -o I/07b_takrorlar_xom.md`) | 01 + xom ro'yxat | `I/07_takrorlar.md` |
+| 8 | ichki-normativ-tekshiruvchi | 01 + 00b + 00d | `I/08_ichki_normativ.md` |
+| 8.2 | paket-muvofiqligi (paket hujjatlari yoki til nusxalari bo'lsa; bir paketning bir nechta hujjati birga tekshirilsa — har birining 01 i) | 01 + paket | `I/08_2_paket.md` |
+| 8.5 | mohiyat-tekshiruvchi (mustaqil) | 01 + tasnif + paket | `I/08_5_mohiyat.md` |
+| **B** | **YIG'ISH** — A to'lqin to'liq tugagach (`python3 scripts/bosqich_nazorati.py I/ --gacha 9`), ketma-ket | | |
+| 9 | aaoifi-nazoratchi (standartlar matritsasi + VETO; standart matni bazada bo'lmasa — BLOKLANGAN, foydalanuvchiga ayt) | 01 + 02–08.5 | `I/09_aaoifi_nazorat.md` |
 | 9.5 | iqtibos-tekshiruvchi | 02–09 | `I/09_5_iqtiboslar.md` |
-| — | **orkestrator: ziddiyatlarni hal qilish** (quyidagi qoidalar) | 02–09.5 | `I/10_ziddiyatlar.md` |
+| 9.7 | orinlilik-nazoratchi (hujjat turi chegarasi va o'rinlilik — asl matn va BARCHA TAHRIRlar; hukmi majburiy) | 01 + tasnif + 02–09.5 | `I/09_7_orinlilik.md` |
+| — | **orkestrator: ziddiyatlarni hal qilish** (quyidagi qoidalar) | 02–09.7 | `I/10_ziddiyatlar.md` |
 | 10 | savol-yiguvchi | 02–09.5 + 10_ziddiyatlar | `I/10_savollar.json`, `I/10_Savollar.docx`, `I/10_savollar.md` |
 | 10.5 | kengash-xulosachi | shariat hisobotlari + 10 | `I/10_5_kengash_xulosasi.md`, `– IMK uchun xulosa.docx` |
 | ⛔ | **NN-2** | — | to'xta, quyida |
@@ -95,7 +98,7 @@ Tahlil qilinadigan hujjat: I/01_islomiy_versiya.md
 Asl hujjat: [yo'l]
 Tasnif: I/00_tasnif.md
 Bank: [BANK]; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_documents/ (boshqa bank papkalari — TAQIQ)
-Oldingi hisobotlar: [ro'yxat]   ← shariat-auditor uchun faqat 02_huquqiy.md; mohiyat-tekshiruvchiga hech qanday hisobot berilmaydi; 01_ozgarishlar.md faqat yakuniy-muharrirga
+Oldingi hisobotlar: [ro'yxat]   ← A to'lqindagi agentlarga (2–8.5) BERILMAYDI (parallel); faqat 9, 9.5, 9.7, 10 va undan keyingilarga; 01_ozgarishlar.md faqat yakuniy-muharrirga
 Bank izohlari: I/00c_bank_izohlari.md (bo'lsa) — o'z sohangdagi har bir Bn ga hisobotingda \"Bank izohlariga javob\" bo'limida javob ber: rozimiz/qisman/rozi emasmiz, asos (qonun, Ustav, Siyosat, shariat) va aniq TAHRIR yoki savol.
 Natijani [fayl] ga yoz. Menga faqat qaytar: umumiy baho, K/Y/O'/P soni, eng muhim 3 topilma, e'tirozlar soni.
 ```
@@ -103,10 +106,13 @@ Natijani [fayl] ga yoz. Menga faqat qaytar: umumiy baho, K/Y/O'/P soni, eng muhi
 Agent xato bilan tugasa — bir marta qayta ishga tushir; yana xato bo'lsa, faylga "BAJARILMADI: sabab" deb yoz va davom et.
 
 ## ZIDDIYATLARNI HAL QILISH — USTUNLIK QOIDALARI
-9.5-bosqichdan keyin barcha hisobotlardagi tavsiyalarni **band bo'yicha** guruhla. Bitta bandga ikki yoki undan ortiq agent bir-biriga zid tavsiya bergan bo'lsa (yoki "Oldingi tavsiyalarga e'tiroz" bo'lsa), quyidagi qoidalarni **tartib bilan** qo'lla va natijani `I/10_ziddiyatlar.md` ga yoz.
+9.7-bosqichdan keyin barcha hisobotlardagi tavsiyalarni **band bo'yicha** guruhla. A to'lqin parallel bo'lgani uchun bir bandga bir nechta agentning mos tavsiyasi ko'p bo'ladi — ularni birlashtir (bitta matn), faqat haqiqiy zid tavsiyalarga quyidagi qoidalarni qo'lla. Bitta bandga ikki yoki undan ortiq agent bir-biriga zid tavsiya bergan bo'lsa (yoki "Oldingi tavsiyalarga e'tiroz" bo'lsa), quyidagi qoidalarni **tartib bilan** qo'lla va natijani `I/10_ziddiyatlar.md` ga yoz.
 
-### 0. O'rinlilik filtri (birinchi navbatda)
-Har bir TAHRIRni `bilim/00-umumiy/hujjat-turlari/orinlilik.md` bo'yicha tekshir: mazmuni boshqa hujjatga tegishli (soliq → soliq hisobi siyosati, provodka → hisob sxemalari, limit → risk siyosati, protsedura → tartib) yoki hujjatning tasdiqlovchi organi vakolatidan tashqari bo'lsa — **KO'CHIRISH** ga aylantir. Bu hujjatga faqat havola qoladi (zarur bo'lsa). KO'CHIRISHlar ro'yxati `I/10_kochirishlar.md` ga (| № | Topilma ID | Mazmun | Qaysi hujjatga | Tasdiqlovchi organ | Bu hujjatda havola kerakmi |) va tasdiqdan keyin `B/04_Reestr/OZGARTIRISH_NAVBATI.md` ga yoziladi. Agentlar o'zi KO'CHIRISH deb belgilagan bo'lsa — tekshirib tasdiqla. Shubhali holat (tegishli hujjat bankda bormi, noma'lum) — savolga.
+### 0. O'rinlilik filtri (birinchi navbatda) — `I/09_7_orinlilik.md` hukmi MAJBURIY
+- Har bir TAHRIR uchun orinlilik-nazoratchining "O'rinlilik reestri"dagi hukmni qo'lla: **QAYTA YOZ** → reestrdagi tayyor matn ishlatiladi; **HAVOLA** → havola matni; **KO'CHIRISH** → matnga kiritilmaydi, `I/10_kochirishlar.md` ga; **KO'CHIRISH (o'tish qoidasi bilan)** → asl mazmun o'chirilmaydi (qabul qiluvchi hujjat bankda yo'q yoki unda bo'lim yo'q). Orkestrator bu hukmni bekor qilmaydi; rozi bo'lmasa — savolga aylantiradi.
+- **Birlashtirilgan matn ham filtrdan o'tadi.** Bir bandga bir nechta tavsiyani bitta matnga birlashtirsang, yangi matnni chegaralar jadvali (orinlilik-nazoratchi.md) bo'yicha qayta tekshir: siyosatga qadam, muddat, ijrochilar ketma-ketligi, formula kirmasin; yuqori hujjatni (Ustav, siyosat) o'zgartirishni talab qiluvchi gap yozilmasin.
+- KO'CHIRISHlar ro'yxati `I/10_kochirishlar.md` ga (| № | Topilma ID | Mazmun | Qaysi hujjatga | Tasdiqlovchi organ | Bu hujjatda havola kerakmi |) va tasdiqdan keyin `B/04_Reestr/OZGARTIRISH_NAVBATI.md` ga yoziladi.
+- **Topilmalar holati.** Har bir agentning har bir TAHRIRi `I/10_ziddiyatlar.md` dagi "Topilmalar holati" jadvalida bo'lsin: QABUL / BIRLASHTIRILDI (qaysi matnga) / KO'CHIRISH / RAD (sabab) / SAVOL. Holatsiz topilma qolmasin (aks holda yakuniy-muharrirga yetib bormaydi).
 
 ### 1. Masala turi bo'yicha vakolatli agent
 | Masala turi | Vakolatli (ustun) agent | Izoh |

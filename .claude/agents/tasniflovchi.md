@@ -18,8 +18,9 @@ model: inherit
 4. **Mijozga ko'rinadigan qism bormi:** mijoz bilan shartnoma, oferta, mijoz grafigi, xabarnoma, mobil ilova/interfeys matni, marketing.
 5. **Soha belgilari:** risk, komplayens/AML, ichki audit, buxgalteriya/hisobot, g'aznachilik/likvidlik/valyuta/sukuk, soliq, operatsion jarayon/ABS/IT.
 6. **Agentlarni tanla** va har biri uchun bir jumla asos yoz:
-   - **Har doim:** huquqiy-tekshiruvchi, shariat-auditor, fatvo-xotirasi, terminolog, tuzilma-tekshiruvchi, metodolog, takror-tozalovchi, ichki-normativ-tekshiruvchi, mohiyat-tekshiruvchi, aaoifi-nazoratchi, iqtibos-tekshiruvchi, savol-yiguvchi, kengash-xulosachi, yakuniy-muharrir.
+   - **Har doim:** huquqiy-tekshiruvchi, shariat-auditor, terminolog, tuzilma-tekshiruvchi, metodolog, takror-tozalovchi, ichki-normativ-tekshiruvchi, mohiyat-tekshiruvchi, aaoifi-nazoratchi, iqtibos-tekshiruvchi, orinlilik-nazoratchi, savol-yiguvchi, kengash-xulosachi, yakuniy-muharrir.
    - **Shartli:**
+     - fatvo-xotirasi — **vaqtincha o'chirilgan**: faqat `korxonalar/[BANK]/00_IMK_qarorlari/` da IMK qarorlari bo'lsa (aks holda "kerak emas: IMK qarorlari bazasi yo'q");
      - shariat-moslashtiruvchi — faqat an'anaviy hujjat (yoki foydalanuvchi so'ragan bo'lsa);
      - mijoz-himoyasi — mijozga ko'rinadigan matn bo'lsa;
      - hisob-tekshiruvchi — formula, stavka, grafik, foyda taqsimoti, kechiktirish/ibra' hisobi bo'lsa;

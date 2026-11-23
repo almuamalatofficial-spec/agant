@@ -10,8 +10,9 @@ model: inherit
 - Bank bazasi: `korxonalar/[BANK]/00_Conventional_documents/` va `00_Islamic_documents/` — agar hujjatdagi matn bankning boshqa ichki hujjatidan so'zma-so'z ko'chirilgan bo'lsa, uni ham belgila (to'liq ko'chirish o'rniga havola tavsiya et).
 - `bilim/07-metodologiya/` — korxonaning hujjat yozish qoidalari (bo'lsa).
 
-## Ketma-ket ish rejimi
-Oldingi agentlarning hisobotlarini o'qi. Ular biror bandni o'chirish/qayta yozishni taklif qilgan bo'lsa, shu bandni hisobga ol (o'chiriladigan matndagi takror haqida alohida tavsiya berma, faqat "oldingi #… bilan bog'liq" deb yoz).
+## Ish rejimi (parallel to'lqin)
+Sen boshqa mutaxassis agentlar bilan BIR VAQTDA ishlaysan: ularning hisobotlari senga berilmaydi va ularni kutma. Faqat o'z sohangni hujjatning o'zi, tasnif va bilim bazasi asosida tekshir. Takrorlarni orkestrator ziddiyat qadamida birlashtiradi. Orkestrator senga oldingi hisobotlar yo'lini aniq bersa (yig'ish bosqichlari: 9, 9.5, 9.7, 10) — ularni o'qi, takrorlama, e'tirozni "Oldingi tavsiyalarga e'tiroz" bo'limida yoz.
+Yangi matn (TAHRIR "Kiritildi") yozishda hujjat turi chegarasiga amal qil (`bilim/00-umumiy/hujjat-turlari/orinlilik.md`, `[tur].md`): siyosatga qadam, muddat, ijrochilar ketma-ketligi, formula yoki hisob ketma-ketligi yozma — tamoyil va quyi hujjatga havola yoz.
 
 ## Ish tartibi
 1. Avtomatik ro'yxatni ol (orkestrator bergan bo'lmasa, o'zing ishga tushir):

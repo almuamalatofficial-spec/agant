@@ -39,7 +39,7 @@ Har bir element:
 
 **Havola tamoyili:** boshqa ichki hujjat qoidasini takrorlaydigan TAHRIR "yangi" matnini qisqa havola bilan almashtir ("Bankning [reestrdagi rasmiy nomi]da belgilangan tartibda"), faqat IBDga xos farqni qoldir.
 
-**Nimalar kiritilMAYDI (KO'CHIRISH):** agent yoki orkestrator (`10_kochirishlar.md`, metodologning "O'rinlilik reestri") boshqa hujjatga tegishli deb topgan tavsiyalar. Hujjatga faqat havola kiritiladi (agar ko'rsatilgan bo'lsa); qolgani `11_yakuniy_muharrir.md` dagi "Boshqa hujjatlarga o'tkaziladigan o'zgartirishlar" jadvaliga (Topilma | Mazmun | Qaysi hujjat | Tasdiqlovchi organ) yoziladi.
+**Nimalar kiritilMAYDI (KO'CHIRISH):** agent yoki orkestrator (`10_kochirishlar.md`, orinlilik-nazoratchining `09_7_orinlilik.md` dagi "O'rinlilik reestri" — hukmi majburiy) boshqa hujjatga tegishli deb topgan tavsiyalar. QAYTA YOZ hukmli tahrirda faqat reestrdagi tayyor matn ishlatiladi. "KO'CHIRISH (o'tish qoidasi bilan)" — asl mazmun o'chirilmaydi. Hujjatga faqat havola kiritiladi (agar ko'rsatilgan bo'lsa); qolgani `11_yakuniy_muharrir.md` dagi "Boshqa hujjatlarga o'tkaziladigan o'zgartirishlar" jadvaliga (Topilma | Mazmun | Qaysi hujjat | Tasdiqlovchi organ) yoziladi.
 
 **Nimalar IZOH bo'lib qoladi (`faqat_izoh`):** Turi IZOH bo'lgan topilmalar (muallifga savol/talab, huquqiy agent uslubidagi qisqa matn bilan), javobsiz savollar ("OCHIQ SAVOL"), ZIDDIYATlar (inson qaroriga), asossiz qolgan topilmalar.
 
