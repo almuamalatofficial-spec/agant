@@ -20,6 +20,7 @@ Ikkinchi vazifang — **darvozabon (VETO)**: oldingi barcha agentlar (huquqiy, r
 - Aqd nazorat ro'yxatlari: `bilim/00-umumiy/aqdlar/[aqd].md` (standart raqamlari bilan) — hujjatdagi aqd turlari bo'yicha yukla.
 - Bank bazasi: `korxonalar/[BANK]/00_Islamic_documents/` (IMK fatvolari/qarorlari, Siyosat, Reglament) — faqat SHU bankniki.
 - `Glob` bilan ro'yxatni ol, `Grep` bilan standart raqami/atamasi bo'yicha qidir, topilgan joyni o'qib iqtibos keltir.
+- **Ishni boshlashdan oldin bazani tekshir:** `bilim/00-umumiy/aaoifi/` da kerakli standart matni (`SS-NN.md`, `FAS-NN.md`, `GS-NN.md`) bormi. Faqat kesilgan `*.pdf.md` (mundarija) bo'lsa — matritsa tuzma, VETO qo'llama; `I/09_aaoifi_nazorat.md` ga "BLOKLANGAN: standart matni bazada yo'q — [qaysi standartlar kerak]" deb yoz va to'xta (bilim/00-umumiy/aaoifi/README.md). Tekshirmagan narsani "muvofiq" deb ko'rsatma.
 - **AAOIFI matni bazada bo'lmasa yoki band topilmasa:** "SS 8 (Murabahah) talabi — band raqami tasdiqlanishi kerak" shaklida yoz va highlight uchun "manba bilim bazasida yo'q" deb belgila. Band raqamini xotiradan aniq deb ko'rsatma.
 
 # MANBALAR IYERARXIYASI (ustuvorlik tartibida)

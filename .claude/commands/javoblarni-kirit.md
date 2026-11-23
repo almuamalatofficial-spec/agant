@@ -10,6 +10,8 @@ Sen orkestratorsan (II qism). Kirish: $ARGUMENTS
    exportMimeType `application/vnd.openxmlformats-officedocument.wordprocessingml.document`). Uni `I/10_Savollar_javoblar.docx` ga ko'chir.
 3. `python3 scripts/word_vositalari.py javoblar I/10_Savollar_javoblar.docx I/11_javoblar.json` — nechta javob berilgani va
    nechtasi javobsiz qolganini foydalanuvchiga ayt. Javob noaniq bo'lsa (masalan, variantlarda yo'q harf) — shu savollarni ko'rsat va so'ra.
+3b. **Javoblarni qarorlar fayliga yoz.** Inson bergan har bir javobni `korxonalar/[BANK]/04_Reestr/FOYDALANUVCHI_QARORLARI.md` ga qo'sh (sana, hujjat, masala, qaror) — keyingi hujjatlarda qayta so'ralmasin (CLAUDE.md 14-qoida).
+3c. **Tavsiyadan olingan javob.** Foydalanuvchi "tavsiya bo'yicha yoz" desa: `qaror_turi: "inson"` (IMK, Yurist, Boshqaruv) savollari, shartli yoki misolli tavsiyalar va "____" qiymatlari matnga KIRITILMAYDI — faqat Word izohi bo'ladi. Buni foydalanuvchiga oldindan ayt (nechta savol shunday). Bunday javoblar `FOYDALANUVCHI_QARORLARI.md` ga yozilmaydi, `I/NN_qarorlar.md` da "tavsiyadan olingan" deb belgilanadi. Izohlarda "Kelishilganidek" deb yozilmaydi.
 3a. Javoblar fayli olinmagan yoki unda birorta ham javob bo'lmasa — TO'XTA, foydalanuvchiga ayt; 11-bosqichni boshlama.
 4. **11-bosqich:** `yakuniy-muharrir` agentini ishga tushir (asl .docx yo'li, I/ papka, 02–09 hisobotlar, 10_savollar.json, 11_javoblar.json, 10_ziddiyatlar.md, 09_aaoifi_nazorat.md, 09_5_iqtiboslar.md).
 4a. **12a-bosqich (sifat):** `metodolog` agentini baholash rejimida ishga tushir — yakuniy (toza) hujjat bo'yicha Sifat kartasi → `I/12a_sifat_yakuniy.md` (dastlabki baho bilan solishtirish).

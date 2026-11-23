@@ -20,6 +20,18 @@ model: inherit
 4c. **Bank izohlari** (`[I]/00c_bank_izohlari.md`): har bir Bn uchun agentlar javobini yig'. Javob aniq bo'lsa — savol berma, `10_savollar.md` dagi "Bank izohlariga javoblar" jadvaliga yoz; agentlar kelishmasa yoki bank qarori kerak bo'lsa — savol (kimga: Muallif/bank), variantlari bilan.
 5. Agentlar "muallifdan aniqlashtirish kerak" degan joylar (raqam, muddat, mas'ul, tanlov).
 
+## Savol berishdan oldin javob qidir (majburiy, CLAUDE.md 14-qoida)
+Har bir savol uchun avval quyidagilarda qidir (Grep) va natijani `10_savollar.md` ga yoz ("qayerda qidirildi"):
+1. `korxonalar/[BANK]/04_Reestr/FOYDALANUVCHI_QARORLARI.md` va `bilim/00-umumiy/foydalanuvchi_qarorlari.md` — foydalanuvchi allaqachon hal qilgan masalalar;
+2. `[I]/00e_foydalanuvchi_javoblari.md` va shu paketdagi boshqa hujjatlarning javoblari — faqat INSON bergan javoblar (`NN_qarorlar.md` da "tavsiyadan olingan" deb belgilanganlari qaror emas);
+3. bank reestri (`hujjatlar_reestri.md`, `islomiy_hujjatlar.jsonl`), Ustav, tashkiliy tuzilma, `[I]/00d_hujjat_nomlari.md`, `09_5_iqtiboslar.md`;
+4. `bilim/` (qonun rekvizitlari, MB nizomlari, lug'atlar).
+Javob topilsa — savol BERILMAYDI, "Bazadan javob topildi" ro'yxatiga manbasi bilan yoziladi. Hujjat nomi, rekvizit, sana, qonun moddasi, bo'linmaning rasmiy nomi kabi faktlar deyarli har doim bazada bo'ladi — ularni so'rama. Faqat inson hal qiladigan narsa savol bo'ladi.
+
+## Tavsiya qanday yoziladi
+- Bitta aniq variant (A/B/C yoki aniq matn). "Masalan, 5", "C, keyin A yoki B", "____" kabi shartli yoki misolli tavsiya berma — aniq qiymat bilmasang, tavsiya maydoniga "Tavsiya yo'q — qiymatni bank belgilaydi" deb yoz.
+- Savol JSON'ida har savolga `"qaror_turi"`: `"inson"` (IMK, Yurist, Boshqaruv qarori — javobsiz matnga hech qachon kiritilmaydi) yoki `"malumot"` (muallif ma'lumoti/texnik tanlov) maydoni qo'sh.
+
 ## Qoidalar
 - **Insoniy uslub** (CLAUDE.md 10-band): savol qisqa (1–2 jumla), oddiy tilda, hamkasbga berilgandek; "Kontekst" ustuni — 1–2 jumla, nega so'rayapmiz; texnik belgilar (03#2) faqat "Bosqich" ustunida.
 - **Birlashtir:** bir masala bo'yicha bir nechta agentning savoli bitta savol bo'lsin ("bosqich" maydonida barcha manbalar: "02 Huquqiy #11; 03 Shariat #4").

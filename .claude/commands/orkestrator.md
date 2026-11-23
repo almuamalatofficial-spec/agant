@@ -64,6 +64,12 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 | 13 | yoriqnoma-yozuvchi | tasdiqlangan yakuniy hujjat + IMK qarori | `– Xodim yo'riqnomasi.docx`, `– Mijoz uchun savol-javob.docx` |
 | ⛔ | **NN-4** | — | to'xta, quyida |
 
+## BOSQICHLAR NAZORATI (majburiy, CLAUDE.md 15-qoida)
+- **Har bir yig'ish qadamidan oldin** `python3 scripts/bosqich_nazorati.py I/ --gacha N` ishga tushir: ziddiyatlarni hal qilishdan oldin `--gacha 10`, savol-yiguvchidan oldin `--gacha 10`, NN-2 xabaridan oldin `--gacha 11`, yakuniy-muharrirdan oldin `--gacha 11`. Chiqish kodi 1 bo'lsa — yetishmagan bosqichlarni bajar; bajarib bo'lmasa TO'XTA va foydalanuvchiga ayt (nima yetishmaydi, nima qilish kerak). Bosqichni "keyinroq" deb qoldirish taqiqlanadi.
+- **Paket.** Bir bankning bir paketdagi bir nechta hujjati birga tekshirilsa (masalan, IBD siyosatlari), 8.2 paket-muvofiqligi barcha hujjatlar 8-bosqichdan o'tgach va **istalgan hujjatning ziddiyat qadamidan oldin** bajariladi. Paket bo'yicha yagona javoblar (bir masala bir nechta hujjatda) faqat 8.2 natijasi va inson qarori asosida belgilanadi; orkestrator ularni o'zi "kelishuv" qilib yozmaydi — farq bo'lsa savolga aylantiradi.
+- **AAOIFI (9-bosqich).** Avval bazani tekshir: `bilim/00-umumiy/aaoifi/` da standartlar matni (`SS-NN.md`, `FAS-NN.md`, `GS-NN.md`) bormi. Faqat mundarija yoki kesilgan matn bo'lsa — 9-bosqichni boshlama, foydalanuvchiga **ishning boshida** ayt va `bilim/00-umumiy/aaoifi/README.md` dagi yo'lni taklif qil. AAOIFI'ga tayangan topilmalar "AAOIFI tekshiruvi kutilmoqda" belgisi bilan qoladi.
+- **Foydalanuvchi qarorlari.** Ishni boshlashda `korxonalar/[BANK]/04_Reestr/FOYDALANUVCHI_QARORLARI.md` va `bilim/00-umumiy/foydalanuvchi_qarorlari.md` ni o'qi va barcha agentlarga ber. Foydalanuvchi yangi qaror bersa — darhol shu faylga yoz. Javobi shu fayllarda yoki bazada bor narsani foydalanuvchidan so'rama (CLAUDE.md 14-qoida).
+
 ## INSON NAZORAT NUQTALARI (NN)
 AI xulosasi maslahat xarakterida — quyidagi nuqtalarda orkestrator **to'xtaydi**, kim nimani ko'rishi kerakligini aniq aytadi va inson javobisiz keyingi qismga o'tmaydi. Har bir NN natijasini `I/NN_qarorlar.md` ga yoz (kim, sana, qaror).
 
