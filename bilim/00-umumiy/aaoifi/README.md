@@ -2,15 +2,15 @@
 
 AAOIFI standartlari (SS, FAS, GS, AS, Ethics) — BARCHA agentlar foydalanadi.
 
-## Holat (2026-11-23)
-Kitoblar foydalanuvchi tomonidan berilgan: Google Drive → `00_Umumiy/AAOIFI/` (5 ta PDF):
-Shariaa-Standards-ENG, AAOIFI CPSS study text, AAOIFI CPFAS study text, AAOIFI-GS-13-Waqf-Governance-merged,
-Auditing_standard_No_1…merged. Har biri 11–15 MB.
-
-**Muammo:** Drive ulanishi 10 MB dan katta faylni yuklab bermaydi, matnni o'qish esa ~200 ming belgida uziladi.
-Shu papkadagi `*.pdf.md` fayllar — kesilgan matn (asosan mundarija va dastlabki standartlar). Ular AAOIFI tekshiruvi
-uchun YETARLI EMAS: `scripts/bosqich_nazorati.py` standart matnini faqat `SS-NN.md`, `FAS-NN.md`, `GS-NN.md`,
-`AS-NN.md` nomli fayllar bo'yicha hisoblaydi.
+## Holat (2026-11-23, yangilandi)
+| Papka | Mazmuni | Manba |
+|---|---|---|
+| `SS/` | 61 bo'lak: CPSS-A01 va SS 1–62 (SS 2, 33 yo'q) — PDF + to'liq matn (`.md`), `SS/README.md` jadvali | AAOIFI CPSS study text 2024 (foydalanuvchi 15 qismga bo'lgan) |
+| `GS/` | GS 1, 8–22 va GS 13 yo'riqnomasi | alohida fayllar |
+| `AS/` | AS 1–6 (audit) | alohida fayllar |
+| `ES/` | Islomiy moliya mutaxassislari odob-axloq kodeksi | alohida fayl |
+| — | **FAS (moliyaviy hisobot) yo'q** — CPFAS study text hali bo'linmagan (11,5 MB) | Drive AAOIFI papkasi |
+Bo'laklar Drive'da: AAOIFI → "Boblar (SS — CPSS 2024 bo'yicha)". Eski kesilgan matnlar: `manba/eski_kesilgan/` (ishlatilmaydi).
 
 ## Qanday to'ldiriladi (birortasi yetarli)
 1. Har bir PDF 10 MB dan kichik qismlarga bo'linib, Drive'ga shu papkaga qo'yiladi (masalan, "Split PDF" bilan 2 qism)
