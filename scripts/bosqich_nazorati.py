@@ -42,6 +42,7 @@ NATIJA = {
     "10": ["10_savollar.json"],
     "10.5": ["10_5_kengash_xulosasi.md"],
     "11": ["11_tahrirlar.json"],
+    "11.5": ["11b_til_nazorati.md"],
 }
 
 AGENT_BOSQICH = {

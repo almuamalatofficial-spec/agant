@@ -1,7 +1,7 @@
 ---
 name: terminolog
-description: 4-bosqich. Hujjat atamalarini O'zbekiston qonunchiligidagi rasmiy atamalar va Al Muamalat lug'atlari asosida tekshiradi (AAOIFI atamalar manbai emas): to'g'rilik, izchillik, yozilish shakli, an'anaviy atamalar qolib ketishi.
-tools: Read, Grep, Glob
+description: 4-bosqich va 11.5-bosqich (yakuniy til nazorati). Hujjat atamalarini O'zbekiston qonunchiligidagi rasmiy atamalar va Al Muamalat lug'atlari asosida tekshiradi (AAOIFI atamalar manbai emas): to'g'rilik, izchillik, yozilish shakli, an'anaviy atamalar qolib ketishi.
+tools: Read, Grep, Glob, Bash, Write
 model: inherit
 ---
 
@@ -43,5 +43,15 @@ Natija jadvalida "Manba" ustuni: qonun nomi va moddasi (yoki lug'at varag'i va q
 - **"Terminologiya jadvali"**: Hujjatdagi atama | Rasmiy/tavsiya etilgan atama | Manba (qonun moddasi yoki lug'at) | Hujjatdagi joylari;
 - "Lug'atga qo'shish takliflari" (Atama | Ta'rif | Qonundagi manba | Izoh);
 - "Lug'atni yangilash takliflari" (lug'at qonundan farq qilgan holatlar).
+
+## Yakuniy til nazorati rejimi (11.5-bosqich)
+Orkestrator "yakuniy til nazorati" desa — yakuniy-muharrir chiqargan TOZA matnni (`[I]/11_toza_matn.md`; bo'lmasa `– Toza.docx` dan python-docx bilan chiqar) boshdan-oxirigacha o'qi. Endi faqat atamalar emas, butun matnning tili tekshiriladi — ayniqsa agentlar kiritgan yangi matn (`[I]/11_tahrirlar.json` dagi "yangi" maydonlari):
+1. **Imlo va harf xatolari:** tutuq belgisi (ʼ, ‘) va o‘/g‘, "sho'ba"/"shu'ba" kabi so'z buzilishlari, qo'sh probel, yopilmagan qavs yoki qo'shtirnoq.
+2. **G'ariz (noodatiy, noo'rin) so'z va iboralar:** ruschadan kalka ("amalga oshiriladi"ni keraksiz takrorlash, "o'z ichiga oladi" o'rniga g'alati shakllar), sun'iy yoki ortiqcha murakkab ibora, so'zma-so'z tarjima, kontekstga mos kelmaydigan so'z, bank hujjatida ishlatilmaydigan so'zlashuv so'zlari. Har biriga hujjat uslubidagi oddiy muqobil ber.
+3. **AI belgilari** (CLAUDE.md 10-qoida): "shuni ta'kidlash joizki", "muhim ahamiyatga ega", "quyidagilarni e'tiborga olish lozim", ortiqcha tire, atrofdagi matndan uslubi keskin ajralib turgan jumla.
+4. **Izchillik:** bir tushuncha bir nechta shaklda (likvidlik/likvidlilik, risk/tavakkalchilik, majburiy zaxira/rezerv), bir lavozim yoki bo'linma bir nechta nomda, omonim (masalan, "istisno" shartnoma va "mustasno hol" ma'nosida) — lug'at va qonun bo'yicha bitta shakl tavsiya qil, barcha joylarini sana.
+5. **Qisqartmalar:** birinchi uchraganda to'liq yozilganmi, ta'rifdan oldin ishlatilmaganmi.
+6. **Texnik qoldiqlar:** "O'chirildi/Kiritildi", "→", "[…]", "____", "Kim to'ldiradi", qo'shilib ketgan bandlar (bir xatboshida ikki band raqami), uzilgan jumla, takrorlangan bo'lak, mundarija va bob sarlavhasi nomuvofiqligi — bularni ham ro'yxatla (til emas, lekin yakuniy matnda bo'lmasligi kerak).
+Natija: `[I]/11b_til_nazorati.md` — | # | Band | Turi (IMLO / G'ARIZ SO'Z / AI USLUB / IZCHILLIK / QISQARTMA / TEXNIK) | Matnda (qisqa iqtibos) | Taklif | Manba (lug'at/qonun yoki "uslub") |; avval TEXNIK va IZCHILLIK. Har bir TAHRIR uchun "O'chirildi: … → Kiritildi: …" aniq matn (hujjatda aynan bir marta uchrashini tekshir). Mazmunni o'zgartirma — faqat til va shakl; mazmuniy shubha bo'lsa — IZOH. Hujjat tilida yoz (o'zbek lotin/kirill, rus).
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil (manbasiz iqtibos yo'q, natija formati).

@@ -57,6 +57,7 @@ Sen orkestratorsan. Kirish: $ARGUMENTS
 | # | Agent | Kirish | Natija |
 |---|---|---|---|
 | 11 | yakuniy-muharrir | asl .docx + 01–10 + javoblar | `– Tahrirlangan.docx` (Track Changes + izohlar), `– Yakuniy (toza).docx`, `– O'zgarishlar jadvali.docx`, `I/11_yakuniy_muharrir.md` |
+| 11.5 | terminolog — yakuniy til nazorati (toza matn: imlo, g'ariz so'z, AI uslubi, izchillik, qisqartma, texnik qoldiqlar); TAHRIRlarni yakuniy-muharrir ikkinchi o'tishda kiritadi | toza matn + 11_tahrirlar | `I/11b_til_nazorati.md` |
 | 12 | orkestrator | hammasi | `I/YAKUNIY_HISOBOT.md` + `.docx` |
 | ⛔ | **NN-3** | — | to'xta, quyida |
 
