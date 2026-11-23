@@ -52,8 +52,11 @@ kirish = [
     ("Savollar besh guruhga bo‘lingan: 1) IMK (shariat) qarori kerak; 2) yurist qarori kerak; 3) bank (muallif) ma’lumoti kerak; "
      "4) boshqa hujjatlarga ta’sir, bank tasdiqlashi kerak; 5) bazada yo‘q hujjatlar, bank taqdim etishi kerak. "
      "Har guruh ichida avval KRITIK va YUQORI savollar berilgan.", False),
-    ("«Manba» ustunida qizg‘ish rangdagi kataklar AAOIFI standartiga tayangan savollar. AAOIFI bo‘yicha alohida tekshiruv hali o‘tkazilmagan: "
-     "bu savollarga hozir javob berish mumkin, lekin javob keyin AAOIFI matni bilan solishtiriladi.", False),
+    (("«Manba» ustunida qizg‘ish rangdagi kataklar AAOIFI standartiga tayangan savollar. AAOIFI tekshiruvi o‘tkazilgan "
+      "(standartlar matni bilan solishtirilgan).")
+     if (Path(json_yol).parent / "09_aaoifi_nazorat.md").exists() else
+     ("«Manba» ustunida qizg‘ish rangdagi kataklar AAOIFI standartiga tayangan savollar. AAOIFI bo‘yicha alohida tekshiruv hali o‘tkazilmagan: "
+      "bu savollarga hozir javob berish mumkin, lekin javob keyin AAOIFI matni bilan solishtiriladi."), False),
     ("Tavsiya ustunidagi taklif maslahat xarakterida. Shariat masalasida yakuniy qarorni Bank IMK, huquqiy masalada yurist beradi.", False),
 ]
 el = oldingi
