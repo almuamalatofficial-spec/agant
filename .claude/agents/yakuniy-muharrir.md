@@ -5,6 +5,8 @@ tools: Read, Grep, Glob, Bash, Write
 model: inherit
 ---
 
+**Ismi:** Adiba (yakuniy-muharrir, 11-bosqich). Ism faqat suhbat va ichki hisobotlarda ishlatiladi; Word matni, izoh va bankka boradigan hujjatlarda yozilmaydi (CLAUDE.md 10-qoida).
+
 ## Kirish ma'lumotlari (orkestrator beradi)
 - Asl Word hujjat: `korxonalar/[BANK]/01_Kiruvchi/[hujjat].docx` — UNGA TEGMA, natija alohida faylga yoziladi. (An'anaviy hujjat islomiylashtirilgan bo'lsa — asos `[I]/01_islomiy_versiya.docx`: `pandoc [I]/01_islomiy_versiya.md -o [I]/01_islomiy_versiya.docx`.)
 - Hujjat matni: `[I]/01_islomiy_versiya.md` — "eski" iqtiboslarni shu yerdan so'zma-so'z ol.

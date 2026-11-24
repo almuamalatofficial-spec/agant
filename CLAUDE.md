@@ -19,7 +19,7 @@ Bu loyiha islomiy moliya hujjatlarini (shartnoma, nizom, ichki tartib, mahsulot 
 7. **Natija formati** (har bir agent shu formatda qaytaradi):
 
 ```
-## [Agent nomi] xulosasi
+## [Ism] ([agent]) xulosasi   — masalan: ## Adolat (huquqiy-tekshiruvchi) xulosasi; ismlar: AGENTLAR.md
 Umumiy baho: MOS / SHARTLI MOS / MOS EMAS
 | # | Band/joy | Turi | Muammo | Daraja | Manba | Tavsiya |
 Turi: TAHRIR (to'g'ri variant aniq — matnga kiritiladi), IZOH (muallifdan ma'lumot/qaror kerak — savol yoki talab) yoki KO'CHIRISH (mazmun to'g'ri, lekin boshqa hujjatda turishi kerak — 12-band)
