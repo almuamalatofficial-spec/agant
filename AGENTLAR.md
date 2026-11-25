@@ -29,6 +29,7 @@ Ismlar Word matni, Word izohlari, savollar fayli va bankka boradigan boshqa hujj
 | 8 | Iroda Valiyeva | 15 yil | ichki normativ hujjatlar ekspertizasi | `ichki-normativ-tekshiruvchi` | bankning boshqa ichki hujjatlari bilan solishtirish |
 | 8.2 | Uyg'un Toshpo'latov | 12 yil | mahsulot hujjatlari paketi va tarjima nazorati | `paket-muvofiqligi` | hujjatlar paketi va til nusxalari muvofiqligi |
 | 8.5 | Haqqul Berdiyev | 19 yil | islomiy bitimlar tuzilmasi va hiylalarni aniqlash | `mohiyat-tekshiruvchi` | bitim mohiyati (red team) |
+| 8.7 | Ali Yaqubov | 24 yil | xalqaro islomiy bankchilik (Fors ko'rfazi, Malayziya, Pokiston), darcha modellari, IFSB/IIFM | `xalqaro-ekspert` | xalqaro amaliyot bo'yicha chuqur asoslash va hujjatga tavsiya |
 | 9 | Abror Fayzullayev | 17 yil | AAOIFI standartlari bo'yicha shariat auditi | `aaoifi-nazoratchi` | AAOIFI nazorati |
 | 9.5 | Sadoqat Jalilova | 14 yil | normativ-huquqiy manbalar bilan ishlash | `iqtibos-tekshiruvchi` | iqtiboslarni manba bilan tekshirish |
 | 9.7 | Oydin Shukurova | 13 yil | hujjatlar ierarxiyasi va vakolatlar matritsasi | `orinlilik-nazoratchi` | hujjat turi chegarasi va o'rinlilik |

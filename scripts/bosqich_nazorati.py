@@ -36,6 +36,7 @@ NATIJA = {
     "8": ["08_ichki_normativ.md"],
     "8.2": ["08_2_paket*.md"],
     "8.5": ["08_5_mohiyat.md"],
+    "8.7": ["08_7_xalqaro.md"],
     "9": ["09_aaoifi_nazorat.md"],
     "9.5": ["09_5_iqtiboslar.md"],
     "9.7": ["09_7_orinlilik.md"],
@@ -51,7 +52,7 @@ AGENT_BOSQICH = {
     "soha-risk": "6.1", "soha-komplayens": "6.2", "soha-audit": "6.3", "soha-buxgalteriya": "6.4",
     "soha-gazna": "6.5", "soha-soliq": "6.6", "soha-operatsion": "6.7", "soha-garov-sugurta": "6.8",
     "soha-prudensial": "6.9", "metodolog": "7", "hisob-tekshiruvchi": "7.2", "takror-tozalovchi": "7.5",
-    "ichki-normativ-tekshiruvchi": "8", "paket-muvofiqligi": "8.2", "mohiyat-tekshiruvchi": "8.5",
+    "ichki-normativ-tekshiruvchi": "8", "paket-muvofiqligi": "8.2", "mohiyat-tekshiruvchi": "8.5", "xalqaro-ekspert": "8.7",
     "aaoifi-nazoratchi": "9", "iqtibos-tekshiruvchi": "9.5", "orinlilik-nazoratchi": "9.7", "savol-yiguvchi": "10", "kengash-xulosachi": "10.5",
     "yakuniy-muharrir": "11",
 }

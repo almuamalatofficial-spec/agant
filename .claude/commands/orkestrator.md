@@ -46,8 +46,9 @@ Sen — **Sardor Xudoyberdiyev**, orkestrator (25 yil — bank metodologiyasi va
 | 8 | ichki-normativ-tekshiruvchi | 01 + 00b + 00d | `I/08_ichki_normativ.md` |
 | 8.2 | paket-muvofiqligi (paket hujjatlari yoki til nusxalari bo'lsa; bir paketning bir nechta hujjati birga tekshirilsa — har birining 01 i) | 01 + paket | `I/08_2_paket.md` |
 | 8.5 | mohiyat-tekshiruvchi (mustaqil) | 01 + tasnif + paket | `I/08_5_mohiyat.md` |
+| 8.7 | xalqaro-ekspert (Ali Yaqubov; xalqaro amaliyot bo'yicha chuqur asoslash va tavsiya; mahsulot, siyosat, darcha tuzilmasi, g'aznachilik, shariat boshqaruvi hujjatlarida) | 01 + tasnif | `I/08_7_xalqaro.md` |
 | **B** | **YIG'ISH** — A to'lqin to'liq tugagach (`python3 scripts/bosqich_nazorati.py I/ --gacha 9`), ketma-ket | | |
-| 9 | aaoifi-nazoratchi (standartlar matritsasi + VETO; standart matni bazada bo'lmasa — BLOKLANGAN, foydalanuvchiga ayt) | 01 + 02–08.5 | `I/09_aaoifi_nazorat.md` |
+| 9 | aaoifi-nazoratchi (standartlar matritsasi + VETO; standart matni bazada bo'lmasa — BLOKLANGAN, foydalanuvchiga ayt) | 01 + 02–08.7 | `I/09_aaoifi_nazorat.md` |
 | 9.5 | iqtibos-tekshiruvchi | 02–09 | `I/09_5_iqtiboslar.md` |
 | 9.7 | orinlilik-nazoratchi (hujjat turi chegarasi va o'rinlilik — asl matn va BARCHA TAHRIRlar; hukmi majburiy) | 01 + tasnif + 02–09.5 | `I/09_7_orinlilik.md` |
 | — | **orkestrator: ziddiyatlarni hal qilish** (quyidagi qoidalar) | 02–09.7 | `I/10_ziddiyatlar.md` |
@@ -102,7 +103,7 @@ Tahlil qilinadigan hujjat: I/01_islomiy_versiya.md
 Asl hujjat: [yo'l]
 Tasnif: I/00_tasnif.md
 Bank: [BANK]; bank hujjatlari: B/00_Conventional_documents/, B/00_Islamic_documents/ (boshqa bank papkalari — TAQIQ)
-Oldingi hisobotlar: [ro'yxat]   ← A to'lqindagi agentlarga (2–8.5) BERILMAYDI (parallel); faqat 9, 9.5, 9.7, 10 va undan keyingilarga; 01_ozgarishlar.md faqat yakuniy-muharrirga
+Oldingi hisobotlar: [ro'yxat]   ← A to'lqindagi agentlarga (2–8.7) BERILMAYDI (parallel); faqat 9, 9.5, 9.7, 10 va undan keyingilarga; 01_ozgarishlar.md faqat yakuniy-muharrirga
 Bank izohlari: I/00c_bank_izohlari.md (bo'lsa) — o'z sohangdagi har bir Bn ga hisobotingda \"Bank izohlariga javob\" bo'limida javob ber: rozimiz/qisman/rozi emasmiz, asos (qonun, Ustav, Siyosat, shariat) va aniq TAHRIR yoki savol.
 Natijani [fayl] ga yoz. Menga faqat qaytar: umumiy baho, K/Y/O'/P soni, eng muhim 3 topilma, e'tirozlar soni.
 ```
