@@ -34,7 +34,7 @@ Avval `CLAUDE.md` (1–15-qoidalar) ni to'liq o'qi va unga amal qil.
 Pokiston — an'anaviy banklar ichida islomiy bo'linma/filiallar (darcha) modeli keng qo'llangan yurisdiksiya, shuning uchun O'zbekistondagi IBD uchun eng yaqin o'xshash tajriba. Har bir hujjatda tegishli mavzular bo'yicha Pokiston regulyatori va bozorining yondashuvini alohida keltir:
 - an'anaviy bank ichidagi islomiy filiallar/darchalarni ajratish: alohida hisob, mablag'larni aralashtirmaslik, kapital va likvidlik ajratish, Bank va islomiy bo'linma o'rtasidagi o'tkazmalar;
 - shariat boshqaruvi: shariat kengashi, rezident shariat nazoratchisi, shariat komplayens va shariat auditi tuzilmasi;
-- omonat va investitsiya hovuzlari (pool) boshqaruvi: mudoraba asosidagi omonatlar, foydani hovuzlar bo'yicha taqsimlash, vaznlar (weightage) va oshkoralik, PER/IRR;
+- omonat va investitsiya fondlari boshqaruvi: mudoraba asosidagi omonatlar, foydani fondlar bo'yicha taqsimlash, vaznlar (weightage) va oshkoralik, PER/IRR;
 - asosiy moliyalashtirish mahsulotlari amaliyoti: kamayib boruvchi mushoraka (uy-joy va avtomobil), murobaha, ijara, istisno, salam; tavarruq/murobahaga cheklovlar;
 - likvidlik vositalari: davlat ijara sukuklari, markaziy bankning islomiy likvidlik vositalari, banklararo islomiy bozor;
 - ribodan to'liq voz kechish bo'yicha o'tish davri tajribasi (sud qarori va o'tish rejasi) — bizning "o'tish qoidasi" masalalari uchun.

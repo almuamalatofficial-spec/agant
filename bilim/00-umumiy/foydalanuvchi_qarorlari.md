@@ -19,3 +19,4 @@ AI tavsiyasi asosida yozilgan javoblar bu yerga yozilmaydi. Yangi qaror — sana
 | U11 | 2026-11-23 | 2026-11-23 dagi tahrirlangan 6 hujjatga tegilmaydi — foydalanuvchi qo'lda tuzatadi | barcha |
 | U12 | 2026-11-23 | Agent ko'rsatmalari xatolar tahlilidan va foydalanuvchi tasdig'idan keyin o'zgartiriladi | orkestrator |
 | U13 | 2026-11-23 | Hujjat turi chegaralari (siyosat / tartib / metodologiya / yo'riqnoma / nizom / reglament) — foydalanuvchi matni muhokamada; yakuniy shakli kelishilgach `hujjat-turlari/chegaralar.md` ga yoziladi | orinlilik |
+| U14 | 2026-11-25 | «Hovuz» so'zi g'aliz — ishlatilmaydi; o'rniga «fond» (masalan, «umumiy investitsiya fondi», «foyda taqsimlash fondi») | barcha (terminolog, yakuniy-muharrir, xalqaro-ekspert) |

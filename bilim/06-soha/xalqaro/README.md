@@ -5,4 +5,4 @@ Bazada boshqa joyda mavjudlari: IFSB-10/31 (shariat boshqaruvi), IFSB-12 (likvid
 PDF/DOCX matni yonidagi `.md` faylda (`python3 scripts/bazani_tayyorla.py`).
 
 ## pokiston/
-Pokiston tajribasi (foydalanuvchi talabi): markaziy bankning islomiy bankchilik qo'llanmalari (an'anaviy banklardagi islomiy filiallar/darchalar, shariat boshqaruvi asoslari, hovuz boshqaruvi va foyda taqsimoti, mahsulot qo'llanmalari — kamayib boruvchi mushoraka va boshqalar), davlat ijara sukuklari, ribodan voz kechish bo'yicha o'tish rejasi. Fayllar shu papkaga yuklanadi.
+Pokiston tajribasi (foydalanuvchi talabi): markaziy bankning islomiy bankchilik qo'llanmalari (an'anaviy banklardagi islomiy filiallar/darchalar, shariat boshqaruvi asoslari, fond boshqaruvi va foyda taqsimoti, mahsulot qo'llanmalari — kamayib boruvchi mushoraka va boshqalar), davlat ijara sukuklari, ribodan voz kechish bo'yicha o'tish rejasi. Fayllar shu papkaga yuklanadi.
