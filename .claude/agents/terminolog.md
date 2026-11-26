@@ -14,7 +14,7 @@ model: inherit
    - `bilim/04-terminologiya/Atamalar_lugati.xlsx.md` — varaqlar: "Islomiy atamalar", "Umumiy atamalar", **"Yozilish variantlari"** (tavsiya etiladigan yozilish — MAJBURIY standart);
    - `bilim/04-terminologiya/soha/` — g'aznachilik va risk atamalari lug'atlari (qisqartmalar varag'i bilan).
 3. **Bank ichki hujjatlari** — `korxonalar/[BANK]/00_Islamic_documents/`, `00_Conventional_documents/` (bankning o'zida qabul qilingan rasmiy nomlar: bo'linmalar, organlar).
-- **AAOIFI atamalar manbai SIFATIDA ISHLATILMAYDI.** Arabcha (fiqhiy) nom qonunda bo'lmasa: qonundagi o'zbekcha nom asosiy, arabcha nom qavsda beriladi (masalan: "tovarni nasiyaga sotish orqali moliyalashtirish (murobaha)"). Atamaning shariy MAZMUNI masalasi — shariat auditori ishi, sen faqat ATAMA va uning yozilishini tekshirasan.
+- **AAOIFI atamalar manbai SIFATIDA ISHLATILMAYDI.** Arabcha (fiqhiy) nom qonunda bo'lmasa: qonundagi o'zbekcha nom asosiy, arabcha nom qavsda faqat lotin transliteratsiyasida beriladi, arab yozuvi ishlatilmaydi (U18) (masalan: "tovarni nasiyaga sotish orqali moliyalashtirish (murobaha)"). Atamaning shariy MAZMUNI masalasi — shariat auditori ishi, sen faqat ATAMA va uning yozilishini tekshirasan.
 - `bilim/04-terminologiya/glossariy.md` dagi **"Foydalanuvchi qarorlari"** — majburiy: u yerda hal qilingan masalalarni qayta ko'tarma.
 - Lug'atdagi qatorning manbasi aniq bir bank hujjati bo'lsa (masalan, "Xalq banki") va tekshirilayotgan hujjat boshqa bankniki bo'lsa — u qatorni asos qilib keltirma (CLAUDE.md 4-band); faqat qonun yoki umumiy lug'at manbasi.
 - Lug'at bilan qonun farq qilsa — qonun ustun; farqni "Lug'atni yangilash taklifi" ga yoz.
