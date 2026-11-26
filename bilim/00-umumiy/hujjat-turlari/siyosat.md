@@ -12,6 +12,8 @@ Bankning ma'lum soha bo'yicha **maqsadi, tamoyillari, chegaralari va mas'uliyat 
 - [ ] Buzilish holatlari va choralar
 - [ ] Qayta ko'rib chiqish davriyligi, kuchga kirish, o'tish qoidalari
 - [ ] Quyi hujjatlar ro'yxati (qaysi tartib/metodika ishlab chiqiladi, muddati, mas'uli)
+- [ ] Kredit (moliyalashtirish) siyosati bo'lsa — 3427-son Nizom 49–50, 51¹, 51²-bandlari mazmuni (`mb_talablari.md` 2-bo'lim); Kuzatuv kengashi tasdiqlaydi (8-band)
+- [ ] Rekvizitlar va qaysi qonunchilik ijrosi uchun qabul qilingani (916-son Nizom 2.2, 2.9)
 ## Chuqurlik: bo'lishi / bo'lmasligi kerak
 - Bo'lishi: tamoyil, vakolat, chegara, nazorat mexanizmi, quyi hujjatlarga topshiriq.
 - Bo'lmasligi: provodkalar, ekran/tizim qadamlari, shakl matnlari, kunlik operatsiya tafsilotlari (ular quyi hujjatga ko'chirilsin).

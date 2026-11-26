@@ -8,6 +8,8 @@ Ierarxiya (umumiydan chuqurga): **Ustav → Siyosat → Nizom (bo'linma/organ) �
 Mahsulot darajasida: **Mahsulot pasporti → Shartnoma / Ommaviy oferta → Tarif**. Loyiha: **Texnik topshiriq**.
 
 Qoida: yuqori turuvchi hujjat "nima va nega" ni, quyi turuvchi "kim, qachon, qanday, qaysi shaklda" ni belgilaydi.
+
+**Majburiy asos:** Markaziy bank talablari — `mb_talablari.md` (916-son Nizom: ichki qoida shakllari — strategiya, nizom, tartib, qoidalar, siyosat; yo'riqnoma quyi hujjat; rekvizitlar, tuzilish, takrorlash taqiqi; 3427-son Nizom: kredit (moliyalashtirish) siyosati mazmuni).
 Siyosatga operatsion tafsilot yozish ham, tartibda tamoyil bilan cheklanish ham — kamchilik.
 
 Foydalanish: tasniflovchi hujjat turini aniqlaydi → metodolog tegishli faylni yuklab **Sifat kartasi** va
