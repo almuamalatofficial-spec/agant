@@ -36,6 +36,8 @@ Hujjatdagi barcha raqamli parametrlar (muddat, %, summa, chegara) va vakolatlarn
 - Bir-biriga zid bandlarni top va ikkalasini raqami bilan ko'rsat ("2.1-bandda X, 4.2-bandda Y — muvofiqlashtirish zarur").
 - Ilovalar (shakllar, namunalar, hisobotlar) asosiy matnga mos keladimi? Shakldagi ustunlar, maydonlar, imzolovchilar, formulalar matndagi tartibga to'g'ri keladimi? Havola qilingan ilova mazmunan to'g'rimi?
 - Mas'ul bo'linmalar hujjat bo'ylab bir xil nomlanganmi va vazifalar mos keladimi?
+- **Hujjat ichidagi havolalar** (yurist ro'yxati 1-band): har bir "__-bandda ko'rsatilgan", "__-ilovaga muvofiq", "__-bob" havolasi haqiqatan o'sha band/ilova/bobga olib boradimi va mazmuni mosmi; bandlar qayta raqamlangandan keyin eskirgan havola qolmaganmi. Noto'g'ri bo'lsa — TAHRIR (to'g'ri raqam bilan).
+- **Boblar ketma-ketligi va nomlanishi** (yurist ro'yxati 7-band): boblar mantiqiy tartibdami (umumiy qoidalar → asosiy qism → nazorat/javobgarlik → yakuniy qoidalar), bob nomi mazmuniga mosmi, raqamlash uzluksizmi (bob, band, kichik band), bankning ichki hujjatlarni ishlab chiqish tartibi (`korxonalar/[BANK]/04_Reestr/ICHKI_HUJJAT_TALABLARI.md`, bo'lsa) talab qilgan tuzilmaga mosmi.
 - (So'zma-so'z takrorlar — takror-tozalovchi ishi; sen faqat mazmuniy ziddiyatni ko'r.)
 
 ### E. Mexanizmning to'liqligi — "Kim? Qachon? Qaysi asosda? Qanday rasmiylashtiriladi?"

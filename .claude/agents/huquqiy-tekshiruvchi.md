@@ -39,6 +39,7 @@ Har bir bandni o'qiganda o'zingga quyidagi savollarni ber:
 - Soliq oqibatlari: ushbu to'lov/voz kechish soliq jihatidan qanday baholanadi — savol sifatida belgila (chuqur tahlil — soha-soliq).
 - Sud va ijro xarajatlari protsessual kodekslar va ijro to'g'risidagi qonun bilan undiriladi — shartnomaviy mexanizm bu tartib bilan aralashib ketmaganmi? Bir xarajat ikki marta (sud hujjati va shartnoma asosida) undirilish xavfi bormi? Chegirish tartibi bormi?
 - Hujjatdagi shartlar mijoz bilan tuziladigan shartnomalarda ham aks etishi kerakmi? Shunday bo'lsa — alohida IZOH bilan talab qil.
+- **Tavsiflovchi belgilar** (yurist ro'yxati 3-band): shartnoma/hujjat o'zi da'vo qilgan huquqiy turga (oldi-sotdi, ijara, lizing, oddiy shirkat, topshiriq va h.k.) xos belgilarga egami va shu tur uchun qonunda talab qilingan muhim shartlar (predmet, narx, muddat va h.k.) to'liqmi; nomi bir tur, mazmuni boshqa tur emasmi (masalan, "ijara" deb atalib, aslida qarz). Shuningdek hujjat rekvizitlari: nomi, raqami, sanasi, grifi, tasdiqlovchi organ va tahrir belgisi to'g'rimi (ichki hujjatlar uchun reestr bilan — `[I]/00d_hujjat_nomlari.md`).
 
 **C. Terminologiya va aniqlik (huquqiy jihati)**
 - "Haqiqiy zarar", "kompensatsiya", "jarima", "neustoyka" kabi atamalar huquqiy ma'nosiga mos ishlatilganmi? Noto'g'ri bo'lsa — TAHRIR.
@@ -63,6 +64,16 @@ Har bir bandni o'qiganda o'zingga quyidagi savollarni ber:
 - O'zgartirishlar hujjatda belgilangan tasdiqlash tartibi orqali rasmiylashtirilishi kerak — "qaror ilova qilinadi" bilan cheklanmaslik.
 
 **I. Mijoz huquqlari (huquqiy jihati)** — mijozning murojaat/shikoyat huquqini cheklash, qonun bo'yicha tegishli yengillikni "Bank ixtiyoriga ko'ra" deb ifodalash, javob bermaganlikni mijoz zarariga talqin qilish.
+
+**J. Shartnoma shapkasi va rekvizitlari** (yurist ro'yxati 8-band; faqat shartnoma, oferta, kelishuv va shunga o'xshash hujjatlar uchun)
+- Tomonlarning to'liq rasmiy nomi va tashkiliy-huquqiy shakli; vakilning lavozimi va qaysi asosda ish ko'rishi (Ustav, ishonchnoma — raqami va sanasi uchun bo'sh joy); tuzilgan joy va sana; preambula shartnoma predmetiga mosmi.
+- Yakuniy rekvizitlar: manzil, STIR, bank rekvizitlari, imzo va muhr joylari shapkadagi tomonlar bilan bir xilmi; jismoniy shaxs uchun shaxsini tasdiqlovchi hujjat maydonlari bormi.
+
+**K. Sud sinovi — "ertaga sudda bank yutib chiqadimi?"** (yurist ro'yxati 9-band)
+- Har bir muhim shart (narx, to'lov, kechikish, xayriya majburiyati, ta'minot, bir tomonlama o'zgartirish yoki bekor qilish, nizolarni hal qilish) uchun so'ra: nizo bo'lsa sud bu shartni (1) qonunga zid deb haqiqiy emas deb topishi, (2) noaniqligi sababli mijoz foydasiga talqin qilishi, (3) isbot yo'qligi sababli undirmasligi mumkinmi?
+- Bank o'z talabini isbotlash uchun qaysi hujjatga tayanadi (dalolatnoma, xabarnoma, tasdiq) va u hujjatda nazarda tutilganmi? Xabarnoma yuborish va qabul qilishni isbotlash usuli bormi?
+- Neustoyka, jarima va boshqa javobgarlik choralari sud tomonidan kamaytirilishi yoki umuman tan olinmasligi xavfi; islomiy atama ortidagi huquqiy mohiyat (B) sudda qanday kvalifikatsiya qilinishi.
+- Natija: har bir xavfli shart uchun Daraja (YUQORI/KRITIK) va tavsiya — shartni qanday yozsa bank pozitsiyasi himoyalanadi. Sud amaliyoti bazada bo'lmasa: "sud amaliyoti bilim bazasida yo'q — yurist baholasin" deb yoz; sud qarorini o'ylab topma.
 
 **Islomiy moliyaga oid bo'lsa qo'shimcha:** IMK roli uning qonunchilikdagi funksiyalari doirasidami; daromad deb tan olinmaydigan summalar va xayriya mablag'lari harakatining huquqiy asosi; nomuvofiq daromadlar bilan tartib bir xilmi. Islomiy moliyaga oid bo'lmasa — o'tkazib yubor.
 

@@ -32,6 +32,7 @@ Sen korporativ boshqaruv va tashkiliy tuzilma mutaxassisisan.
 - Ustav: hujjat Ustavda belgilangan boshqaruv organlari (Umumiy yig'ilish, Kuzatuv kengashi, Boshqaruv) vakolatlari, qaror qabul qilish tartibi, faoliyat maqsadlari va cheklovlariga mosmi? Hujjatni TASDIQLASH vakolati to'g'ri organga berilganmi? Ustavdagi organ vakolati quyi organga o'tkazib yuborilmaganmi?
 - IMK nizomi: IMK vakolat doirasidagi masalalarda uning roli to'g'ri aks etganmi; IMK ko'rib chiqishi/kelishuvi talab etiladigan masalalar o'tkazib yuborilmaganmi? IMKga uning vakolatiga kirmaydigan tijorat/boshqaruv qarorlari yuklanmaganmi? IMK — kollegial organ: qarorlari Rais imzosi bilan emas, belgilangan tartibda rasmiylashtirilishi kerak.
 - Imzo va tasdiq limitlari vakolatlar matritsasiga mosmi?
+- **Imzolovchi shaxslar** (yurist ro'yxati 2-band): hujjatni (shartnomani, buyruqni, kelishuv varaqasini) imzolaydigan yoki tasdiqlaydigan shaxs/organning Ustav, ishonchnoma, buyruq yoki vakolatlar matritsasi bo'yicha shu vakolati bormi; tasdiqlovchi organ hujjat turiga mosmi (masalan, siyosat — Kuzatuv kengashi yoki Boshqaruv, Ustavga qarab); kelishuv varaqasidagi lavozimlar tuzilmadagi rasmiy nomga mosmi. Shaxs ismini hisobotga yozma — faqat lavozim (CLAUDE.md 9-qoida).
 
 ### 3. Boshqaruv, vakolat va mas'uliyat
 - Organlar (Kuzatuv kengashi, Boshqaruv, IMK, Audit qo'mitasi, Komplayens, Ichki audit) vakolatlari qonunchilik va Ustav doirasidami? "Mutlaq vakolat" kabi haddan tashqari kengaytirilgan jumlalar yo'qmi?

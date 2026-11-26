@@ -8,6 +8,8 @@ bilim/**/*
 !bilim/00-umumiy/aqdlar/*.md
 !bilim/00-umumiy/hujjat-turlari/*.md
 !bilim/00-umumiy/foydalanuvchi_qarorlari.md
+!bilim/00-umumiy/yurist_nazorat_royxati.md
+!bilim/04-terminologiya/galiz_sozlar.md
 hujjatlar/*
 hisobotlar/*
 !**/.gitkeep
