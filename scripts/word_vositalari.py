@@ -22,6 +22,7 @@
                      "izoh": "Word'dagi qisqa, insoniy izoh (1–2 jumla)", "asos": "to'liq texnik asos (jadval uchun)",
                      "manba": "03#2; S5=B", "sariq": false}]
    "sariq": true — o'zgarish sariq fon bilan belgilanadi (izohida ZIDDIYAT / "manba yo'q" bo'lsa — avtomatik).
+   "muallif": "Yurist" (ixtiyoriy) — shu tahrir va izoh muallifi; berilmasa --muallif yoki sozlamalar.json dagi standart.
    "faqat_izoh": true bo'lsa — matn o'zgarmaydi, faqat izoh biriktiriladi (masalan, ochiq savol).
    Har bir tahrir: eski matn o'chirilgan (qizil), yangi matn qo'shilgan (yashil) ko'rinadi, yoniga izoh qo'yiladi.
    Topilmagan tahrirlar natija.docx.hisobot.json da ko'rsatiladi.
@@ -291,8 +292,15 @@ def tahrir(asl, tahrir_json, chiqish, muallif=None):
     t.initsial = INITSIAL if not muallif else "".join(w[0] for w in muallif.split()[:2]).upper()
     royxat = json.loads(Path(tahrir_json).read_text(encoding="utf-8"))
     hisobot = {"qollandi": [], "topilmadi": []}
+    asosiy_muallif, asosiy_initsial = t.muallif, t.initsial
     for e in royxat:
         ok = False
+        # ixtiyoriy: tahrir bo'yicha muallif (masalan, lavozim: "Metodolog", "Yurist")
+        if e.get("muallif"):
+            t.muallif = e["muallif"]
+            t.initsial = e.get("initsial") or "".join(w[0] for w in e["muallif"].split()[:2]).upper()
+        else:
+            t.muallif, t.initsial = asosiy_muallif, asosiy_initsial
         for p in _paragraflar(doc):
             izoh = (e.get("izoh") or "").strip()  # Word izohi: qisqa, insoniy; ID va texnik asos bu yerga yozilmaydi
             t.sariq = bool(e.get("sariq")) or bool(SARIQ_SOZLAR.search(izoh + " " + e.get("asos", "")))
