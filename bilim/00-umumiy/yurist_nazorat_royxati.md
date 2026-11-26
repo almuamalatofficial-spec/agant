@@ -6,7 +6,7 @@ Litsenziyali yurist hujjat va shartnomani tekshirganda e'tibor beradigan 14 band
 |---|---|---|---|
 | 1 | Havolalar to'g'ri berilganmi | metodolog (7) — hujjat ichidagi havolalar; huquqiy-tekshiruvchi (2, A) va ichki-normativ-tekshiruvchi (8) — normativ va ichki hujjatlarga havolalar; iqtibos-tekshiruvchi (9.5) — agentlar iqtiboslari | metodolog D |
 | 2 | Imzolovchi shaxslar to'g'rimi | tuzilma-tekshiruvchi (5) | 2-bo'lim |
-| 3 | Tavsiflovchi belgilar | huquqiy-tekshiruvchi (2, B) — huquqiy tur belgilari, muhim shartlar va rekvizitlar | B |
+| 3 | Tavsiflovchi belgilar — obyektni identifikatsiya qiluvchi belgilar (kadastr raqami, kuzov/VIN va h.k.; U16) | huquqiy-tekshiruvchi (2, B) + soha-garov-sugurta (6.8) — garov predmeti | B |
 | 4 | Shartlar O'zR qonunchiligiga zid emasmi | huquqiy-tekshiruvchi (2, A–B) | A, B |
 | 5 | AAOIFI va O'zR qonunchiligi ziddiyati | huquqiy-tekshiruvchi (2) + aaoifi-nazoratchi (9); CLAUDE.md 1-qoida — "ZIDDIYAT" | A |
 | 6 | Atamalar O'zR qonunida bormi | terminolog (4) | 1-band |
@@ -16,7 +16,7 @@ Litsenziyali yurist hujjat va shartnomani tekshirganda e'tibor beradigan 14 band
 | 10 | Iste'molchi huquqlariga zid emasmi | mijoz-himoyasi (5.5) — Iste'molchilar huquqlarini himoya qilish to'g'risidagi Qonun | bilim bazasi |
 | 11 | G'aliz so'zlar | terminolog (4 va 11.5) — `bilim/04-terminologiya/galiz_sozlar.md` | 10-band |
 | 12 | Ichki ziddiyatlar | metodolog (7, 0 va D) + huquqiy-tekshiruvchi (2, D) | — |
-| 13 | Qo'shtirnoqlar | terminolog (4 va 11.5) | 11-band |
+| 13 | Qo'shtirnoqlar — asosiy “…”, «…» faqat nomlarda va ichma-ich (U15) | terminolog (4 va 11.5) | 11-band |
 | 14 | Islomiy atama qaysi O'zR qonuniga tayanadi | terminolog (4) — "Islomiy atamalarning huquqiy asosi" jadvali; huquqiy oqibati — huquqiy-tekshiruvchi (B) | 9-band |
 
 Yakuniy huquqiy xulosa — litsenziyali yurist (CLAUDE.md 13-qoida).

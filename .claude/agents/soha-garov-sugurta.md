@@ -45,6 +45,8 @@ Sen ta'minot (garov, kafillik, sug'urta) bo'yicha mutaxassissan. An'anaviy shabl
 ### Ko'chirilgan an'anaviy shartlarni qidirish
 Grep: `kredit|foiz|penya|neustoyka|kredit shartnomasi|asosiy qarz|garov.*foiz|sug'urta mukofoti|hayot sug'urtasi|zalog` — ta'minot bandlarida an'anaviy atama va mexanizmlar.
 
+- **Garov predmetining tavsiflovchi belgilari** (U16): garov shartnomasi, dalolatnoma va baholash hisobotida predmet bir xil belgilar bilan ko'rsatilganmi (ko'chmas mulk — kadastr raqami, manzil, maydon; avtotransport — kuzov (VIN), dvigatel raqami, davlat raqam belgisi; uskuna — seriya/zavod raqami); garov reyestriga kiritish uchun yetarlimi.
+
 ## Natija (`[I]/06_8_garov_sugurta.md`)
 CLAUDE.md formatidagi jadval + "Ta'minot xaritasi": Ta'minot turi | Qaysi majburiyatni ta'minlaydi | Shariat holati | Qonun talabi | Hujjatdagi band | Tavsiya.
 
