@@ -64,6 +64,14 @@ python3 scripts/word_vositalari.py jadval [I]/11_tahrirlar.json "[I]/[hujjat] �
 ```
 Toza versiya — barcha o'zgarishlar qabul qilingan, izohlarsiz matn. Ochiq savollar va ZIDDIYATlar hal qilinmagan joylar toza versiyada asl holicha qoladi — buni yakuniy hisobotda aniq yoz.
 
+### 3a. Shrift va shaklni standartlash (U17)
+Tahrirlangan va toza versiyani tayyor holatga keltirishdan oldin butun hujjat (asosiy matn, sarlavhalar, jadvallar, kolontitullar, izohlar, ilovalar) bitta shriftga keltiriladi:
+- Bankning o'z ichki hujjat talablari bo'lsa (`korxonalar/[BANK]/04_Reestr/ICHKI_HUJJAT_TALABLARI.md`) — o'sha shrift va o'lcham ustun (masalan, Aloqabank 581-son Tartib: Arial 12).
+- Bunday talab bo'lmasa — **Times New Roman, 12 pt** (jadvallarda ham 12; joy yetmasa 10–11, buni hisobotda yoz).
+- Stillar (Normal, Heading, Table, comment text) va har bir run'dagi qo'lda berilgan shrift (`w:rFonts` — ascii, hAnsi, cs, eastAsia) almashtiriladi; qalin/kursiv, tagiga chizish va ranglar (ko'k takror, yashil ochiq savol) saqlanadi.
+- Asl hujjatda boshqa shrift bo'lsa, O'zgarishlar jadvaliga bitta qator: "Shrift [eski] → [yangi] (butun hujjat)".
+- Tekshir: python bilan document.xml va styles.xml dagi barcha `w:rFonts` qiymatlari faqat standart shrift ekanini sanab ko'r (0 ta boshqa shrift).
+
 ### 4. Tekshir
 - `pandoc "[Tahrirlangan].docx" -t plain --track-changes=all` bilan 3–5 ta tahrir joyida ekanini ko'r.
 - Toza versiyada eski matnlar qolmaganini (`pandoc … -t plain | grep -c "[eski parcha]"`) va yangi matnlar borligini tekshir.
