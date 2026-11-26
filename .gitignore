@@ -12,3 +12,6 @@ hujjatlar/*
 hisobotlar/*
 !**/.gitkeep
 __pycache__/
+
+# Takror (almashtirilgan) eski matnlar — mahfiy, agentlar qidirmaydi
+arxiv/
