@@ -33,6 +33,9 @@ def _risk(m):
 
 
 QOIDALAR = [
+    # U22 (2026-11-27, foydalanuvchi): Vadiya, Ujara, Sarf
+    (re.compile(r"\b([Vv])adia(?=\w*)\b|\b([Vv])adi'a"), lambda m: (m.group(1) or m.group(2))+'adiya'),
+    (re.compile(r"\b([Uu])jra\b|\b([Uu])jra(?=[a-z‘'’]{1,6}\b)"), lambda m: (m.group(1) or m.group(2))+'jara'),
     # Vakala (Vakola, Wakala). "vakolat" — boshqa so'z
     (re.compile(r"\b([Vv])akola(?!t)"), r"\1akala"),
     (re.compile(r"\bWakala"), "Vakala"),
