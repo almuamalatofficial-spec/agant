@@ -17,4 +17,8 @@ Foydalanish: xalqaro-ekspert (8.7) faqat xorijiy amaliyot misoli sifatida keltir
 | IA_FundPerformance_DF-Ind_2025Q4.md | Mudarabah investitsiya hisobvarag'i (Daily Fund-i, jismoniy shaxslar) — fond natijalari hisoboti, 2025 IV chorak (Malayziya) |
 | CBUAE_EN_4728_VER1.md | BAA Markaziy banki: islomiy banklarda foydani tekislash (PER) standarti |
 | PROFIT_DISTRIBUTION_IN_ISLAMIC_BANKS_DAI.md | Maqola: kunlik mahsulot asosida foyda taqsimoti va vaznlar |
+| Announcement-of-profit-distribution.md | Mudaraba depozitlari bo'yicha foyda taqsimoti metodikasi — bank e'loni |
+| kfs-islamic-mudaraba.md | Asosiy ma'lumotlar varaqasi (KFS): Mudaraba investitsiya depoziti (Commercial Bank of Dubai) |
+| kfs_islamic_account_islamic_deposits.md | KFS: islomiy muddatli depozitlar (Mudaraba) |
+| IAH-Quantitaive-Disclosures-EN.md | Investitsiya hisobvarag'i egalari bo'yicha miqdoriy oshkor qilish, 2022 choraklar (PER/IRR nisbatlari) |
 Arab yozuvi md fayllardan olib tashlangan (U18). Bir xil ikkinchi PDF nusxasi saqlanmadi.
