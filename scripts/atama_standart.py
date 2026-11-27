@@ -49,9 +49,9 @@ QOIDALAR = [
     (re.compile(r"\b([Ii])stisna[’'ʼ`]"), r"\1stisna"),
     # Ibra (Ibra')
     (re.compile(r"\b([Ii])bra[’'ʼ`]"), r"\1bra"),
-    # Hamish jiddiya (jiddiyya, jiddiyah; Hamis jiddiya). "jiddiylik" tegilmaydi
-    (re.compile(r"\b([Jj])iddiy(?:ya|ah)"), r"\1iddiya"),
-    (re.compile(r"\b([Hh])amis(\s+[Jj]iddiya)"), r"\1amish\2"),
+    # Hamish jiddiyya (U29, 2026-11-27: MB Murobaha standarti loyihasidagi shakl; jiddiya, jiddiyah; Hamis). "jiddiylik" tegilmaydi
+    (re.compile(r"\b([Jj])iddiy(?:ah\b|a\b|a(?=[a-z‘’']))"), r"\1iddiyya"),
+    (re.compile(r"\b([Hh])amis(\s+[Jj]iddiyya)"), r"\1amish\2"),
     # Murobaha (Murabaha, Murabahah)
     (re.compile(r"\b([Mm])urabaha(?:h\b)?"), r"\1urobaha"),
     # Mushoraka (Musharaka, Musharakah; yangi alifboda Muşaraka -> Muşoraka)
@@ -192,9 +192,10 @@ SINOV = [  # (kirish, kutilgan, bank yo'li)
     ("fors-major istisno qilingan", "fors-major istisno qilingan", ''),
     ("istisna’ va salam", "istisna va salam", ''),
     ("Ibra’ berish", "Ibra berish", ''),
-    ("hamiş jiddiyah", "hamiş jiddiya", ''),
-    ("hamish jiddiyya", "hamish jiddiya", ''),
-    ("hamis jiddiya", "hamish jiddiya", ''),
+    ("hamiş jiddiyah", "hamiş jiddiyya", ''),
+    ("hamish jiddiya", "hamish jiddiyya", ''),
+    ("hamis jiddiya", "hamish jiddiyya", ''),
+    ("hamish jiddiyani", "hamish jiddiyyani", ''),
     ("jiddiylik puli", "jiddiylik puli", ''),
     ("Murabaha", "Murobaha", ''),
     ("muşaraka böyiça", "muşoraka böyiça", ''),

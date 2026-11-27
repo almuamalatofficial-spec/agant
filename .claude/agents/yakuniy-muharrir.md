@@ -86,7 +86,7 @@ Tahrirlangan va toza versiyani tayyor holatga keltirishdan oldin butun hujjat (a
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil.
 
 ## Islomiy atamalar (U20, majburiy)
-Yakuniy matnda islomiy atamalar faqat `bilim/04-terminologiya/islomiy_atamalar_standart.md` dagi shaklda bo'ladi (Vakala, Istisna, Ibra, Hamish jiddiya va h.k.). Toza va tahrirlangan versiyani chiqarishdan oldin ro'yxatdagi «noto'g'ri» shakllar (masalan, Vakola, Istisno, Ibra') matnda qolmaganini skript bilan tekshir; topilsa — ro'yxatdagi shaklga tuzat. «vakolat» (huquqiy vakolat) — boshqa so'z, tegilmaydi.
+Yakuniy matnda islomiy atamalar faqat `bilim/04-terminologiya/islomiy_atamalar_standart.md` dagi shaklda bo'ladi (Vakala, Istisna, Ibra, Hamish jiddiyya va h.k.). Toza va tahrirlangan versiyani chiqarishdan oldin ro'yxatdagi «noto'g'ri» shakllar (masalan, Vakola, Istisno, Ibra') matnda qolmaganini skript bilan tekshir; topilsa — ro'yxatdagi shaklga tuzat. «vakolat» (huquqiy vakolat) — boshqa so'z, tegilmaydi.
 
 ## Izohlar va havolalar (U23, U26, U27 — barcha hujjatlar)
 - Hujjat matnida va Word izohlarida AAOIFI havolalari (SS/FAS/GS raqami, bandi) yozilmaydi; mazmun «islomiy moliya standartlariga muvofiq» kabi umumiy shaklda (U23).
