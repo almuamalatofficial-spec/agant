@@ -243,12 +243,13 @@ class Tahrirchi:
         if "".join(a) != eski:  # tokenlash to'liq bo'lmasa — eski usul
             return self._almashtir(p, i, i + len(eski), yangi, izoh)
         import difflib
-        ops = [o for o in difflib.SequenceMatcher(None, [_norm(x) for x in a], [_norm(x) for x in b], autojunk=False).get_opcodes() if o[0] != "equal"]
+        ap = lambda x: x.replace("ʻ", "‘").replace("'", "’").replace("ʼ", "’").replace("`", "‘")  # faqat tutuq belgilari tenglashtiriladi; qo'shtirnoq farqi — haqiqiy tahrir
+        ops = [o for o in difflib.SequenceMatcher(None, [ap(x) for x in a], [ap(x) for x in b], autojunk=False).get_opcodes() if o[0] != "equal"]
         if not ops:
             return True
         # farqlar ko'p bo'lsa (yangi matn deyarli butunlay boshqa) — bitta almashtirish
         sozlar = lambda xs: [x for x in xs if x.strip() and re.match(r"\w", x)]
-        teng = sum(len(sozlar(a[i1:i2])) for t, i1, i2, j1, j2 in difflib.SequenceMatcher(None, [_norm(x) for x in a], [_norm(x) for x in b], autojunk=False).get_opcodes() if t == "equal")
+        teng = sum(len(sozlar(a[i1:i2])) for t, i1, i2, j1, j2 in difflib.SequenceMatcher(None, [ap(x) for x in a], [ap(x) for x in b], autojunk=False).get_opcodes() if t == "equal")
         if teng < 0.5 * max(len(sozlar(a)), 1):
             return self._almashtir(p, i, i + len(eski), yangi, izoh)
         ofs = [0]
@@ -344,7 +345,8 @@ def vaqt_jadvali(royxat, boshlanish=None):
     natija, joriy = {}, t0
     for k in tartib:
         q = max(1, min(10, int(royxat[k].get("qiyinlik", 1) or 1)))
-        joriy = joriy + dt.timedelta(minutes=q)
+        if (royxat[k].get("izoh") or "").strip() or k == tartib[0]:  # vaqt faqat izohli tahrirda suriladi
+            joriy = joriy + dt.timedelta(minutes=q)
         natija[k] = joriy.strftime("%Y-%m-%dT%H:%M:00Z")
     return natija
 
@@ -352,7 +354,7 @@ def vaqt_jadvali(royxat, boshlanish=None):
 def izsiz(doc, oxirgi_muallif=None):
     """AI/skript izlarini olib tashlash: hujjat xossalari."""
     cp = doc.core_properties
-    for maydon in ("comments", "keywords", "subject"):
+    for maydon in ("comments", "keywords", "subject", "author", "title"):
         if "python-docx" in (getattr(cp, maydon) or ""):
             setattr(cp, maydon, "")
     if oxirgi_muallif:
