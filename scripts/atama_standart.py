@@ -6,7 +6,10 @@ python3 scripts/atama_standart.py tuzat kirish.docx chiqish.docx
 import re, sys, zipfile
 QOIDALAR = [
     (re.compile(r"\b([Vv])akola(?!t)"), r"\1akala"),
-    (re.compile(r"\b([Ii])stisno"), r"\1stisna"),
+    # aqd nomi: bosh harfli "Istisno" (ko'plik "Istisnolar" = istisnolar, tegilmaydi) va kichik harfli aqd kontekstlari
+    (re.compile(r"\bIstisno(?!l)"), "Istisna"),
+    (re.compile(r"\b([Pp]arallel )istisno"), r"\1istisna"),
+    (re.compile(r"\bistisno(?=\w{0,6}\s+(shartnoma|narx|asosida|daromad|debitor|tannarx|aktiv|moliyalashtirish))"), "istisna"),
     (re.compile(r"\b([Ii])bra[’'ʼ`]"), r"\1bra"),
     (re.compile(r"\b([Jj])iddiyya"), r"\1iddiya"),
     (re.compile(r"\b([Hh])amis\s+([Jj])iddiya"), r"\1amish \2iddiya"),
@@ -14,7 +17,14 @@ QOIDALAR = [
     (re.compile(r"\b([Mm])usharaka"), r"\1ushoraka"),
 ]
 WT = re.compile(r'(<w:t(?: [^>]*)?>)([^<]*)(</w:t>)')
+TIKLASH = [  # avvalgi versiyaning xatosini qaytarish: oddiy so'z "istisno" (bundan mustasno)
+    (re.compile(r"\b([Ii])stisnalar"), r"\1stisnolar"),
+    (re.compile(r"\b([Ii])stisna(?=\s+(tariqasida|holat|qilin|etil|tashqari|sifatida))"), r"\1stisno"),
+    (re.compile(r"(bundan|bundan tashqari|qonunchilikda nazarda tutilgan)\s+istisna\b"), r"\1 istisno"),
+]
 def ozgart(t):
+    for p, r in TIKLASH:
+        t = p.sub(r, t)
     n = 0
     for p, r in QOIDALAR:
         t, k = p.subn(r, t); n += k
