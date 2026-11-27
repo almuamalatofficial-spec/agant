@@ -231,12 +231,45 @@ class Tahrirchi:
         return c
 
     def qol(self, p, eski, yangi, izoh):
+        """U28: minimal tahrir — faqat farq qiladigan so'z/belgilar o'chiriladi va qo'shiladi,
+        butun jumla almashtirilmaydi."""
         runs = _runlar(p)
         matn = "".join(_run_matn(r) for r in runs)
         i = _norm(matn).find(_norm(eski))
         if i < 0 or not eski:
             return False
-        j = i + len(eski)
+        tok = lambda x: re.findall(r"\w+|\s+|[^\w\s]", x)
+        a, b = tok(eski), tok(yangi or "")
+        if "".join(a) != eski:  # tokenlash to'liq bo'lmasa — eski usul
+            return self._almashtir(p, i, i + len(eski), yangi, izoh)
+        import difflib
+        ops = [o for o in difflib.SequenceMatcher(None, [_norm(x) for x in a], [_norm(x) for x in b], autojunk=False).get_opcodes() if o[0] != "equal"]
+        if not ops:
+            return True
+        # farqlar ko'p bo'lsa (yangi matn deyarli butunlay boshqa) — bitta almashtirish
+        sozlar = lambda xs: [x for x in xs if x.strip() and re.match(r"\w", x)]
+        teng = sum(len(sozlar(a[i1:i2])) for t, i1, i2, j1, j2 in difflib.SequenceMatcher(None, [_norm(x) for x in a], [_norm(x) for x in b], autojunk=False).get_opcodes() if t == "equal")
+        if teng < 0.5 * max(len(sozlar(a)), 1):
+            return self._almashtir(p, i, i + len(eski), yangi, izoh)
+        ofs = [0]
+        for x in a:
+            ofs.append(ofs[-1] + len(x))
+        qadamlar = []
+        for t, i1, i2, j1, j2 in ops:
+            if i1 == i2:  # faqat qo'shish: oldingi (yoki keyingi) tokenni ham almashtiramiz
+                if i1 > 0:
+                    i1 -= 1; j1 -= 1
+                else:
+                    i2 += 1; j2 += 1
+            qadamlar.append((i + ofs[i1], i + ofs[i2], "".join(b[j1:j2])))
+        for k, (s1, e1, y) in enumerate(reversed(qadamlar)):
+            ok = self._almashtir(p, s1, e1, y, izoh if k == 0 else "")
+            if not ok:
+                return False
+        return True
+
+    def _almashtir(self, p, i, j, yangi, izoh):
+        runs = _runlar(p)
         # chegaralarda runlarni bo'lish
         pos, tanlangan = 0, []
         for r in list(runs):

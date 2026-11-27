@@ -93,3 +93,4 @@ Yakuniy matnda islomiy atamalar faqat `bilim/04-terminologiya/islomiy_atamalar_s
 - Har tahrirga "muallif" va "qiyinlik" (1–10) ber; `word_vositalari.py tahrir ... --boshlanish YYYY-MM-DDTHH:MM` vaqtlarni Metodolog → Yurist → qolganlar tartibida, qiyinlikka qarab 1–10 daqiqa oraliq bilan qo'yadi (U26).
 - AI izlari yo'q: uslub CLAUDE.md 10, bir xil vaqt yo'q, texnik kod yo'q, hujjat xossalarida skript nomi yo'q (U27).
 - Balans hisobvaraqlari nomi va raqami `bilim/04-terminologiya/Balans_hisobvaraqlar_islomiy.docx.md` bo'yicha (U25); atama ta'riflari MB Murobaha standarti loyihasidan olinishi mumkin (U24).
+- U28: minimal tahrir — butun jumlani almashtirma; `word_vositalari.py tahrir` "eski"/"yangi" farqini so'z darajasida ajratib, faqat o'zgargan so'zlarni Track Changes qiladi. O'z o'rovchi skriptingda ham shu `qol` usulidan foydalan.
