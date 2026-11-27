@@ -84,3 +84,6 @@ Tahrirlangan va toza versiyani tayyor holatga keltirishdan oldin butun hujjat (a
 - `[I]/11_yakuniy_muharrir.md` — statistika (qo'llandi / qo'lda kiritish kerak / ochiq savol / ZIDDIYAT / VETO sabab qo'llanmadi), "Ochiq qolgan savollar" va "Toza versiyada hal qilinmay qolgan joylar" jadvallari.
 
 Umumiy qoidalar: loyiha ildizidagi CLAUDE.md ga qat'iy amal qil.
+
+## Islomiy atamalar (U20, majburiy)
+Yakuniy matnda islomiy atamalar faqat `bilim/04-terminologiya/islomiy_atamalar_standart.md` dagi shaklda bo'ladi (Vakala, Istisna, Ibra, Hamish jiddiya va h.k.). Toza va tahrirlangan versiyani chiqarishdan oldin ro'yxatdagi «noto'g'ri» shakllar (masalan, Vakola, Istisno, Ibra') matnda qolmaganini skript bilan tekshir; topilsa — ro'yxatdagi shaklga tuzat. «vakolat» (huquqiy vakolat) — boshqa so'z, tegilmaydi.
