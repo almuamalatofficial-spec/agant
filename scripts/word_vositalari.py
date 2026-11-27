@@ -22,6 +22,7 @@
                      "izoh": "Word'dagi qisqa, insoniy izoh (1–2 jumla)", "asos": "to'liq texnik asos (jadval uchun)",
                      "manba": "03#2; S5=B", "sariq": false}]
    "sariq": true — o'zgarish sariq fon bilan belgilanadi (izohida ZIDDIYAT / "manba yo'q" bo'lsa — avtomatik).
+   "qiyinlik": 1–10 (ixtiyoriy) — izoh vaqti oldingisidan shuncha daqiqa keyin; vaqt tartibi: Metodolog → Yurist → qolganlar (--boshlanish "2026-11-27T09:00"); "vaqt": aniq ISO vaqt.
    "muallif": "Yurist" (ixtiyoriy) — shu tahrir va izoh muallifi; berilmasa --muallif yoki sozlamalar.json dagi standart.
    "faqat_izoh": true bo'lsa — matn o'zgarmaydi, faqat izoh biriktiriladi (masalan, ochiq savol).
    Har bir tahrir: eski matn o'chirilgan (qizil), yangi matn qo'shilgan (yashil) ko'rinadi, yoniga izoh qo'yiladi.
@@ -218,8 +219,16 @@ class Tahrirchi:
         if self.sariq:
             for r in tanlangan:
                 _sariq(r)
-        self.doc.add_comment([Run(r, p) for r in tanlangan], text=izoh, author=self.muallif, initials=self.initsial)
+        self._izoh([Run(r, p) for r in tanlangan], izoh)
         return True
+
+    def _izoh(self, runlar, izoh):
+        c = self.doc.add_comment(runlar, text=izoh, author=self.muallif, initials=self.initsial)
+        try:
+            c._comment_elm.set(qn("w:date"), self.sana)
+        except Exception:
+            pass
+        return c
 
     def qol(self, p, eski, yangi, izoh):
         runs = _runlar(p)
@@ -280,20 +289,54 @@ class Tahrirchi:
             try:
                 from docx.text.run import Run
                 izoh_runlari = [Run(x, p) for x in oxirgi.iter(qn("w:r"))] or [Run(birinchi, p)]
-                self.doc.add_comment(izoh_runlari, text=izoh, author=self.muallif, initials=self.initsial)
+                self._izoh(izoh_runlari, izoh)
             except Exception:
                 pass
         return True
 
 
-def tahrir(asl, tahrir_json, chiqish, muallif=None):
+MUALLIF_TARTIBI = ("Metodolog", "Yurist")  # izohlar vaqt bo'yicha: avval Metodolog, keyin Yurist, oxirida qolganlar
+
+
+def vaqt_jadvali(royxat, boshlanish=None):
+    """"qiyinlik" (1–10) bo'lsa — har izoh oldingisidan qiyinlik daqiqa keyin; mualliflar ketma-ketligi
+    MUALLIF_TARTIBI bo'yicha, har muallif ichida ro'yxat tartibida. Natija: {indeks: ISO vaqt}."""
+    if not any("qiyinlik" in e for e in royxat):
+        return {}
+    t0 = dt.datetime.fromisoformat(boshlanish) if boshlanish else dt.datetime.now().replace(second=0, microsecond=0) - dt.timedelta(hours=6)
+    def guruh(e):
+        m = e.get("muallif") or MUALLIF
+        return MUALLIF_TARTIBI.index(m) if m in MUALLIF_TARTIBI else len(MUALLIF_TARTIBI)
+    tartib = sorted(range(len(royxat)), key=lambda k: (guruh(royxat[k]), k))
+    natija, joriy = {}, t0
+    for k in tartib:
+        q = max(1, min(10, int(royxat[k].get("qiyinlik", 1) or 1)))
+        joriy = joriy + dt.timedelta(minutes=q)
+        natija[k] = joriy.strftime("%Y-%m-%dT%H:%M:00Z")
+    return natija
+
+
+def izsiz(doc, oxirgi_muallif=None):
+    """AI/skript izlarini olib tashlash: hujjat xossalari."""
+    cp = doc.core_properties
+    for maydon in ("comments", "keywords", "subject"):
+        if "python-docx" in (getattr(cp, maydon) or ""):
+            setattr(cp, maydon, "")
+    if oxirgi_muallif:
+        cp.last_modified_by = oxirgi_muallif
+    cp.modified = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None)
+
+
+def tahrir(asl, tahrir_json, chiqish, muallif=None, boshlanish=None):
     doc = Document(asl)
     t = Tahrirchi(doc, muallif or MUALLIF)
     t.initsial = INITSIAL if not muallif else "".join(w[0] for w in muallif.split()[:2]).upper()
     royxat = json.loads(Path(tahrir_json).read_text(encoding="utf-8"))
     hisobot = {"qollandi": [], "topilmadi": []}
     asosiy_muallif, asosiy_initsial = t.muallif, t.initsial
-    for e in royxat:
+    vaqtlar = vaqt_jadvali(royxat, boshlanish)
+    for k, e in enumerate(royxat):
+        t.sana = e.get("vaqt") or vaqtlar.get(k) or t.sana
         ok = False
         # ixtiyoriy: tahrir bo'yicha muallif (masalan, lavozim: "Metodolog", "Yurist")
         if e.get("muallif"):
@@ -309,6 +352,8 @@ def tahrir(asl, tahrir_json, chiqish, muallif=None):
                 ok = True
                 break
         (hisobot["qollandi"] if ok else hisobot["topilmadi"]).append(e.get("id"))
+    oxirgi = max(((v, (royxat[k].get("muallif") or asosiy_muallif)) for k, v in vaqtlar.items()), default=(None, t.muallif))[1]
+    izsiz(doc, oxirgi)
     doc.save(chiqish)
     Path(str(chiqish) + ".hisobot.json").write_text(json.dumps(hisobot, ensure_ascii=False, indent=1), encoding="utf-8")
     holat = {i: "qo'llandi" for i in hisobot["qollandi"]}
@@ -412,4 +457,5 @@ if __name__ == "__main__":
         jadval(a[1], a[2])
     else:
         m = a[a.index("--muallif") + 1] if "--muallif" in a else None
-        tahrir(a[1], a[2], a[3], m)
+        b = a[a.index("--boshlanish") + 1] if "--boshlanish" in a else None
+        tahrir(a[1], a[2], a[3], m, b)
